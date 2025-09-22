@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
-@plugin "tailwindcss-motion";
 @plugin "flowbite/plugin";
 @theme {
   --color-primary: #6E5BFB; 

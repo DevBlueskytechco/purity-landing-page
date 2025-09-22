@@ -3339,3 +3339,43 @@ textarea.form-control-lg {
   padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
   overflow-y: auto;
 }
+/* =============================== */
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.playbtn::after ,.playbtn::before{
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(from var(--angle), transparent 70%, #6E5BFB);
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  translate:  -50% -50%;
+  padding: 2px;
+  border-radius: 10px;
+  animation: 2s spin-1 linear infinite;
+  z-index: -1;
+}
+.playbtn::before{
+  filter:blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin-1 {
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
+}
+
+.up {
+  transform: translateY(-30px);
+}
+
+.down {
+  transform: translateY(30px);
+}

@@ -10,78 +10,212 @@
     <link href="./output.css" rel="stylesheet" />
 </head>
 
-<body class="min-h-screen font-instrument_sans">
+<body class="min-h-screen">
    
-    <section class="bg-black bg-[url(img/bg-header.jpg)] pb-15 2xl:pt-47 xl:pt-30 pt-20 bg-cover bg-center bg-no-repeat ">
+    <section class="bg-black bg-[url(img/bg-header.jpg)] pb-15 2xl:pt-47 xl:pt-30 pt-20 bg-cover bg-center bg-no-repeat lg:min-h-screen">
         <div class="container ">
             <div class="space-y-6 text-center text-white">
-                <button class="text-white px-4 py-2.5 inline-flex items-center rounded-full bg-white/10 text-sm font-medium capitalize backdrop-blur-xs gap-2 font-plus-jakarta-sans">
-                    <span class="relative inline-flex p-1 "><svg width="6" height="6" class="relative z-1" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="3" cy="3" r="3" fill="#6E5BFB"/>
-                        </svg>
-                        <span class="absolute inset-0 rounded-full animate-ping z-2 bg-primary"></span>
-                        <span class="absolute inset-0 delay-150 rounded-full animate-ping z-3 bg-primary/80"></span>
-                    </span>
-                     Purity Theme</button>
-                <h1 class="max-w-[700px] mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl text-5xl tracking-tighter font-semibold leading-tight text-transparent bg-clip-text bg-[linear-gradient(92.35deg,#FFFFFF_0%,#FFFFFF_49.5%,#6E5BFB_100%)]">
+                <button class="text-white overflow-hidden z-1 px-4 py-2.5 inline-flex playbtn items-center rounded-full bg-[#1c1f2b] text-sm font-medium capitalize backdrop-blur-xs gap-2 font-plus-jakarta-sans  relative">
+                    <div class="relative inline-flex p-1 z-2">
+                        <div class="inline-flex size-1.5 rounded-full bg-primary animate-pulse"></div>
+                        <div class="absolute inset-0 rounded-full animate-ping z-2 bg-primary"></div>
+                        <div class="absolute delay-150 rounded-full inset-0.5 animate-ping z-3 bg-primary/90"></div>
+                    </div>
+                    <span class="relative z-2"> Purity Theme</span>
+                   
+                   <span class="absolute  bg-[#1c1f2b] inset-[1.5px] rounded-full"></span>
+                  </button>
+                <h1 class="max-w-[700px] mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl sm:text-5xl text-4xl tracking-tighter font-semibold leading-tight text-transparent bg-clip-text bg-[linear-gradient(92.35deg,#FFFFFF_0%,#FFFFFF_49.5%,#6E5BFB_100%)]">
                     The Perfect <span class="hidden lg:inline"><br/></span>
                     Design Solution<span class="hidden lg:inline"><br/></span>
                     to Grow Your Store
                 </h1>
-                <p class="mb-10 font-medium lg:mb-15 lg:text-lg">Optimized mobile design, smooth UX, and easy setup to help you engage <span class="hidden lg:inline"><br/></span> customers and grow effortlessly.</p>
+                <p class="mb-10 font-medium lg:mb-15 lg:text-lg">Optimized mobile design, smooth UX, and easy setup to help you engage <span class="hidden md:inline"><br/></span> customers and grow effortlessly.</p>
                 <div class="flex flex-col justify-center gap-4 sm:flex-row">
                     <a href="#" class="inline-flex group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-medium tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
-                        Try Purity Theme <span class="inline-block transition-all duration-300 group-hover:rotate-45"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z" fill="white"/>
-                            </svg></span> 
+                        <span class="z-2">Try Purity Theme</span> <span class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img src="img/icon-arrow.svg" alt=""></span> 
                       </a>
                       <a href="#" class="inline-flex group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-medium tracking-tighter text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
-                        View Demo <span class="inline-block transition-all duration-300 group-hover:rotate-45"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z" fill="white"/>
-                            </svg></span> 
+                        View Demo <span class="inline-block transition-all duration-300 group-hover:rotate-45"><img src="img/icon-arrow.svg" alt=""></span> 
                       </a>
                 </div>
                 
-                <ul class="mt-10 space-x-5 space-y-1 xl:space-x-12 2xl:mt-37 xl:mt-30 lg:mt-25">
-                    <li class="inline-flex items-center gap-3"> <span class="inline-flex items-center justify-center text-white rounded-full shrink-0 size-5 bg-primary"><svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5753 1.66907L4.6169 7.62729C4.43814 7.80605 4.20349 7.89601 3.96884 7.89601C3.73419 7.89601 3.49954 7.80605 3.32079 7.62729L0.341675 4.64818C-0.0168457 4.28983 -0.0168457 3.71042 0.341675 3.35207C0.700027 2.99355 1.27927 2.99355 1.63779 3.35207L3.96884 5.68312L9.27917 0.372955C9.63753 0.0144348 10.2168 0.0144348 10.5753 0.372955C10.9336 0.731308 10.9336 1.31055 10.5753 1.66907Z" fill="currentcolor"/>
-                        </svg></span> Exclusive Built-in Features</li>
-                    <li class="inline-flex items-center gap-3"> <span class="inline-flex items-center justify-center text-white rounded-full shrink-0 size-5 bg-primary"><svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5753 1.66907L4.6169 7.62729C4.43814 7.80605 4.20349 7.89601 3.96884 7.89601C3.73419 7.89601 3.49954 7.80605 3.32079 7.62729L0.341675 4.64818C-0.0168457 4.28983 -0.0168457 3.71042 0.341675 3.35207C0.700027 2.99355 1.27927 2.99355 1.63779 3.35207L3.96884 5.68312L9.27917 0.372955C9.63753 0.0144348 10.2168 0.0144348 10.5753 0.372955C10.9336 0.731308 10.9336 1.31055 10.5753 1.66907Z" fill="currentcolor"/>
-                            </svg></span> Optimized Mobile Performance</li>
-                    <li class="inline-flex items-center gap-3"> <span class="inline-flex items-center justify-center text-white rounded-full shrink-0 size-5 bg-primary"><svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5753 1.66907L4.6169 7.62729C4.43814 7.80605 4.20349 7.89601 3.96884 7.89601C3.73419 7.89601 3.49954 7.80605 3.32079 7.62729L0.341675 4.64818C-0.0168457 4.28983 -0.0168457 3.71042 0.341675 3.35207C0.700027 2.99355 1.27927 2.99355 1.63779 3.35207L3.96884 5.68312L9.27917 0.372955C9.63753 0.0144348 10.2168 0.0144348 10.5753 0.372955C10.9336 0.731308 10.9336 1.31055 10.5753 1.66907Z" fill="currentcolor"/>
-                                </svg></span> Setup and Migration Help</li>
+                <ul class="mt-10 space-x-5 space-y-1 text-sm xl:space-x-12 2xl:mt-37 xl:mt-30 lg:mt-25 md:text-base">
+                    <li class="inline-flex items-center gap-3"> <span class="inline-flex items-center justify-center text-white rounded-full shrink-0 size-5 bg-primary"><img src="img/icon-list.svg" alt=""></span> Exclusive Built-in Features</li>
+                    <li class="inline-flex items-center gap-3"> <span class="inline-flex items-center justify-center text-white rounded-full shrink-0 size-5 bg-primary"><img src="img/icon-list.svg" alt=""></span> Optimized Mobile Performance</li>
+                    <li class="inline-flex items-center gap-3"> <span class="inline-flex items-center justify-center text-white rounded-full shrink-0 size-5 bg-primary"><img src="img/icon-list.svg" alt=""></span> Setup and Migration Help</li>
                 </ul>
             </div>
             
         </div>
     </section>
 
-    <section class="overflow-hidden bg-white -mt-7 rounded-t-4xl py-25">
+    <section class="overflow-hidden bg-white -mt-7 rounded-t-4xl xl:py-25 lg:py-18 py-15">
         <div class="container">
-          <div class="space-y-4 text-center lg:mb-12.5 mb-8">
-            <h2 class="text-heading tracking-tighter leading-tight lg:text-[45px] text-2xl font-semibold">Powerful Sections<span class="hidden lg:inline"><br/></span>
+          <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
+            <h2 class="text-heading tracking-tighter leading-tight lg:text-[45px] text-3xl font-semibold">Powerful Sections<span class="inline"><br/></span>
               to Increase Sales Conversion</h2>
-            <p>Designed to help customers find, compare, and purchase products effortlessly while<span class="hidden lg:inline"><br/></span> boosting your store’s conversion rates.</p>
+            <p>Designed to help customers find, compare, and purchase products effortlessly while<span class="hidden md:inline"><br/></span> boosting your store’s conversion rates.</p>
           </div>
-          <div class="max-w-[1345px] mx-auto space-y-6">
-            <div class="bg-[#ECE7DA] rounded-[20px] grid grid-cols-12">
-              <div class="col-span-5 xl:p-12.5 lg:p-8 p-6"></div>
+          <div class="max-w-[1345px] mx-auto mb-6" data-cues="slideInUp" data-duration="600">
+            <div class="bg-[#ECE7DA] rounded-[20px] grid lg:grid-cols-12 overflow-hidden">
+              <div class="lg:col-span-5 xl:p-12.5 lg:p-8 p-6">
+                <div class="flex flex-col justify-between h-full gap-5">
+                  <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
+                    <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt=""></span>Purity Exclusive</li>
+                      <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt=""></span>Personalized</li>
+                  </ul>
+                  <div class="space-y-3 lg:space-y-5">
+                    <h3 class="font-semibold text-heading lg:text-[30px] text-2xl">Suitable Product Finder</h3>
+                    <p class="leading-relaxed">Smart search helps you find the right products tailored to your lifestyle, habits, and goals, delivering instant recommendations so you can choose with confidence.</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="lg:col-span-7 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.jpg)] grid content-center bg-cover bg-center">
+                <figure class="overflow-hidden rounded-2xl"><img src="img/img-banner1.jpg" alt=""></figure>
+              </div>
             </div>
+          </div>
+
+          <div class="max-w-[1345px] mx-auto mb-6" data-cues="slideInUp" data-duration="600">
+            <div class="bg-[#DAE2EC] rounded-[20px] grid lg:grid-cols-12 overflow-hidden">
+              <div class="lg:col-span-5 xl:p-12.5 lg:p-8 p-6">
+                <div class="flex flex-col justify-between h-full gap-5">
+                  <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
+                    <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt=""></span>Purity Exclusive</li>
+                      <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt=""></span>Personalized</li>
+                  </ul>
+                  <div class="space-y-3 lg:space-y-5">
+                    <h3 class="font-semibold text-heading lg:text-[30px] text-2xl">Recommend Collection</h3>
+                    <p class="leading-relaxed">An A–Z skincare roadmap makes it simple to build a complete routine, guiding you step by step from basic care to advanced treatments with clarity and ease.</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="lg:col-span-7 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.jpg)] grid content-center bg-cover bg-center">
+                <figure class="overflow-hidden rounded-2xl"><img src="img/img-banner1.jpg" alt=""></figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="max-w-[1345px] mx-auto mb-6" data-cues="slideInUp" data-duration="600">
+            <div class="bg-[#ECE7DA] rounded-[20px] grid lg:grid-cols-12 overflow-hidden">
+              <div class="lg:col-span-5 xl:p-12.5 lg:p-8 p-6">
+                <div class="flex flex-col justify-between h-full gap-5">
+                  <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
+                    <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt=""></span>Purity Exclusive</li>
+                      <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt=""></span>Personalized</li>
+                  </ul>
+                  <div class="space-y-3 lg:space-y-5">
+                    <h3 class="font-semibold text-heading lg:text-[30px] text-2xl">Product Bundle</h3>
+                    <p class="leading-relaxed">Offering curated bundles of related products, carefully combined to encourage more purchases while providing added savings and value for customers.</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="lg:col-span-7 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.jpg)] grid content-center bg-cover bg-center">
+                <figure class="overflow-hidden rounded-2xl"><img src="img/img-banner1.jpg" alt=""></figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="max-w-[1345px] mx-auto mb-6" data-cues="slideInUp" data-duration="600">
+            <div class="bg-[#DAE2EC] rounded-[20px] grid lg:grid-cols-12 overflow-hidden">
+              <div class="lg:col-span-5 xl:p-12.5 lg:p-8 p-6">
+                <div class="flex flex-col justify-between h-full gap-5">
+                  <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
+                    <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt=""></span>Purity Exclusive</li>
+                      <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt=""></span>Personalized</li>
+                  </ul>
+                  <div class="space-y-3 lg:space-y-5">
+                    <h3 class="font-semibold text-heading lg:text-[30px] text-2xl">Featured Product Banner</h3>
+                    <p class="leading-relaxed">Smart search helps you find the right products tailored to your lifestyle, habits, and goals, delivering instant recommendations so you can choose with confidence.</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="lg:col-span-7 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.jpg)] grid content-center bg-cover bg-center">
+                <figure class="overflow-hidden rounded-2xl"><img src="img/img-banner1.jpg" alt=""></figure>
+              </div>
+            </div>
+          </div>
+
+ 
+        </div>
+    </section>
+    <section class="bg-[#13111C] relative xl:py-25 lg:py-18 py-15 xl:min-h-screen">
+        <span class="absolute pointer-events-none inset-0 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
+        <div class="container">
+          <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
+            <h2 class="inline-block tracking-tighter leading-tight lg:text-[45px] text-3xl font-semibold text-transparent bg-clip-text bg-[linear-gradient(92.35deg,#FFFFFF_0%,#FFFFFF_49.5%,#6E5BFB_100%)]">Optimized for Mobile-First</h2>
+            <p class="text-white/70">Designed to help customers find, compare, and purchase products effortlessly while<span class="hidden md:inline"><br/></span> boosting your store’s conversion rates.</p>
           </div>
         </div>
     </section>
 
-
+    <button id="backToTop" class="fixed z-10 transition duration-300 cursor-pointer back-top end-8 bottom-8"
+    onclick="scrollToTop()" data-cue="slideInUp">
+    <span
+      class="inline-flex items-center justify-center text-lg text-white transition-colors duration-300 border rounded-full bg-gradient-to-l from-purple-500 to-primary hover:bg-gradient-to-r md:size-13 size-11">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 18.75 7.5-7.5 7.5 7.5" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 7.5-7.5 7.5 7.5" />
+      </svg>
+    </span>
+    </button>
    
     <script src="js/plugins.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/scrollCue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script>
+    <script type="text/javascript">
         scrollCue.init({
             duration : 300,
             interval : -200,
             percentage : 0.8
         });
+        // JavaScript để xử lý cuộn lên đầu trang
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Cuộn mượt mà
+        });
+      }
+
+      // Hiển thị/ẩn nút khi cuộn trang
+      window.onscroll = function () {
+        let backToTopButton = document.getElementById('backToTop');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      };
+
+      const targets = document.querySelectorAll('.target');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+          // cuộn xuống
+          targets.forEach(el => {
+            el.classList.add('up');
+            el.classList.remove('down');
+          });
+        } else {
+          // cuộn lên
+          targets.forEach(el => {
+            el.classList.add('down');
+            el.classList.remove('up');
+          });
+        }
+
+        lastScrollY = currentScrollY;
+      });
     </script>
 </body>
 
