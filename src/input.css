@@ -9,7 +9,7 @@
   --color-heading: #1D1D1F;
   --font-instrument_sans: "Instrument Sans", sans-serif;
   --font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
-
+  --breakpoint-sm: 36rem;
   --animate-scrolling: scrolling 30s linear infinite;
   @keyframes scrolling {
     0% {
@@ -31,6 +31,9 @@
   }
   .container {
     @apply pe-4 ps-4 mx-auto;
+  }
+  h1,h2,h3,h4,h5,h6{
+    @apply font-plus-jakarta-sans
   }
 }
 @layer utility {
