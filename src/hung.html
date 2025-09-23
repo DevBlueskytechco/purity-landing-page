@@ -8,617 +8,658 @@
     <link rel="stylesheet" href="./scrollCue.css">
     <link rel="stylesheet" href="./style.css">
     <link href="./output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+
     <style>
-      @keyframes sweepLeft {
-        0% { transform: translate(0, -50%); opacity: .9; }
-        70% { opacity: .15; }
-        100% { transform: translate(-140px, -50%); opacity: 0; }
-      }
-      @keyframes sweepRight {
-        0% { transform: translate(0, -50%); opacity: .9; }
-        70% { opacity: .15; }
-        100% { transform: translate(140px, -50%); opacity: 0; }
-      }
-       @keyframes sweepUp {
-         0% { transform: translate(-50%, 0); opacity: .9; }
-         70% { opacity: .15; }
-         100% { transform: translate(-50%, -140px); opacity: 0; }
-       }
-      .sweep-wrap { position: relative; display: inline-block; }
-      .sweep-wrap .line {
-        position: absolute;
-        top: 50%;
-        height: 1px;
-        width: 150px;
-        pointer-events: none;
-      }
-      .sweep-wrap .line.left { left: -50%; background: linear-gradient(90deg, #5B7BFB, #5B7BFB00); animation: sweepLeft 2.2s ease-out infinite; }
-      .sweep-wrap .line.right { right: -50%; background: linear-gradient(270deg, #5B7BFB, #5B7BFB00); animation: sweepRight 2.2s ease-out infinite; }
-       .sweep-wrap .line.up { left: 50%; top: auto; bottom: 50%; width: 1px; height: 150px; background: linear-gradient(0deg, #5B7BFB, #5B7BFB00); animation: sweepUp 2.2s ease-out infinite; transform: translate(-50%, 0); }
-      .sweep-wrap .line.delay-1 { animation-delay: 0s; }
+        
+        .bar {
+            width: 0;
+            /* bắt đầu từ 0 */
+            height: 4px;
+            background: linear-gradient(90deg, #6E5BFB, #A88BFF);
+            animation: leftToRight 3s ease-in-out infinite;
+            /* nếu muốn chỉ chạy 1 lần thì bỏ infinite */
+        }
+
+        @keyframes leftToRight {
+            0% {
+                width: 0;
+                opacity: 1;
+            }
+
+            70% {
+                width: 100%;
+                opacity: 1;
+            }
+
+            /* lớn dần tới full */
+            100% {
+                width: 0;
+                opacity: 0;
+            }
+
+            /* thu về lại */
+        }
     </style>
 </head>
 
 <body class="min-h-screen font-instrument_sans">
-    <section class="w-full bg-[#F1F3F7] rounded-t-3xl">
-        <div class="lg:max-w-[1350px] mx-auto p-5 md:p-1">
-            <div class="py-16 sm:py-20 lg:py-24">
-                <div class="mx-auto xl:w-[1350px]">
-                    <div class="grid gap-10 grid-cols-1 lg:grid-cols-12">
-                        <div class="flex justify-end flex-col lg:col-span-5">
-                            <h2 class="md:text-4xl text-3xl font-semibold mb-4 font-plus-jakarta-sans">Our
-                                Achievements <span class="hidden lg:inline"><br /></span>
-                                and Growth</h2>
-                            <p class="mb-12.5">We are committed to constantly improving and
-                                innovating to <span class="hidden lg:inline"><br /></span>
-                                enhance your experience.</p>
-                            <ul class="space-y-4">
-                                <li class="mb-6 px-4 py-5.5 border rounded-2xl border-[#D1D6DD]">
-                                    <div class="flex items-start gap-3 mb-2">
-                                        <span class="inline-flex h-6 w-6 color-[#14854E]">
-                                            <svg width="24" height="26" viewBox="0 0 18 13" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
-                                                    fill="#1D1D1F" />
-                                            </svg>
-                                        </span>
-                                        <p class="font-semibold text-lg">Developed by NextSky</p>
+    <section class="w-full bg-[#F1F3F7] rounded-t-3xl" data-cues="slideInUp" data-duration="600">
+        <div class="container">
+            <div class="lg:max-w-[1350px] mx-auto md:p-1">
+                <div class="py-16 sm:py-20 lg:py-24">
+                    <div class="mx-auto lg:w-[1350px]">
+                        <div class="grid gap-10 grid-cols-1 lg:grid-cols-12">
+                            <div class="flex justify-end flex-col lg:col-span-5">
+                                <h2 class="md:text-4xl text-3xl font-semibold mb-4 font-plus-jakarta-sans">Our
+                                    Achievements <span class="hidden lg:inline"><br /></span>
+                                    and Growth</h2>
+                                <p class="mb-12.5">We are committed to constantly improving and
+                                    innovating to <span class="hidden lg:inline"><br /></span>
+                                    enhance your experience.</p>
+                                <ul class="space-y-4">
+                                    <li class="mb-6 px-4 py-5.5 border rounded-2xl border-[#D1D6DD]">
+                                        <div class="flex items-start gap-3 mb-2">
+                                            <span class="inline-flex h-6 w-6 color-[#14854E]">
+                                                <svg width="24" height="26" viewBox="0 0 18 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
+                                                        fill="#1D1D1F" />
+                                                </svg>
+                                            </span>
+                                            <p class="font-semibold text-lg">Developed by NextSky</p>
+                                        </div>
+                                        <p class="text-base font-medium">One of the top Shopify Theme developers on
+                                            ThemeForest.</p>
+                                    </li>
+                                    <li class="px-4 py-5.5 border rounded-2xl border-[#D1D6DD]">
+                                        <div class="flex items-start gap-3 mb-2">
+                                            <span class="inline-flex size-6 color-[#14854E]">
+                                                <svg width="24" height="26" viewBox="0 0 18 13" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
+                                                        fill="#1D1D1F" />
+                                                </svg>
+                                            </span>
+                                            <p class="font-semibold text-lg">Top 1 Shopify Theme for Performance</p>
+                                        </div>
+                                        <p class="text-base font-medium">Fastest and Ultimate Shopify Themes for your
+                                            store
+                                            2025.</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex items-center justify-center lg:col-span-7">
+                                <div class="relative w-full rounded-xl bg-[#6B7B8F] md:aspect-[16/9] aspect-[1/1]">
+                                    <div
+                                        class="absolute bottom-1 left-1 right-1 md:right-57.5 md:bottom-6 md:left-6 grid grid-cols-2 gap-4">
+                                        <div
+                                            class="rounded-[15px] bg-[#FFFFFF99] flex flex-col justify-center px-4 py-3 backdrop-blur-[30px] shadow-sm lg:min-w-[250px] lg:min-h-[132px]">
+                                            <p class="text-xl font-semibold text-white md:text-5xl">50k</p>
+                                            <p class="text-sm md:text-base text-white">Satisfied Customers</p>
+                                        </div>
+                                        <div
+                                            class="rounded-lg bg-[#FFFFFF99] flex flex-col justify-center px-4 py-3 backdrop-blur-[30px] shadow-sm lg:min-w-[250px] lg:min-h-[132px]">
+                                            <p class="text-xl font-semibold text-white md:text-5xl">17k</p>
+                                            <p class="text-sm md:text-base text-white">5 Stars Reviews</p>
+                                        </div>
                                     </div>
-                                    <p class="text-base font-medium">One of the top Shopify Theme developers on
-                                        ThemeForest.</p>
-                                </li>
-                                <li class="px-4 py-5.5 border rounded-2xl border-[#D1D6DD]">
-                                    <div class="flex items-start gap-3 mb-2">
-                                        <span class="inline-flex size-6 color-[#14854E]">
-                                            <svg width="24" height="26" viewBox="0 0 18 13" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
-                                                    fill="#1D1D1F" />
-                                            </svg>
-                                        </span>
-                                        <p class="font-semibold text-lg">Top 1 Shopify Theme for Performance</p>
-                                    </div>
-                                    <p class="text-base font-medium">Fastest and Ultimate Shopify Themes for your store
-                                        2025.</p>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="flex items-center justify-center lg:col-span-7">
-                            <div class="relative w-full rounded-xl bg-[#6B7B8F] md:aspect-[16/9] aspect-[1/1]">
+                        <div class="mt-25 text-center mb-12.5">
+                            <h3 class="text-3xl font-semibold sm:text-[40px]">Pay Once—Unlock All</h3>
+                            <p class="mt-4">One—time charge no more year fee. Save $2.500+ per Year with our built—in
+                                theme
+                                features for<span class="hidden lg:inline"><br></span> free. You don't need to buy any
+                                additional Apps.</p>
+                        </div>
+
+                        <div class="border rounded-2xl">
+                            <div class="relative rounded-2xl shadow-sm lg:p-8 overflow-hidden">
+                                <div class="overflow-x-auto">
+                                    <table id="features-table"
+                                        class="w-full min-w-[900px] lg:min-w-0 border rounded-2xl overflow-hidden border-[#D1D6DD] [&>tbody>*:nth-child(odd)]:bg-[#DDE3EB] [&>tbody>*:nth-child(even)]:bg-white">
+                                        <thead class="text-sm font-medium">
+                                            <tr class="bg-white radius-2xl divide-x divide-[#D1D6DD]">
+                                                <th class="px-6 py-3 text-center border-e-1">Features</th>
+                                                <th class="px-6 py-3 text-center">Apps</th>
+                                                <th class="px-6 py-3 text-center">Purity Theme</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class=" text-center">
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Countdown Timer</td>
+                                                <td class="px-6 py-3 text-center text-slate-500">$85</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Product Compare</td>
+                                                <td class="px-6 py-3 text-center">$60</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Product Filtering</td>
+                                                <td class="px-6 py-3 text-center">$240</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Cart Upsell</td>
+                                                <td class="px-6 py-3 text-center text-slate-500">$300</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Before/After Image</td>
+                                                <td class="px-6 py-3 text-center text-slate-500">$80</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Product Bundle</td>
+                                                <td class="px-6 py-3 text-center text-slate-500">$100</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Sticky Add to Cart</td>
+                                                <td class="px-6 py-3 text-center text-slate-500">$100</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Product Options</td>
+                                                <td class="px-6 py-3 text-center text-slate-500">$190</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Suitable Product Finder</td>
+                                                <td class="px-6 py-3 text-center">🔥 Built-in Exclusive</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Shop by Step</td>
+                                                <td class="px-6 py-3 text-center">🔥 Built-in Exclusive</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD]">
+                                                <td class="px-6 py-3">Featured Product Banner</td>
+                                                <td class="px-6 py-3 text-center">🔥 Built-in Exclusive</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD] feature-extra hidden">
+                                                <td class="px-6 py-3">Countdown Timer</td>
+                                                <td class="px-6 py-3 text-center text-slate-500">$85</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr class="divide-x divide-[#D1D6DD] feature-extra hidden">
+                                                <td class="px-6 py-3">Product Compare</td>
+                                                <td class="px-6 py-3 text-center">$60</td>
+                                                <td
+                                                    class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
+                                                    <span
+                                                        class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
+                                                        <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
+                                                                fill="#FAFAFA" />
+                                                        </svg>
+                                                    </span>
+                                                    Free
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" class="px-6 py-4 text-center relative">
+                                                    <!-- Fade overlay above the button (visible when collapsed) -->
+                                                    <div id="features-overlay"
+                                                        class="pointer-events-none absolute left-0 right-0 -top-[55px] h-14 bg-gradient-to-t from-white to-transparent opacity-100 transition-opacity duration-500 shadow-[0_0px_20px_rgba(255,255,255,0.95)]">
+                                                    </div>
+                                                    <button id="toggle-features" type="button"
+                                                        class="inline-flex items-center gap-1 text-lg font-semibold text-[var(--color-primary)] opacity-100 cursor-pointer focus:outline-none">
+                                                        <span class="toggle-label">View all Features</span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr
+                                                class="bg-white border-t divide-x divide-[#D1D6DD] overflow-hidden border-[#D1D6DD]">
+                                                <td class="px-6 py-4 font-semibold text-[22px] text-center">Total</td>
+                                                <td
+                                                    class="px-6 py-4 text-center align-middle font-semibold text-[22px]">
+                                                    Over
+                                                    $2.500/year<br> <span class="text-base font-medium">(Standalone
+                                                        Cost)</span>
+                                                </td>
+                                                <td class="px-6 py-3 text-center bg-[var(--color-primary)]">
+                                                    <a href="#"
+                                                        class="inline-block rounded-lg px-6 py-3 text-center font-semibold text-white text-[22px] hover:opacity-80">$350<br>
+                                                        <span class="text-base font-medium">(One Time Only)</span></a>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[var(--color-black)] rounded-t-[30px] -mt-[30px] relative m-0 overflow-hidden"
+        data-cues="slideInUp" data-duration="600">
+        <div class="container">
+            <div class="lg:max-w-[1350px] mx-auto px-5 md:px-1 py-20 md:py-25 bg-dark relative">
+                <span
+                    class="absolute pointer-events-none inset-0 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
+                <div class="text-center mx-auto">
+                    <h2
+                        class="text-3xl inline-block md:text-4xl lg:text-[45px]  font-plus-jakarta-sans font-semibold leading-tight tracking-tight bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#6E5BFB] bg-clip-text text-transparent">
+                        Special Offers
+                        <br class="hidden md:block" />
+                        from Our Trusted App Partners
+                    </h2>
+                    <p class="mt-4 text-sm md:text-base leading-relaxed text-white/70">
+                        We have optimized the layout and structure to ensure easy navigation and quick access <br
+                            class="hidden md:block">
+                        to the information customer seeking.
+                    </p>
+                </div>
+
+                <div class="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
+                        <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
+                        <div class="text-center pb-6">
+                            <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">Color Swatch King: Variants
+                            </p>
+                            <p class="text-white/70">Displays multiple product variants, auto-hides out-of-stock
+                                options, and fully customizes
+                                the
+                                variant selector for better usability.</p>
+                        </div>
+                        <div
+                            class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed border-[#71619F66] font-semibold bg-[#212028]">
+                            20% Off All Plans for Purity Users
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
+                        <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
+                        <div class="text-center pb-6">
+                            <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">SA Variants: Combined
+                                Listings
+                            </p>
+                            <p class="text-white/70">Displays product variants as intuitive color swatches, further
+                                enhancing navigation,
+                                on‑page
+                                SEO, and comparison with images.</p>
+                        </div>
+                        <div
+                            class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed border-[#71619F66] font-semibold bg-[#212028]">
+                            20% Off All Plans for Purity Users
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
+                        <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
+                        <div class="text-center pb-6">
+                            <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">Easy Display: Product
+                                Showcase
+                            </p>
+                            <p class="text-white/70">Recommends upsell products, with countdown timer, clickable
+                                hotspots, image slider, video
+                                on
+                                hover, and grid tabs.</p>
+                        </div>
+                        <div
+                            class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed border-[#71619F66] font-semibold bg-[#212028]">
+                            20% Off All Plans for Purity Users
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
+                        <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
+                        <div class="text-center pb-6">
+                            <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">SA Variant Image Automator
+                            </p>
+                            <p class="text-white/70">Organizes product images in the admin and automatically assigns new
+                                images to the correct
+                                variant options.</p>
+                        </div>
+                        <div
+                            class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed border-[#71619F66] font-semibold bg-[#212028]">
+                            20% Off All Plans for Purity Users
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div
+                        class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
+                        <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
+                        <div class="text-center pb-6">
+                            <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">UpPromote Affiliate
+                                Marketing
+                            </p>
+                            <p class="text-white/70">Enables customer referrals and creation of unique affiliate
+                                programs with customizable
+                                forms,
+                                links, and codes.</p>
+                        </div>
+                        <div
+                            class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed border-[#71619F66] font-semibold bg-[#212028]">
+                            20% Off All Plans for Purity Users
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div
+                        class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
+                        <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
+                        <div class="text-center pb-6">
+                            <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">BON Loyalty Program &
+                                Rewards
+                            </p>
+                            <p class="text-white/70">Loyalty points at checkout, multi-language and payment method
+                                support, bonus points on
+                                special occasions.</p>
+                        </div>
+                        <div
+                            class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed border-[#71619F66] font-semibold bg-[#212028]">
+                            20% Off All Plans for Purity Users
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 md:mt-12.5 text-center">
+                    <a href="#"
+                        class="inline-flex group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold font-plus-jakarta-sans tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary/90 border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
+                        Get the Deals Now<span
+                            class="inline-block transition-all duration-300 group-hover:rotate-45"><svg width="12"
+                                height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z"
+                                    fill="white" />
+                            </svg></span>
+                    </a>
+                </div>
+
+                <div
+                    class="absolute flex items-center bottom-0 w-full max-w-[1350px] h-[1px] bg-gradient-to-r from-transparent via-[#D1D6DD] to-transparent">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[var(--color-black)] rounded-t-[30px] -mt-[30px]" data-cues="slideInUp" data-duration="600">
+        <div class="container">
+            <div class="lg:max-w-[1350px] mx-auto px-5 md:px-1 py-20 md:py-25 bg-dark">
+                <div class="text-center mx-auto ">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-[45px] inline-block  font-plus-jakarta-sans font-semibold leading-tight tracking-tight bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#6E5BFB] bg-clip-text text-transparent">
+                        Get Purity Theme <br class="hidden md:block">
+                        Take Your Store to the Next Level
+                    </h2>
+                    <p class="mt-4 text-sm md:text-base leading-relaxed text-white/70">
+                        Get free theme setup and design consulting with Purity. Whether starting fresh or upgrading,<br
+                            class="hidden md:block "> we’ll help migrate and elevate your store with expert support.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 mt-12.5">
+                    <div
+                        class="flex flex-col items-center justify-center bg-[#16141d] border border-[#71619F40] rounded-[20px]">
+                        <div class="w-full mx-auto text-center px-6 py-12 rounded-2xl">
+                            <!-- rounded-[30px] border border-transparent [background:linear-gradient(#0000,#0000)_padding-box,linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB)_border-box] -->
+                            <div class="p-[2px] rounded-[30px] inline-block bg-gradient-to-r from-white via-white to-[#6E5BFB]">
+                                <div class="rounded-[28px] bg-black">
+                                    <a href="#"
+                                        class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text">
+                                        <span
+                                            class="bg-gradient-to-r from-white via-white to-[#6E5BFB] bg-clip-text text-transparent">No
+                                            Store Yet?</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3
+                                class="mt-4 text-3xl md:text-[30px] text-white font-semibold leading-tight font-plus-jakarta-sans">
+                                Buy Purity with
+                                <br class="hidden md:block" />
+                                Free Setup and Design Support
+                            </h3>
+                            <p class="mt-4 text-white text-base md:text-lg leading-relaxed">
+                                Buy Purity Theme and get Free design and setup for Home, Collection, and
+                                Product pages with optimized sections.
+                            </p>
+                            <div class="mt-6 md:mt-10">
+                                <a href="#"
+                                    class="inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary/90 border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
+                                    Contact Us <span
+                                        class="inline-block transition-all duration-300 group-hover:rotate-45"><svg
+                                            width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z"
+                                                fill="white" />
+                                        </svg></span>
+                                </a>
+                            </div>
+
+                            <div class="mt-10 md:mt-14 relative mx-auto">
                                 <div
-                                    class="absolute bottom-1 left-1 right-1 md:right-57.5 md:bottom-6 md:left-6 grid grid-cols-2 gap-4">
-                                    <div
-                                        class="rounded-lg bg-[#FFFFFF99] flex flex-col justify-center px-4 py-3 backdrop-blur-[30px] shadow-sm lg:min-w-[250px] lg:min-h-[132px]">
-                                        <p class="text-xl font-semibold text-white md:text-5xl">50k</p>
-                                        <p class="text-sm md:text-base text-white">Satisfied Customers</p>
-                                    </div>
-                                    <div
-                                        class="rounded-lg bg-[#FFFFFF99] flex flex-col justify-center px-4 py-3 backdrop-blur-[30px] shadow-sm lg:min-w-[250px] lg:min-h-[132px]">
-                                        <p class="text-xl font-semibold text-white md:text-5xl">17k</p>
-                                        <p class="text-sm md:text-base text-white">5 Stars Reviews</p>
-                                    </div>
+                                    class="relative mx-auto w-full aspect-[16/10] rounded-2xl overflow-hidden max-w-[560xp] max-h-[350px] bg-white">
+                                    <!-- <img class="absolute left-0 top-1/2 -translate-y-1/2 w-[32%] rounded-xl" src="" width="560" height="350"
+                                            alt="" /> -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mt-25 text-center mb-12.5">
-                        <h3 class="text-3xl font-semibold sm:text-[40px]">Pay Once—Unlock All</h3>
-                        <p class="mt-4">One—time charge no more year fee. Save $2.500+ per Year with our built—in theme
-                            features for<span class="hidden lg:inline"><br></span> free. You don't need to buy any
-                            additional Apps.</p>
-                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center bg-[#16141d] border border-[#71619F40] rounded-[20px]">
+                        <div class="w-full mx-auto text-center px-6 py-12 rounded-2xl">
+                            <!-- rounded-[30px] border border-transparent [background:linear-gradient(#0000,#0000)_padding-box,linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB)_border-box] -->
+                            <a href="#"
+                                class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text"
+                                style="background-color:transparent;border:1px solid transparent;border-image:linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB) 1; border-radius: 30px;">
+                                <span
+                                    class="bg-gradient-to-r from-white via-white to-[#6E5BFB] bg-clip-text text-transparent">No
+                                    Store Yet?</span>
+                            </a>
+                            <h3
+                                class="mt-4 text-3xl md:text-[30px] text-white font-semibold leading-tight font-plus-jakarta-sans">
+                                Buy Purity with
+                                <br class="hidden md:block" />
+                                Free Setup and Design Support
+                            </h3>
+                            <p class="mt-4 text-white text-base md:text-lg leading-relaxed">
+                                Buy Purity Theme and get Free design and setup for Home, Collection, and
+                                Product pages with optimized sections.
+                            </p>
+                            <div class="mt-6 md:mt-10">
+                                <a href="#"
+                                    class="inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary/90 border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
+                                    Explore Now <span
+                                        class="inline-block transition-all duration-300 group-hover:rotate-45"><svg
+                                            width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z"
+                                                fill="white" />
+                                        </svg></span>
+                                </a>
+                            </div>
 
-                    <div class="border rounded-2xl">
-                        <div class="relative rounded-2xl shadow-sm lg:p-8 overflow-hidden">
-                            <div class="overflow-x-auto">
-                                <table id="features-table"
-                                    class="w-full min-w-[900px] lg:min-w-0 border border-[#D1D6DD] border-collapse [&>tbody>*:nth-child(odd)]:bg-[#DDE3EB] [&>tbody>*:nth-child(even)]:bg-white rounded-2xl">
-                                    <thead class="text-sm font-medium">
-                                        <tr class="bg-white radius-2xl divide-x divide-[#D1D6DD]">
-                                            <th class="px-6 py-3 text-center border-e-1">Features</th>
-                                            <th class="px-6 py-3 text-center">Apps</th>
-                                            <th class="px-6 py-3 text-center">Purity Theme</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class=" text-center">
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Countdown Timer</td>
-                                            <td class="px-6 py-3 text-center text-slate-500">$85</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Product Compare</td>
-                                            <td class="px-6 py-3 text-center">$60</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Product Filtering</td>
-                                            <td class="px-6 py-3 text-center">$240</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Cart Upsell</td>
-                                            <td class="px-6 py-3 text-center text-slate-500">$300</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Before/After Image</td>
-                                            <td class="px-6 py-3 text-center text-slate-500">$80</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Product Bundle</td>
-                                            <td class="px-6 py-3 text-center text-slate-500">$100</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Sticky Add to Cart</td>
-                                            <td class="px-6 py-3 text-center text-slate-500">$100</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Product Options</td>
-                                            <td class="px-6 py-3 text-center text-slate-500">$190</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Suitable Product Finder</td>
-                                            <td class="px-6 py-3 text-center">🔥 Built-in Exclusive</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Shop by Step</td>
-                                            <td class="px-6 py-3 text-center">🔥 Built-in Exclusive</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD]">
-                                            <td class="px-6 py-3">Featured Product Banner</td>
-                                            <td class="px-6 py-3 text-center">🔥 Built-in Exclusive</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD] feature-extra hidden">
-                                            <td class="px-6 py-3">Countdown Timer</td>
-                                            <td class="px-6 py-3 text-center text-slate-500">$85</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr class="divide-x divide-[#D1D6DD] feature-extra hidden">
-                                            <td class="px-6 py-3">Product Compare</td>
-                                            <td class="px-6 py-3 text-center">$60</td>
-                                            <td
-                                                class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-1">
-                                                <span
-                                                    class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                                                    <svg width="8" height="6" viewBox="0 0 10 7" fill="#FAFAFA"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path
-                                                            d="M9.56158 1.59296L4.68654 6.46786C4.54028 6.61412 4.3483 6.68773 4.15631 6.68773C3.96432 6.68773 3.77234 6.61412 3.62608 6.46786L1.18863 4.03041C0.895294 3.73721 0.895294 3.26315 1.18863 2.96996C1.48183 2.67662 1.95575 2.67662 2.24908 2.96996L4.15631 4.87718L8.50113 0.532501C8.79433 0.239166 9.26825 0.239166 9.56158 0.532501C9.85478 0.825699 9.85478 1.29962 9.56158 1.59296Z"
-                                                            fill="#FAFAFA" />
-                                                    </svg>
-                                                </span>
-                                                Free
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3" class="px-6 py-4 text-center relative">
-                                                <!-- Fade overlay above the button (visible when collapsed) -->
-                                                <div id="features-overlay"
-                                                    class="pointer-events-none absolute left-0 right-0 -top-[55px] h-14 bg-gradient-to-t from-white to-transparent opacity-100 transition-opacity duration-500 shadow-[0_0px_20px_rgba(255,255,255,0.95)]">
-                                                </div>
-                                                <button id="toggle-features" type="button"
-                                                    class="inline-flex items-center gap-1 text-lg font-semibold text-[var(--color-primary)] opacity-100 cursor-pointer focus:outline-none">
-                                                    <span class="toggle-label">View all Features</span>
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr
-                                            class="bg-white border-t divide-x divide-[#D1D6DD] overflow-hidden border-[#D1D6DD]">
-                                            <td class="px-6 py-4 font-semibold text-[22px] text-center">Total</td>
-                                            <td class="px-6 py-4 text-center align-middle font-semibold text-[22px]">
-                                                Over
-                                                $2.500/year<br> <span class="text-base font-medium">(Standalone
-                                                    Cost)</span>
-                                            </td>
-                                            <td class="px-6 py-3 text-center bg-[var(--color-primary)]">
-                                                <a href="#"
-                                                    class="inline-block rounded-lg px-6 py-3 text-center font-semibold text-white text-[22px] hover:opacity-80">$350<br>
-                                                    <span class="text-base font-medium">(One Time Only)</span></a>
-                                            </td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
+                            <div class="mt-10 md:mt-14 relative mx-auto">
+                                <div
+                                    class="relative mx-auto w-full aspect-[16/10] rounded-2xl overflow-hidden max-w-[560px] max-h-[350px] bg-white">
+                                    <!-- <img class="absolute left-0 top-1/2 -translate-y-1/2 w-[32%] rounded-xl" src="" width="560" height="350"
+                                            alt="" /> -->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </section>
 
-    <section class="bg-[var(--color-black)] rounded-t-[30px] -mt-[30px] relative m-0 overflow-hidden">
-        <div class="lg:max-w-[1350px] mx-auto px-5 md:px-1 py-20 md:py-25 bg-dark">
-            <div class="text-center mx-auto">
-                <h2
-                    class="text-3xl md:text-4xl lg:text-[45px]  font-plus-jakarta-sans font-semibold leading-tight tracking-tight bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#6E5BFB] bg-clip-text text-transparent">
-                    Special Offers
-                    <br class="hidden md:block" />
-                    from Our Trusted App Partners
-                </h2>
-                <p class="mt-4 text-sm md:text-base leading-relaxed text-white">
-                    We have optimized the layout and structure to ensure easy navigation and quick access <br
-                        class="hidden md:block">
-                    to the information customer seeking.
-                </p>
-            </div>
-
-            <div class="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-                <!-- Card 1 -->
-                <div
-                    class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
-                    <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
-                    <div class="text-center pb-6">
-                        <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">Color Swatch King: Variants</p>
-                        <p>Displays multiple product variants, auto-hides out-of-stock options, and fully customizes the
-                            variant selector for better usability.</p>
-                    </div>
-                    <div
-                        class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed font-semibold bg-[#212028]">
-                        20% Off All Plans for Purity Users
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div
-                    class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
-                    <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
-                    <div class="text-center pb-6">
-                        <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">SA Variants: Combined Listings
-                        </p>
-                        <p>Displays product variants as intuitive color swatches, further enhancing navigation, on‑page
-                            SEO, and comparison with images.</p>
-                    </div>
-                    <div
-                        class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed font-semibold bg-[#212028]">
-                        20% Off All Plans for Purity Users
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div
-                    class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
-                    <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
-                    <div class="text-center pb-6">
-                        <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">Easy Display: Product Showcase
-                        </p>
-                        <p>Recommends upsell products, with countdown timer, clickable hotspots, image slider, video on
-                            hover, and grid tabs.</p>
-                    </div>
-                    <div
-                        class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed font-semibold bg-[#212028]">
-                        20% Off All Plans for Purity Users
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div
-                    class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
-                    <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
-                    <div class="text-center pb-6">
-                        <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">SA Variant Image Automator</p>
-                        <p>Organizes product images in the admin and automatically assigns new images to the correct
-                            variant options.</p>
-                    </div>
-                    <div
-                        class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed font-semibold bg-[#212028]">
-                        20% Off All Plans for Purity Users
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div
-                    class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
-                    <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
-                    <div class="text-center pb-6">
-                        <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">UpPromote Affiliate Marketing
-                        </p>
-                        <p>Enables customer referrals and creation of unique affiliate programs with customizable forms,
-                            links, and codes.</p>
-                    </div>
-                    <div
-                        class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed font-semibold bg-[#212028]">
-                        20% Off All Plans for Purity Users
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div
-                    class="rounded-2xl shadow-sm p-8 min-h-[220px] flex items-center justify-center flex-col bg-[#110f19] text-white">
-                    <img src="img/Vector.svg" alt="Partner Logo" class="size-[90px] rounded-4xl bg-white mb-6" />
-                    <div class="text-center pb-6">
-                        <p class="text-[22px] font-semibold pb-4 font-plus-jakarta-sans">BON Loyalty Program & Rewards
-                        </p>
-                        <p>Loyalty points at checkout, multi-language and payment method support, bonus points on
-                            special occasions.</p>
-                    </div>
-                    <div
-                        class="flex items-center py-4 text-sm md:text-base w-full justify-center rounded-full border border-dashed font-semibold bg-[#212028]">
-                        20% Off All Plans for Purity Users
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-10 md:mt-12.5 text-center">
-                <a href="#"
-                    class="inline-flex group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold font-plus-jakarta-sans tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary/90 border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
-                    Get the Deals Now<span class="inline-block transition-all duration-300 group-hover:rotate-45"><svg
-                            width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z"
-                                fill="white" />
-                        </svg></span>
-                </a>
-            </div>
-
-            <div
-                class="absolute flex items-center bottom-0 w-full max-w-[1350px] h-[1px] bg-gradient-to-r from-transparent via-[#D1D6DD] to-transparent">
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-[var(--color-black)] rounded-t-[30px] -mt-[30px]">
-        <div class="xl:max-w-[1350px] mx-auto px-5 md:px-1 py-20 md:py-25 bg-dark">
+    <section class="bg-[#F1F3F7]" data-cues="slideInUp" data-duration="600">
+        <div class="lg:max-w-[1350px] mx-auto px-5 md:px-1 py-16 md:py-20 overflow-hidden">
             <div class="text-center max-w-3xl mx-auto">
                 <h2
-                    class="text-3xl md:text-4xl lg:text-[45px]  font-plus-jakarta-sans font-semibold leading-tight tracking-tight bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#6E5BFB] bg-clip-text text-transparent">
-                    Get Purity Theme <br class="hidden md:block">
-                    Take Your Store to the Next Level
-                </h2>
-                <p class="mt-4 text-sm md:text-base leading-relaxed text-white">
-                    Get free theme setup and design consulting with Purity. Whether starting fresh or upgrading,<br
-                        class="hidden md:block "> we’ll help migrate and elevate your store with expert support.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto gap-6 mt-12.5">
-                <div class="flex flex-col items-center justify-center bg-[#16141d] border border-[#71619F40] rounded-[20px]">
-                    <div class="w-full mx-auto text-center px-6 py-12 rounded-2xl">
-                        <!-- rounded-[30px] border border-transparent [background:linear-gradient(#0000,#0000)_padding-box,linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB)_border-box] -->
-                        <a href="#"
-                            class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text"
-                            style="background-color:transparent;border:1px solid transparent;border-image:linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB) 1; border-radius: 30px;">
-                            <span
-                                class="bg-gradient-to-r from-white via-white to-[#6E5BFB] bg-clip-text text-transparent">No
-                                Store Yet?</span>
-                        </a>
-                        <h3
-                            class="mt-4 text-3xl md:text-[30px] text-white font-semibold leading-tight font-plus-jakarta-sans">
-                            Buy Purity with
-                            <br class="hidden md:block" />
-                            Free Setup and Design Support
-                        </h3>
-                        <p class="mt-4 text-white text-base md:text-lg leading-relaxed">
-                            Buy Purity Theme and get Free design and setup for Home, Collection, and
-                            Product pages with optimized sections.
-                        </p>
-                        <div class="mt-6 md:mt-10">
-                            <a href="#"
-                                class="inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary/90 border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
-                                Contact Us <span
-                                    class="inline-block transition-all duration-300 group-hover:rotate-45"><svg
-                                        width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z"
-                                            fill="white" />
-                                    </svg></span>
-                            </a>
-                        </div>
-
-                        <div class="mt-10 md:mt-14 relative mx-auto">
-                            <div class="relative mx-auto w-full aspect-[16/10] rounded-2xl overflow-hidden max-w-[560xp] max-h-[350px] bg-white">
-                                <!-- <img class="absolute left-0 top-1/2 -translate-y-1/2 w-[32%] rounded-xl" src="" width="560" height="350"
-                                    alt="" /> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-center justify-center bg-[#16141d] border border-[#71619F40] rounded-[20px]">
-                    <div class="w-full mx-auto text-center px-6 py-12 rounded-2xl">
-                        <!-- rounded-[30px] border border-transparent [background:linear-gradient(#0000,#0000)_padding-box,linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB)_border-box] -->
-                        <a href="#"
-                            class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text"
-                            style="background-color:transparent;border:1px solid transparent;border-image:linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB) 1; border-radius: 30px;">
-                            <span
-                                class="bg-gradient-to-r from-white via-white to-[#6E5BFB] bg-clip-text text-transparent">No
-                                Store Yet?</span>
-                        </a>
-                        <h3
-                            class="mt-4 text-3xl md:text-[30px] text-white font-semibold leading-tight font-plus-jakarta-sans">
-                            Buy Purity with
-                            <br class="hidden md:block" />
-                            Free Setup and Design Support
-                        </h3>
-                        <p class="mt-4 text-white text-base md:text-lg leading-relaxed">
-                            Buy Purity Theme and get Free design and setup for Home, Collection, and
-                            Product pages with optimized sections.
-                        </p>
-                        <div class="mt-6 md:mt-10">
-                            <a href="#"
-                                class="inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary/90 border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
-                                Explore Now <span
-                                    class="inline-block transition-all duration-300 group-hover:rotate-45"><svg
-                                        width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M1.42383 2.34766C1.16602 2.34766 0.94401 2.26172 0.757812 2.08984C0.585938 1.90365 0.5 1.68164 0.5 1.42383C0.5 1.16602 0.585938 0.951172 0.757812 0.779297C0.94401 0.593099 1.16602 0.5 1.42383 0.5H10.5762C10.6478 0.5 10.7122 0.507161 10.7695 0.521484C10.8268 0.535807 10.8841 0.557292 10.9414 0.585938C10.9987 0.60026 11.0488 0.628906 11.0918 0.671875C11.1491 0.700521 11.1921 0.736328 11.2207 0.779297C11.235 0.779297 11.2422 0.779297 11.2422 0.779297C11.2852 0.822266 11.321 0.872396 11.3496 0.929688C11.3783 0.972656 11.4069 1.02279 11.4355 1.08008C11.4499 1.12305 11.4642 1.18034 11.4785 1.25195C11.4928 1.30924 11.5 1.36654 11.5 1.42383V10.5977C11.5 10.8411 11.4069 11.056 11.2207 11.2422C11.0488 11.4141 10.834 11.5 10.5762 11.5C10.3327 11.5 10.1178 11.4141 9.93164 11.2422C9.75977 11.056 9.67383 10.8411 9.67383 10.5977V3.63672L2.06836 11.2422C1.88216 11.4141 1.66016 11.5 1.40234 11.5C1.15885 11.5 0.951172 11.4141 0.779297 11.2422C0.593099 11.056 0.5 10.8411 0.5 10.5977C0.5 10.3398 0.593099 10.125 0.779297 9.95312L8.36328 2.34766H1.42383Z"
-                                            fill="white" />
-                                    </svg></span>
-                            </a>
-                        </div>
-
-                        <div class="mt-10 md:mt-14 relative mx-auto">
-                            <div class="relative mx-auto w-full aspect-[16/10] rounded-2xl overflow-hidden max-w-[560px] max-h-[350px] bg-white">
-                                <!-- <img class="absolute left-0 top-1/2 -translate-y-1/2 w-[32%] rounded-xl" src="" width="560" height="350"
-                                    alt="" /> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                
-        </div>
-    </section>
-
-    <section>
-        <div class="xl:max-w-[1350px] mx-auto px-5 md:px-1 py-16 md:py-20">
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-3xl md:text-4xl lg:text-[45px] font-plus-jakarta-sans font-semibold leading-tight tracking-tight">
+                    class="text-3xl md:text-4xl lg:text-[45px] font-plus-jakarta-sans font-semibold leading-tight tracking-tight">
                     Helpful Support
                     <br class="hidden md:block" />
                     Whenever You Need It
@@ -635,13 +676,16 @@
                     <div class="flex items-start gap-3 md:gap-4">
                         <span class="inline-flex items-center justify-center size-10 rounded-md border">
                             <!-- Folder icon -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z" stroke="currentColor" stroke-width="1.5"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"
+                                    stroke="currentColor" stroke-width="1.5" />
                             </svg>
                         </span>
                         <div>
                             <h3 class="text-lg md:text-xl font-semibold">Detailed Documentation</h3>
-                            <p class="mt-2">Comprehensive guide documentation to help you unlock the theme’s full potential.</p>
+                            <p class="mt-2">Comprehensive guide documentation to help you unlock the theme’s full
+                                potential.</p>
                             <a href="#" class="mt-4 inline-block font-semibold underline">Online Documentation</a>
                         </div>
                     </div>
@@ -651,9 +695,11 @@
                     <div class="flex items-start gap-3 md:gap-4">
                         <span class="inline-flex items-center justify-center size-10 rounded-md border">
                             <!-- Mouse icon -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="7" y="3" width="10" height="18" rx="5" stroke="currentColor" stroke-width="1.5"/>
-                                <line x1="12" y1="7" x2="12" y2="11" stroke="currentColor" stroke-width="1.5"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="7" y="3" width="10" height="18" rx="5" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <line x1="12" y1="7" x2="12" y2="11" stroke="currentColor" stroke-width="1.5" />
                             </svg>
                         </span>
                         <div>
@@ -668,8 +714,10 @@
                     <div class="flex items-start gap-3 md:gap-4">
                         <span class="inline-flex items-center justify-center size-10 rounded-md border">
                             <!-- Chat icon -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 12a7 7 0 0 1-7 7H8l-5 3 1.5-4.5A7 7 0 1 1 21 12Z" stroke="currentColor" stroke-width="1.5"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 12a7 7 0 0 1-7 7H8l-5 3 1.5-4.5A7 7 0 1 1 21 12Z" stroke="currentColor"
+                                    stroke-width="1.5" />
                             </svg>
                         </span>
                         <div>
@@ -684,8 +732,12 @@
                     <div class="flex items-start gap-3 md:gap-4">
                         <span class="inline-flex items-center justify-center size-10 rounded-md border">
                             <!-- Rocket icon -->
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14 10l-4 4M12 3c4.418 0 8 3.582 8 8 0 2.857-1.5 5.5-4 7l-2-2-3 1-1 3c-3-1-5-3-6-6l3-1 1-3-2-2c1.5-2.5 4.143-4 7-4Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10l-4 4M12 3c4.418 0 8 3.582 8 8 0 2.857-1.5 5.5-4 7l-2-2-3 1-1 3c-3-1-5-3-6-6l3-1 1-3-2-2c1.5-2.5 4.143-4 7-4Z"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </span>
                         <div>
@@ -698,18 +750,310 @@
             </div>
 
             <div class="mt-8 md:mt-10 flex justify-center">
-                <button type="button" class="sweep-wrap inline-flex items-center justify-center rounded-full px-6 py-3 md:px-8 md:py-3.5 border font-semibold">
+                <button type="button"
+                    class="sweep-wrap inline-flex items-center justify-center rounded-full px-6 py-3 md:px-8 md:py-3.5 border font-semibold">
+                    <span
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full w-full h-px bg-[#D1D6DD]"></span>
+                    <span
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-full h-px bg-[#D1D6DD]"></span>
+                    <span
+                        class="absolute hidden lg:flex top-0 left-1/2 -translate-x-1/2 -translate-y-full h-full w-px bg-[#D1D6DD]"></span>
                     <!-- Left sweeping lines -->
-                    <span class="line left delay-1"></span>
+                    <span class="lg:min-w-[150px] w-full line left delay-1"></span>
                     <!-- Right sweeping lines -->
-                    <span class="line right delay-1"></span>
-                     <!-- Upward sweeping line -->
-                     <span class="line up delay-1"></span>
+                    <span class="lg:min-w-[150px]  line right delay-1"></span>
+                    <!-- Upward sweeping line -->
+                    <span class="hidden lg:flex line up delay-1"></span>
                     Center Support
                 </button>
             </div>
+
         </div>
     </section>
+
+    <section class="w-full bg-[#F1F3F7] rounded-t-3xl" data-cues="slideInUp" data-duration="600">
+        <div class="container">
+            <div class="lg:max-w-[1350px] mx-auto md:p-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-25">
+                    <!-- Left content -->
+                    <div class="mb-10">
+                        <div class="mb-12.5">
+                            <h2 class="font-semibold text-[45px] mb-4">Help Center</h2>
+                            <p>We answer frequently asked questions about Purity, helping customers easily understand
+                                its
+                                features, customization options, and support.</p>
+                        </div>
+                        <div class="flex mb-4">
+                            <img class="size-12.5 rounded-full overflow-hidden" src="./img/help-center-1.png"
+                                alt="help-center">
+                            <img class="-ms-[6px] size-12.5 rounded-full overflow-hidden" src="./img/help-center-2.png"
+                                alt="help-center">
+                            <img class="-ms-[6px] size-12.5 rounded-full overflow-hidden" src="./img/help-center-3.png"
+                                alt="help-center">
+                            <div class="-ms-[6px] relative">
+                                <img class="size-12.5 rounded-full overflow-hidden" src="./img/help-center-4.png"
+                                    alt="help-center">
+                                <span
+                                    class="border-2 border-white absolute size-4 bg-[#22B76E] rounded-full top-0 -right-2"></span>
+                            </div>
+                        </div>
+                        <p class="mb-10">Customer support team from: 8am to 7:30pm daily.<br>Average answer time: 8
+                            hours.</p>
+                        <div class="flex flex-col w-full md:flex-row gap-4">
+                            <a href="#"
+                                class="inline-flex group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-7.5 lg:min-w-[160px] font-medium tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary/90 border-primary/90 disabled:opacity-50 disabled:pointer-events-none">
+                                View Demo <span
+                                    class="inline-block transition-all duration-300 group-hover:rotate-45"><img
+                                        src="./img/icon.svg" alt="icon-link"></span>
+                            </a>
+                            <a href="#"
+                                class="inline-flex group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[160px] font-medium tracking-tighter text-primary transition-all duration-300 rounded-full border gap-x-2 bg-white border-primary/90 disabled:opacity-50 disabled:pointer-events-none">
+                                More Faqs <span
+                                    class="inline-block transition-all duration-300 group-hover:rotate-45"><img
+                                        src="./img/icon-purple.svg" alt="icon-link"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right content -->
+                    <div class="space-y-4">
+                        <!-- FAQ item 1 -->
+                        <details
+                            class="faq-item bg-white rounded-[20px] shadow-sm overflow-hidden border border-[#D1D6DD]">
+                            <summary
+                                class="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer select-none">
+                                <span class="text-base md:text-lg font-medium">What's included in Purity theme?</span>
+                                <span class="faq-icon text-black/80"><span class="line horiz"></span><span
+                                        class="line vert"></span></span>
+                            </summary>
+                            <div class="px-5 md:px-6 pb-5 md:pb-6">
+                                <p class="text-sm md:text-base text-black/70">Free theme setup, design consulting, and
+                                    migration support. Multiple exclusive presets with regularly released demos. 30+
+                                    built-in features to boost engagement and conversions. Pixel-perfect,
+                                    mobile-optimized design with dynamic layouts. Free, stable updates to ensure Shopify
+                                    compatibility. Fast expert support via multiple channels.</p>
+                            </div>
+                        </details>
+                        <!-- FAQ item 2 -->
+                        <details
+                            class="faq-item bg-white rounded-[20px] shadow-sm overflow-hidden border border-[#D1D6DD]">
+                            <summary
+                                class="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer select-none">
+                                <span class="text-base md:text-lg font-medium">Which stores suit the Purity
+                                    theme?</span>
+                                <span class="faq-icon text-black/80"><span class="line horiz"></span><span
+                                        class="line vert"></span></span>
+                            </summary>
+                            <div class="px-5 md:px-6 pb-5 md:pb-6">
+                                <p class="text-sm md:text-base text-black/70">Purity theme suits stores of all sizes
+                                    across niches like cosmetics, clothing and more. It features pixel-perfect,
+                                    mobile-optimized design with smooth interactions and dynamic layouts.
+                                    <br> <br>
+                                    With 30+ powerful built-in features, Purity reduces the need for extra apps -
+                                    helping you save money while keeping your store fast and efficient on all devices.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- FAQ item 3 -->
+                        <details
+                            class="faq-item bg-white rounded-[20px] shadow-sm overflow-hidden border border-[#D1D6DD]">
+                            <summary
+                                class="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer select-none">
+                                <span class="text-base md:text-lg font-medium">Can I customize Purity theme without
+                                    coding?</span>
+                                <span class="faq-icon text-black/80"><span class="line horiz"></span><span
+                                        class="line vert"></span></span>
+                            </summary>
+                            <div class="px-5 md:px-6 pb-5 md:pb-6">
+                                <p class="text-sm md:text-base text-black/70">Absolutely! Purity offers clean and
+                                    concise code and user-friendly admin settings designed for easy customization - no
+                                    coding skills required..
+                                    <br> <br>
+                                    Before making major changes, we recommend creating a backup of your store files and
+                                    testing your modifications in a development environment to ensure everything runs
+                                    smoothly.
+                                </p>
+                            </div>
+                        </details>
+
+                        <!-- FAQ item 4 -->
+                        <details
+                            class="faq-item bg-white rounded-[20px] shadow-sm overflow-hidden border border-[#D1D6DD]">
+                            <summary
+                                class="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer select-none">
+                                <span class="text-base md:text-lg font-medium">Any additional fees for Purity
+                                    theme?</span>
+                                <span class="faq-icon text-black/80"><span class="line horiz"></span><span
+                                        class="line vert"></span></span>
+                            </summary>
+                            <div class="px-5 md:px-6 pb-5 md:pb-6">
+                                <p class="text-sm md:text-base text-black/70">No, there are no additional fees for using
+                                    the Purity theme. The price you pay covers all the features and updates, ensuring
+                                    you get the full benefits without any hidden costs.</p>
+                            </div>
+                        </details>
+
+                        <!-- FAQ item 5 -->
+                        <details
+                            class="faq-item bg-white rounded-[20px] shadow-sm overflow-hidden border border-[#D1D6DD]">
+                            <summary
+                                class="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer select-none">
+                                <span class="text-base md:text-lg font-medium">Is after-sale support available for the
+                                    Purity theme <br class="hidden lg:block"> and how can I get assistance?</span>
+                                <span class="faq-icon text-black/80"><span class="line horiz"></span><span
+                                        class="line vert"></span></span>
+                            </summary>
+                            <div class="px-5 md:px-6 pb-5 md:pb-6">
+                                <p class="text-sm md:text-base text-black/70">
+                                    Yes! All Purity theme buyers receive lifetime support. Our expert support typically
+                                    replies within 8 hours and is available even on weekends.
+
+                                    For fast and efficient assistance, you can reach us via:
+                                <ul class="list-disc list-inside">
+                                    <li>
+                                        Support Ticket System
+                                    </li>
+                                    <li>
+                                        WhatsApp
+                                    </li>
+                                    <li>
+                                        Booking options for direct help
+                                    </li>
+                                </ul>
+                                Or contact us by email at info@nextsky.co.
+                                Please refer to our Customer Support for full details.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full bg-[#F1F3F7] lg:pt-25 pt-10" data-cues="slideInUp" data-duration="600">
+        <div class="container">
+            <div class="lg:max-w-[1350px] mx-auto md:p-1">
+                <div class="grid grid-cols-1 lg:grid-flow-col lg:grid-rows-2 lg:grid-cols-2 gap-6">
+                    <div class="bg-primary rounded-[30px] lg:row-span-2">
+                        <div class="text-center my-12.5">
+                            <h2 class="text-white text-[45px] font-semibold">Get in Touch</h2>
+                            <p class="text-white px-2">Have questions or special requests? Submit the form for free
+                                setup,
+                                partner discounts and
+                                expert help.</p>
+                        </div>
+
+                        <form action="./assets/contact.php" method="POST" class="mx-auto px-8 pb-8">
+                            <div class="flex flex-col lg:flex-row gap-4 items-center justify-center w-full mb-4">
+                                <input type="text" name="name" id="name"
+                                    class="w-full text-white border border-[#E5E8EC] rounded-[30px] placeholder:text-white bg-primary p-4"
+                                    placeholder="Your name *">
+                                <input type="email" name="email" id="email"
+                                    class="w-full text-white border border-[#E5E8EC] rounded-[30px] placeholder:text-white bg-primary p-4"
+                                    placeholder="Your email *">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="store_url" aria-label="store url"></label>
+                                <input type="url" name="store_url" id="store_url"
+                                    class="border text-white border-[#E5E8EC] rounded-[30px] p-4 w-full placeholder:text-white bg-primary"
+                                    placeholder="Store url">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="notes" aria-label="additional notes"></label>
+                                <textarea name="notes" rows="4" id="notes"
+                                    class="border text-white border-[#E5E8EC] rounded-[30px] p-4 w-full resize-none placeholder:text-white bg-primary"
+                                    placeholder="Additional notes or requests?"></textarea>
+                            </div>
+
+                            <div class="flex items-center gap-3 mb-6">
+                                <input type="checkbox" id="agreement" name="agreement" id="agreement"
+                                    class="size-4 text-primary bg-primary border border-white rounded focus:border-white">
+                                <label for="agreement" class="text-sm text-white">
+                                    I agree that my submitted data is being collected and stored.
+                                </label>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full cursor-pointer inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4 lg:min-w-[220px] font-semibold tracking-tighter text-primary transition-all duration-300 rounded-full border gap-x-2 bg-white border-white disabled:opacity-50 disabled:pointer-events-none">
+                                Submit <span class="inline-block transition-all duration-300 group-hover:rotate-45">
+                                    <img src="./img/icon-purple.svg" alt="">
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="bg-black lg:col-span-2 rounded-[20px] overflow-hidden">
+                        <div class="relative w-full aspect-[16/9] h-full">
+                            <img src="./img/exclusive.png" alt="" class="absolute inset-0 w-full h-full object-cover"
+                                width="700" height="320">
+                            <span
+                                class="absolute pointer-events-none inset-0
+                                bg-[radial-gradient(circle_at_0%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
+                            <div class="absolute top-10 left-10">
+                                <a href="#"
+                                    class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4"
+                                    style="background-color:transparent;border:1px solid transparent;border-image:linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB) 1; border-radius: 30px;">
+                                    <span
+                                        class="bg-gradient-to-r from-white via-white to-[#6E5BFB] bg-clip-text text-transparent">Trusted
+                                        App Partners</span>
+                                </a>
+                                <h2 class="text-2xl lg:text-3xl font-semibold mb-8 lg:mb-16 text-white">
+                                    Exclusive Deals<br>
+                                    from Our Partners
+                                </h2>
+                                <a href="#"
+                                    class="inline-flex group w-full justify-center font-plus-jakarta-sans items-center px-2 py-3 lg:py-4 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary border-primary disabled:opacity-50 disabled:pointer-events-none">
+                                    See Details <span
+                                        class="inline-block transition-all duration-300 group-hover:rotate-45">
+                                        <img src="./img/icon.svg" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-black lg:col-span-2 rounded-[20px] overflow-hidden">
+                        <div class="relative w-full aspect-[16/9] h-full">
+                            <img src="./img/free-setup.png" alt="" class="absolute inset-0 w-full h-full object-cover"
+                                width="700" height="320">
+                            <span
+                                class="absolute pointer-events-none inset-0
+                                bg-[radial-gradient(circle_at_0%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
+                            <div class="absolute top-10 left-10">
+                                <a href="#"
+                                    class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4"
+                                    style="background-color:transparent;border:1px solid transparent;border-image:linear-gradient(90deg,#FFFFFF,#FFFFFF,#6E5BFB) 1; border-radius: 30px;">
+                                    <span
+                                        class="bg-gradient-to-r from-white via-white to-[#6E5BFB] bg-clip-text text-transparent">No
+                                        Store Yet?</span>
+                                </a>
+                                <h2 class="text-2xl lg:text-3xl font-semibold mb-8 lg:mb-16 text-white">
+                                    Free Setup<br>
+                                    and Design Support
+                                </h2>
+                                <a href="#"
+                                    class="inline-flex group w-full justify-center font-plus-jakarta-sans items-center px-4 py-3 lg:py-4 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border gap-x-2 bg-primary border-primary disabled:opacity-50 disabled:pointer-events-none">
+                                    See Details <span
+                                        class="inline-block transition-all duration-300 group-hover:rotate-45">
+                                        <img src="./img/icon.svg" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="bar"></div>
+
+    </section>
+
 
     <script src="js/plugins.js"></script>
     <script src="js/theme.js"></script>
@@ -723,45 +1067,217 @@
         });
 
         (function () {
-            const table = document.getElementById('features-table');
-            if (!table) return;
-            const toggleBtn = document.getElementById('toggle-features');
-            if (!toggleBtn) return;
-            const label = toggleBtn.querySelector('.toggle-label');
-            const overlay = document.getElementById('features-overlay');
-            const extras = table.querySelectorAll('tbody tr.feature-extra');
+            // Contact form handling (guarded and resilient)
+            const form = document.querySelector("form[action$='assets/php/contact.php']") || document.querySelector('form');
+            const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+            const msg = (function () {
+                const el = document.getElementById('msg');
+                if (el) return el;
+                if (!form) return null;
+                const d = document.createElement('div');
+                d.id = 'msg';
+                d.style.marginTop = '12px';
+                d.style.color = 'white';
+                form.appendChild(d);
+                return d;
+            })();
 
-            let expanded = false;
-
-            function setState(isOpen) {
-                // Smooth transition using max-height and opacity
-                extras.forEach(function (row) {
-                    if (isOpen) {
-                        row.classList.remove('hidden');
-                        row.style.maxHeight = row.scrollHeight + 'px';
-                        row.style.opacity = '1';
-                    } else {
-                        row.style.maxHeight = '0px';
-                        row.style.opacity = '0';
-                        // after animation ends, hide from flow
-                        setTimeout(function () { row.classList.add('hidden'); }, 200);
-                    }
-                    row.style.transition = 'max-height 200ms ease, opacity 200ms ease';
-                });
-                if (label) label.textContent = isOpen ? 'Hide Features' : 'View all Features';
-                if (overlay) overlay.style.opacity = isOpen ? '0' : '1';
-                expanded = isOpen;
+            function setMsg(type, text) {
+                if (!msg) return;
+                msg.className = type === 'success' ? 'success' : type === 'loading' ? 'loading' : 'error';
+                msg.textContent = text || '';
             }
 
-            toggleBtn.addEventListener('click', function () {
-                setState(!expanded);
-            });
-            // Initialize collapsed styles for smoothness
-            extras.forEach(function (row) {
-                row.style.overflow = 'hidden';
-                row.style.maxHeight = '0px';
-                row.style.opacity = '0';
-            });
+            if (form) {
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    // Require agreement checkbox to be checked before submit
+                    const agree = form.querySelector('#agreement');
+                    if (agree && !agree.checked) {
+                        setMsg('error', 'Please check the agreement checkbox before submitting.');
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('opacity-50', 'pointer-events-none');
+                        }
+                        agree.focus();
+                        return;
+                    }
+                    setMsg('loading', 'Sending...');
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.classList.add('opacity-50', 'pointer-events-none');
+                    }
+                    const action = form.getAttribute('action') || 'assets/php/contact.php';
+                    const data = new FormData(form);
+                    try {
+                        const res = await fetch(action, {
+                            method: 'POST',
+                            body: data,
+                            headers: { 'X-Requested-With': 'fetch' }
+                        });
+                        const contentType = res.headers.get('content-type') || '';
+                        const isJson = contentType.includes('application/json');
+                        if (!res.ok) {
+                            const err = isJson ? await res.json().catch(() => ({})) : {};
+                            setMsg('error', err.message);
+                        } else {
+                            const json = isJson ? await res.json().catch(() => ({ ok: true })) : { ok: true };
+                            if (json.ok !== false) {
+                                setMsg();
+                                form.reset();
+                            } else {
+                                setMsg('error', json.message || 'Something went wrong.');
+                            }
+                        }
+                    } catch {
+                        setMsg('error', 'Network error. Please try again.');
+                    } finally {
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('opacity-50', 'pointer-events-none');
+                        }
+                    }
+                });
+            }
+
+            // Features table toggle (only if elements exist)
+            const table = document.getElementById('features-table');
+            const toggleBtn = document.getElementById('toggle-features');
+            if (table && toggleBtn) {
+                const label = toggleBtn.querySelector('.toggle-label');
+                const overlay = document.getElementById('features-overlay');
+                const extras = Array.from(table.querySelectorAll('tbody tr.feature-extra'));
+
+                let expanded = false;
+                function setState(isOpen) {
+                    expanded = isOpen;
+                    extras.forEach(function (row) {
+                        if (isOpen) {
+                            row.classList.remove('hidden');
+                            row.style.maxHeight = row.scrollHeight + 'px';
+                            row.style.opacity = '1';
+                        } else {
+                            row.style.maxHeight = '0px';
+                            row.style.opacity = '0';
+                            setTimeout(function () { row.classList.add('hidden'); }, 200);
+                        }
+                        row.style.transition = 'max-height 200ms ease, opacity 200ms ease';
+                    });
+                    if (label) label.textContent = isOpen ? 'Hide Features' : 'View all Features';
+                    if (overlay) overlay.style.opacity = isOpen ? '0' : '1';
+                }
+
+                // Initialize collapsed styles for smoothness
+                extras.forEach(function (row) {
+                    row.style.overflow = 'hidden';
+                    row.style.maxHeight = '0px';
+                    row.style.opacity = '0';
+                    row.classList.add('hidden');
+                });
+
+                toggleBtn.addEventListener('click', function () {
+                    setState(!expanded);
+                });
+            }
+
+            // FAQ accordion: slide down, first open by default, only one open
+            (function () {
+                const faqItems = Array.from(document.querySelectorAll('.faq-item'));
+                if (!faqItems.length) return;
+
+                function getContent(detailsEl) {
+                    // content is the immediate div after summary
+                    const summary = detailsEl.querySelector('summary');
+                    if (!summary) return null;
+                    let node = summary.nextElementSibling;
+                    while (node && node.tagName === 'SCRIPT') node = node.nextElementSibling;
+                    return node;
+                }
+
+                function setCollapsibleStyles(content) {
+                    content.style.overflow = 'hidden';
+                    content.style.transition = 'max-height 260ms ease-in-out';
+                    content.style.willChange = 'max-height';
+                }
+
+                function openItem(detailsEl) {
+                    const content = getContent(detailsEl);
+                    if (!content) return;
+                    setCollapsibleStyles(content);
+                    detailsEl.open = true;
+                    // Start collapsed
+                    content.style.maxHeight = '0px';
+                    // Double reflow to ensure transition starts
+                    void content.offsetHeight;
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.addEventListener('transitionend', function onOpenEnd(e) {
+                        if (e.propertyName !== 'max-height') return;
+                        content.removeEventListener('transitionend', onOpenEnd);
+                        // Allow natural height after opening for layout stability
+                        content.style.maxHeight = 'none';
+                    }, { once: true });
+                }
+
+                function closeItem(detailsEl) {
+                    const content = getContent(detailsEl);
+                    if (!content) return;
+                    setCollapsibleStyles(content);
+                    // If previously set to 'none', set a fixed height first
+                    if (content.style.maxHeight === '' || content.style.maxHeight === 'none') {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        void content.offsetHeight;
+                    } else {
+                        // Ensure it's at its current measured height
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        void content.offsetHeight;
+                    }
+                    content.style.maxHeight = '0px';
+                    // Only set open=false after transition ends so it doesn't jump to display:none
+                    content.addEventListener('transitionend', function onEnd(e) {
+                        if (e.propertyName !== 'max-height') return;
+                        content.removeEventListener('transitionend', onEnd);
+                        detailsEl.open = false;
+                    }, { once: true });
+                }
+
+                function closeOthers(except) {
+                    faqItems.forEach(function (item) {
+                        if (item !== except && item.open) closeItem(item);
+                    });
+                }
+
+                // Initialize: collapse all, then open first by default
+                faqItems.forEach(function (item, idx) {
+                    const content = getContent(item);
+                    if (!content) return;
+                    setCollapsibleStyles(content);
+                    if (idx === 0) {
+                        // Start opened and set max-height to content height
+                        item.open = true;
+                        content.style.maxHeight = 'none';
+                    } else {
+                        item.open = false;
+                        content.style.maxHeight = '0px';
+                    }
+                });
+
+                // Replace native toggle with manual control for consistent animations
+                faqItems.forEach(function (item) {
+                    const summary = item.querySelector('summary');
+                    if (!summary) return;
+                    summary.addEventListener('click', function (ev) {
+                        ev.preventDefault();
+                        if (item.open) {
+                            // Close current
+                            closeItem(item);
+                        } else {
+                            // Open clicked and close others
+                            closeOthers(item);
+                            openItem(item);
+                        }
+                    });
+                });
+            })();
         })();
     </script>
 </body>
