@@ -31,11 +31,11 @@
 }
 
 .up {
-  transform: translateY(-30px);
+  transform: translateY(0px);
 }
 
 .down {
-  transform: translateY(30px);
+  transform: translateY(40px);
 }
 
 .scrolling:hover > div{
