@@ -3379,3 +3379,92 @@ textarea.form-control-lg {
 .down {
   transform: translateY(30px);
 }
+
+/* animation for landing page */
+@keyframes sweepLeft {
+  0% {
+    transform: translate(0, -50%);
+    opacity: .9;
+  }
+
+  70% {
+    opacity: .15;
+  }
+
+  100% {
+    transform: translate(-140px, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes sweepRight {
+  0% {
+    transform: translate(0, -50%);
+    opacity: .9;
+  }
+
+  70% {
+    opacity: .15;
+  }
+
+  100% {
+    transform: translate(140px, -50%);
+    opacity: 0;
+  }
+}
+
+@keyframes sweepUp {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: .9;
+  }
+
+  70% {
+    opacity: .15;
+  }
+
+  100% {
+    transform: translate(-50%, -140px);
+    opacity: 0;
+  }
+}
+
+.sweep-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.sweep-wrap .line {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 150px;
+  pointer-events: none;
+}
+
+.sweep-wrap .line.left {
+  left: -50%;
+  background: linear-gradient(90deg, #5B7BFB, #5B7BFB00);
+  animation: sweepLeft 2.2s ease-out infinite;
+}
+
+.sweep-wrap .line.right {
+  right: -50%;
+  background: linear-gradient(270deg, #5B7BFB, #5B7BFB00);
+  animation: sweepRight 2.2s ease-out infinite;
+}
+
+.sweep-wrap .line.up {
+  left: 50%;
+  top: auto;
+  bottom: 50%;
+  width: 1px;
+  height: 150px;
+  background: linear-gradient(0deg, #5B7BFB, #5B7BFB00);
+  animation: sweepUp 2.2s ease-out infinite;
+  transform: translate(-50%, 0);
+}
+
+.sweep-wrap .line.delay-1 {
+  animation-delay: 0s;
+}
