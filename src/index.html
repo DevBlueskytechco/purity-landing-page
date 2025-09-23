@@ -33,8 +33,42 @@
 </head>
 
 <body class="min-h-screen overflow-x-hidden">
-   
-    <section class="bg-black bg-[url(img/bg-header.jpg)] pb-15 2xl:pt-42 xl:pt-30 pt-20 bg-cover bg-center bg-no-repeat 2xl:min-h-screen">
+    <!-- Header -->
+    <header class="top-0 z-10 w-full  start-0 shadow  fixed  lg:not-[.show]:pt-7.5  will-change-auto bg-transparent  transition-all duration-300" id="header">
+      <div class="px-4 py-2 mx-auto bg-white lg:p-0 lg:container lg:bg-transparent">
+        <div class="flex items-center gap-4 bg-white rounded-lg lg:justify-between lg:ps-5">
+            <div class="cursor-pointer lg:hidden">
+                <label for="menu-checkbox" class="cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>       
+              </label>   
+            </div>
+            <h1>
+                <a href="#"> <img src="img/logo-sky.svg" alt=""></a>
+            </h1>
+            <ul class="items-center justify-center hidden gap-5 font-semibold lg:inline-flex 2xl:gap-8 xl:gap-6 lg:gap-6 text-heading font-plus-jakarta-sans">
+              <li>
+                <a class="block p-3 transition-all duration-300 hover:text-primary" href="#">Home</a>
+               
+              </li>
+              <li>
+                <a class="block p-3 transition-all duration-300 hover:text-primary" href="#exclusive-offeres">Exclusive Offeres</a>
+              </li>
+              <li>
+                <a class="block p-3 transition-all duration-300 hover:text-primary" href="#help-center">Help Center</a>
+              </li>
+            </ul>
+            <div class="lg:m-0 ms-auto">
+              <a href="#" class="inline-flex lg:rounded-r-lg rounded-lg relative  group justify-center items-center px-4 py-2 lg:py-4.5 lg:px-10 lg:text-base text-sm  font-medium tracking-tighter text-white transition-all duration-300  bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
+                <span class="z-2">Contact Us</span> <span class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img src="img/icon-arrow.svg" alt=""></span> 
+              </a>
+            </div>
+        </div>
+      </div>
+    </header>
+    
+    <section class="bg-black bg-[url(img/bg-header.jpg)] pb-15 2xl:pt-50 lg:pt-40 pt-30 bg-cover bg-center bg-no-repeat 2xl:min-h-screen">
         <div class="px-4 mx-auto lg:container">
             <div class="space-y-6 text-center text-white" data-cues="bounceInUp" data-duration="700" data-delay="100">
                 <!-- <button class="text-white overflow-hidden z-1 px-4 py-2.5 inline-flex playbtn items-center rounded-full bg-[#1c1f2b] text-sm font-medium capitalize backdrop-blur-xs gap-2 font-plus-jakarta-sans  relative">
@@ -48,11 +82,11 @@
                    <span class="absolute  bg-[#1c1f2b] inset-[1.5px] rounded-full"></span>
                 </button> -->
                 <div class="m-0 text-center"><img class="inline-block" src="img/logo.svg" alt="" data-duration="600"></div>
-                <h1 class="max-w-[700px] mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl sm:text-5xl text-4xl tracking-tighter font-semibold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent" data-duration="1000">
+                <h2 class="max-w-[700px] mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl sm:text-5xl text-4xl tracking-tighter font-semibold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent" data-duration="1000">
                     The Perfect <span class="hidden lg:inline"><br/></span>
                     Design Solution<span class="hidden lg:inline"><br/></span>
                     to Grow Your Store
-                </h1>
+                </h2>
                 <p class="mb-10 font-medium lg:mb-15 lg:text-lg" data-duration="1200">Optimized mobile design, smooth UX, and easy setup to help you engage <span class="hidden md:inline"><br/></span> customers and grow effortlessly.</p>
                 <div class="flex flex-col justify-center gap-4 sm:flex-row" data-duration="1300">
                     <a href="#" class="inline-flex relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-medium tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
@@ -214,7 +248,7 @@
  
         </div>
     </section>
-    <section class="bg-[#13111C] relative xl:py-25 lg:py-18 py-15 rounded-t-4xl">
+    <section class="bg-[#13111C] relative xl:py-25 lg:py-18 py-15 rounded-t-4xl" id="exclusive-offeres">
         <span class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
         <div class="px-4 mx-auto lg:container">
           <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
@@ -222,12 +256,12 @@
             <p class="text-white/70">Designed to help customers find, compare, and purchase products effortlessly while<span class="hidden md:inline"><br/></span> boosting your store’s conversion rates.</p>
           </div>
 
-          <div class="grid md:grid-cols-[4fr_4fr_6fr_4fr_4fr] grid-cols-[4fr_6fr_4fr] xl:gap-6 lg:gap-4 gap-3 w-full max-w-[1445px] mx-auto mb-12.5">
-            <div class="hidden mt-10 transition-transform ease-in-out lg:mt-20 duration-800 will-change-transform box md:block target"><figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone1.png" alt=""></figure></div>
+          <div class="grid md:grid-cols-[5fr_5fr_6fr_5fr_5fr] grid-cols-[4fr_6fr_4fr] xl:gap-6 lg:gap-4 gap-3 w-full max-w-[1345px] mx-auto mb-12.5">
+            <div class="hidden mt-10 transition-transform ease-in-out lg:mt-20 duration-900 will-change-transform box md:block target"><figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone1.png" alt=""></figure></div>
             <div class="mt-5 transition-transform duration-700 ease-in-out lg:mt-10 will-change-transform box target"><figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone2.png" alt=""></figure></div>
             <div class="transition-transform duration-700 ease-in-out will-change-transform box"><figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone3.png" alt=""></figure></div>
             <div class="mt-5 transition-transform duration-700 ease-in-out lg:mt-10 will-change-transform box target"><figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone4.png" alt=""></figure></div>
-            <div class="hidden mt-10 transition-transform ease-in-out lg:mt-20 duration-800 will-change-transform box md:block target"><figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone5.png" alt=""></figure></div>
+            <div class="hidden mt-10 transition-transform ease-in-out lg:mt-20 duration-900 will-change-transform box md:block target"><figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone5.png" alt=""></figure></div>
           </div>
           
           <div class="flex flex-wrap items-center justify-center gap-3 mb-10 xl:mb-25 lg:mb-20 md:mb-15 lg:gap-4" data-cues="slideInUp" data-duration="400">
@@ -277,23 +311,23 @@
             <p class="text-white/70">Designed with flexibility, performance, and elegance in mind, Purity adapts seamlessly to your<span class="hidden md:inline"><br/></span> brand - whether you're starting out or expanding.</p>
           </div>
 
-          <div class="grid grid-cols-1 gap-6 text-center text-white lg:grid-cols-4 sm:grid-cols-2 gap-x-4 xl:gap-x-6 mb-12.5" data-cues="slideInUp" data-duration="500" data-group="section-box-1">
-            <div class="rounded-[20px] border border-[#71619F33] bg-white/5 hover:bg-white/8 transition-all duration-300 xl:p-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
+          <div class="grid  max-w-[1345px] grid-cols-1 gap-6 text-center text-white lg:grid-cols-4 sm:grid-cols-2 gap-x-4 xl:gap-x-6 mb-12.5" data-cues="slideInUp" data-duration="500" data-group="section-box-1">
+            <div class="rounded-[20px] border border-[#71619F33] bg-white/5 hover:bg-white/8 transition-all duration-300 xl:py-8  p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
               <figure class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1"><img src="img/icon-ux.svg" alt=""></figure>
               <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Seamless—Modern UX</h3>
               <p class="text-sm text-white/70 lg:text-base">Deliver a smooth, thumb-friendly experience with pixel-perfect layouts and elegant design that looks great on all devices.</p>
             </div>
-            <div class="rounded-[20px] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:p-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
+            <div class="rounded-[20px] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
               <figure class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1"><img src="img/icon-fea.svg" alt=""></figure>
               <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Built-In Advanced Features</h3>
               <p class="text-sm text-white/70 lg:text-base">Unlock next-level selling power with conversion-focused features - fully integrated with no extra apps required.</p>
             </div>
-            <div class="rounded-[20px] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:p-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
+            <div class="rounded-[20px] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
               <figure class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1"><img src="img/icon-per.svg" alt=""></figure>
               <h3 class="text-base font-semibold xl:leading-none lg:text-lg">High Mobile Performance</h3>
               <p class="text-sm text-white/70 lg:text-base">Purity meets and exceeds Shopify's mobile performance standards, delivering a fast, smooth shopping experience on any device.</p>
             </div>
-            <div class="rounded-[20px] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:p-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
+            <div class="rounded-[20px] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
               <figure class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1"><img src="img/icon-sup.svg" alt=""></figure>
               <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Fast & Reliable Support</h3>
               <p class="text-sm text-white/70 lg:text-base">Get expert help when you need it - from setup assistance to migration support, all backed by our fast-response team. </p>
@@ -302,7 +336,7 @@
           </div>
 
           <div class="flex flex-col justify-center gap-4 mb-10 sm:flex-row xl:mb-25 lg:mb-20 md:mb-15">
-            <a href="#" class="inline-flex relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-medium tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+            <a href="#" class="inline-flex relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-medium tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               <span class="z-2">Try Purity Theme</span> <span class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img src="img/icon-arrow.svg" alt=""></span> 
               <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
             </a>
@@ -588,10 +622,39 @@
          
         </div>
     </section>
-   
+    
+    <!-- footer -->
     <footer id="footer" class="">
         footer
     </footer>
+
+    <!-- Menu mobile -->
+    <input type="checkbox" id="menu-checkbox" class="hidden peer">
+    <!-- Overlay -->
+    <label for="menu-checkbox" class="fixed inset-0 z-40 invisible transition-opacity duration-300 opacity-0 cursor-pointer bg-black/70 peer-checked:opacity-100 peer-checked:visible"></label>
+    <!-- Offcanvas Menu -->
+    <div class="fixed top-0 z-50 h-full max-w-full text-white transition-all duration-300 -translate-x-full shadow-lg bg-heading w-90 peer-checked:translate-0">
+        <div class="flex items-center justify-between p-4 px-6 text-white uppercase bg-primary">
+          <h3>Menu</h3>
+          <label for="menu-checkbox" class="absolute text-2xl transition-all duration-300 cursor-pointer top-4 right-4 hover:rotate-90"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+          </label>
+        </div>
+        
+        <ul class="items-center justify-center gap-5 mx-6 font-semibold divide-y pt-2 2xl:gap-8 xl:gap-6 lg:gap-6 font-plus-jakarta-sans divide-[#71619f40]">
+          <li>
+            <a class="block py-3 transition-all duration-300 hover:text-primary" href="#">Home</a>
+           
+          </li>
+          <li>
+            <a class="block py-3 transition-all duration-300 hover:text-primary" href="#exclusive-offeres">Exclusive Offeres</a>
+          </li>
+          <li>
+            <a class="block py-3 transition-all duration-300 hover:text-primary" href="#help-center">Help Center</a>
+          </li>
+        </ul>
+    </div>
 
     <div class="fixed left-0 right-0 hidden mx-auto pointer-events-none content bottom-6 w-fit z-111 sm:block">
       <div id="myBox" class="pointer-events-auto sticky-box transition-all duration-300 opacity-100 not-[.show]:opacity-0 not-[.show]:translate-y-full">
@@ -600,6 +663,8 @@
         </a>
       </div>
     </div>
+  
+    <!-- backToTop -->
     <button id="backToTop" class="fixed z-10 transition duration-300 cursor-pointer back-top end-8 bottom-8"
     onclick="scrollToTop()" data-cue="slideInUp">
     <span
@@ -622,11 +687,17 @@
             interval : -200,
             percentage : 0.8
         });
+
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("show", window.scrollY > 0);
+      }) 
+        
         // JavaScript để xử lý cuộn lên đầu trang
       function scrollToTop() {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth' // Cuộn mượt mà
+          behavior: 'smooth'
         });
       }
 
