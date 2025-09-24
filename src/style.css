@@ -55,7 +55,9 @@
 .scrolling-left {
   animation-duration: 60s;
 }
-
+.menu-open{
+  overflow: hidden !important;
+}
 /* animation 3 border */
 .sweep-wrap {
   position: relative;

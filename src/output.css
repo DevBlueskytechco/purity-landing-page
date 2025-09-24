@@ -55,6 +55,7 @@
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -1442,6 +1443,10 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
+  }
   .will-change-auto {
     will-change: auto;
   }
@@ -1454,6 +1459,21 @@
   .backface-hidden {
     backface-visibility: hidden;
   }
+  .not-\[\.menu-open\]\:overflow-auto {
+    &:not(*:is(.menu-open)) {
+      overflow: auto;
+    }
+  }
+  .not-\[\.menu-open\]\:overflow-hidden {
+    &:not(*:is(.menu-open)) {
+      overflow: hidden;
+    }
+  }
+  .not-\[\.menu-open\]\:overflow-x-hidden {
+    &:not(*:is(.menu-open)) {
+      overflow-x: hidden;
+    }
+  }
   .not-\[\.show\]\:translate-y-full {
     &:not(*:is(.show)) {
       --tw-translate-y: 100%;
@@ -1463,6 +1483,11 @@
   .not-\[\.show\]\:opacity-0 {
     &:not(*:is(.show)) {
       opacity: 0%;
+    }
+  }
+  .not-\[menu-open\]\:overflow-hidden {
+    &:not(*:is(menu-open)) {
+      overflow: hidden;
     }
   }
   .group-hover\:-translate-y-1 {

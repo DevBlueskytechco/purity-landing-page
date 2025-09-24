@@ -27,8 +27,8 @@
     <link rel="icon" href="" sizes="32x32" />
 
     <link rel="stylesheet" href="./scrollCue.css">
-    <link rel="stylesheet" href="./style.css">
-    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css?ver=43280125">
+    <link href="./output.css?ver=176125" rel="stylesheet" />
 </head>
 
 <body class="min-h-screen overflow-x-hidden">
@@ -1609,7 +1609,7 @@
     <!-- Overlay -->
     <label for="menu-checkbox" class="fixed inset-0 z-40 invisible transition-opacity duration-300 opacity-0 cursor-pointer bg-black/70 peer-checked:opacity-100 peer-checked:visible"></label>
     <!-- Offcanvas Menu -->
-    <div class="fixed top-0 z-50 h-full max-w-full text-white transition-all duration-300 -translate-x-full shadow-lg bg-heading w-90 peer-checked:translate-0">
+    <div class="offcanvas fixed top-0 z-50 h-full max-w-full text-white transition-all duration-300 -translate-x-full shadow-lg bg-heading w-90 peer-checked:translate-0">
         <div class="flex items-center justify-between p-4 px-6 text-white uppercase bg-primary">
           <h3>Menu</h3>
           <label for="menu-checkbox" class="absolute text-2xl transition-all duration-300 cursor-pointer top-4 right-4 hover:rotate-90"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -1671,8 +1671,6 @@
         var header = document.querySelector("header");
         header.classList.toggle("show", window.scrollY > 0);
       }) 
-        
-        // JavaScript để xử lý cuộn lên đầu trang
       function scrollToTop() {
         window.scrollTo({
           top: 0,
@@ -1693,8 +1691,6 @@
       const targets = document.querySelectorAll('.target');
       let lastScrollY = window.scrollY;
       let ticking = false;
-
-      // Hàm kiểm tra phần tử có trong viewport hay không
       function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
@@ -1702,12 +1698,8 @@
           rect.top <= (window.innerHeight || document.documentElement.clientHeight)
         );
       }
-
-      // Hàm cập nhật hiệu ứng dựa trên hướng cuộn và vị trí phần tử
       function updateElements() {
         const currentScrollY = window.scrollY;
-
-        // Bỏ qua nếu ở đầu hoặc cuối trang
         if (currentScrollY === 0 || currentScrollY + window.innerHeight >= document.body.scrollHeight) {
           return;
         }
@@ -1715,16 +1707,13 @@
         targets.forEach(el => {
           if (isElementInViewport(el)) {
             if (currentScrollY > lastScrollY) {
-              // Cuộn xuống
               el.classList.add('up');
               el.classList.remove('down');
             } else {
-              // Cuộn lên
               el.classList.add('down');
               el.classList.remove('up');
             }
           } else {
-            // Nếu phần tử không trong viewport, đặt trạng thái mặc định
             el.classList.add('down');
             el.classList.remove('up');
           }
@@ -1733,15 +1722,13 @@
         lastScrollY = currentScrollY;
       }
 
-      // Thêm trạng thái ban đầu khi trang load
       window.addEventListener('load', () => {
         targets.forEach(el => {
-          el.classList.add('down'); // Trạng thái mặc định
+          el.classList.add('down');
         });
-        updateElements(); // Kiểm tra ngay khi load
+        updateElements(); 
       });
 
-      // Xử lý sự kiện cuộn
       window.addEventListener('scroll', () => {
         if (!ticking) {
           window.requestAnimationFrame(() => {
@@ -1767,6 +1754,25 @@
         if (windowBottom >= footerTop) {
           stickyBox.classList.remove("show");
         }
+      });
+
+
+      // Menu mobile add overflow-hidden body
+      const menuCheckbox = document.getElementById("menu-checkbox");
+      const htmlTag = document.documentElement; 
+
+      menuCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+          htmlTag.classList.add("menu-open");
+        } else {
+          htmlTag.classList.remove("menu-open");
+        }
+      });
+      document.querySelectorAll('.offcanvas a').forEach(link => {
+        link.addEventListener("click", () => {
+          menuCheckbox.checked = false;
+          htmlTag.classList.remove("menu-open");
+        });
       });
     </script>
     <script>
