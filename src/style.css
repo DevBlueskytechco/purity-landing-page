@@ -1,9 +1,11 @@
-@property --angle{
+@property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
-.playbtn::after ,.playbtn::before{
+
+.playbtn::after,
+.playbtn::before {
   content: "";
   position: absolute;
   background-image: conic-gradient(from var(--angle), #6E5BFB 70%, oklch(66.7% 0.295 322.15));
@@ -11,21 +13,24 @@
   width: 100%;
   top: 50%;
   left: 50%;
-  translate:  -50% -50%;
+  translate: -50% -50%;
   padding: 2px;
   border-radius: calc(infinity * 1px);
   animation: 2s spin-1 linear infinite;
   z-index: -1;
 }
-.playbtn::before{
-  filter:blur(1.5rem);
+
+.playbtn::before {
+  filter: blur(1.5rem);
   opacity: 0.5;
 }
+
 @keyframes spin-1 {
-  from{
+  from {
     --angle: 0deg;
   }
-  to{
+
+  to {
     --angle: 360deg;
   }
 }
@@ -38,65 +43,20 @@
   transform: translateY(40px);
 }
 
-.scrolling:hover > div{
+.scrolling:hover>div {
   animation-play-state: paused;
 }
-.scrolling-right{
-  animation-direction:  reverse;
+
+.scrolling-right {
+  animation-direction: reverse;
   animation-duration: 60s;
 }
-.scrolling-left{
+
+.scrolling-left {
   animation-duration: 60s;
 }
-/* animation for landing page */
-@keyframes sweepLeft {
-  0% {
-    transform: translate(0, -50%);
-    opacity: .9;
-  }
 
-  70% {
-    opacity: .15;
-  }
-
-  100% {
-    transform: translate(-140px, -50%);
-    opacity: 0;
-  }
-}
-
-@keyframes sweepRight {
-  0% {
-    transform: translate(0, -50%);
-    opacity: .9;
-  }
-
-  70% {
-    opacity: .15;
-  }
-
-  100% {
-    transform: translate(140px, -50%);
-    opacity: 0;
-  }
-}
-
-@keyframes sweepUp {
-  0% {
-    transform: translate(-50%, 0);
-    opacity: .9;
-  }
-
-  70% {
-    opacity: .15;
-  }
-
-  100% {
-    transform: translate(-50%, -140px);
-    opacity: 0;
-  }
-}
-
+/* animation 3 border */
 .sweep-wrap {
   position: relative;
   display: inline-block;
@@ -125,7 +85,7 @@
 .sweep-wrap .line.up {
   left: 50%;
   top: auto;
-  bottom: 50%;
+  bottom: 100%;
   width: 1px;
   height: 150px;
   background: linear-gradient(0deg, #5B7BFB, #5B7BFB00);
@@ -138,14 +98,43 @@
 }
 
 /* FAQ details/summary styling */
-.faq-item summary { list-style: none; }
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-icon { position: relative; width: 18px; height: 18px; }
-.faq-icon .line { position: absolute; left: 50%; top: 50%; width: 100%; height: 2px; background: currentColor; border-radius: 2px; transform: translate(-50%, -50%); transition: opacity .2s ease, transform .2s ease; }
-.faq-icon .line.vert { transform: translate(-50%, -50%) rotate(90deg); }
-.faq-item[open] .faq-icon .line.vert { opacity: 0; transform: translate(-50%, -50%) rotate(90deg) scaleY(.5); }
+img,
+svg {
+  max-width: 100%;
+}
 
-/* checkbox check border */
-[type='checkbox']:checked {
-  border-color: white !important;
+.card-item-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.card-item-description {
+  font-size: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 200ms ease;
+}
+
+.icon-footer::before {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  background: url("img/icon_footer.svg") center/contain no-repeat;
+  width: 104px;
+  height: 104px;
+  z-index: 1;
+  animation: circTxt-rotating 8s linear infinite;
 }
