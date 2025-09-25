@@ -25,6 +25,7 @@
   <meta property="og:image:width" content="590" />
   <meta property="og:image:height" content="300" />
   <link rel="icon" href="./img/Favicon.svg" sizes="32x32" />
+  <link rel="preload" as="image" href="/img/logo-sky.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="./scrollCue.css">
   <link rel="stylesheet" href="./style.css">
@@ -50,7 +51,7 @@
           </label>
         </div>
         <h1>
-          <a href="#"> <img src="img/logo-sky.svg" alt=""></a>
+          <a href="#" aria-label="logo"> <img src="img/logo-sky.svg" alt=""></a>
         </h1>
         <ul
           class="items-center justify-center hidden gap-5 font-semibold lg:inline-flex 2xl:gap-8 xl:gap-6 lg:gap-6 text-heading font-plus-jakarta-sans">
@@ -83,9 +84,11 @@
   </header>
 
   <section
-    class="bg-[#13111C] bg-[url(img/bg-header.jpg)] pb-10 lg:pb-16 lg:pt-40 pt-25 bg-cover bg-center bg-no-repeat font-plus-jakarta-sans min-h-screen">
+    class="bg-[#13111C] bg-[url(img/bg-header.webp)] pb-10 lg:pb-16 lg:pt-40 pt-25 bg-cover bg-center bg-no-repeat font-plus-jakarta-sans min-h-screen relative">
+    <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
     <div class="px-4 mx-auto lg:container">
-      <div class="space-y-6 text-center text-white mx-auto max-w-[1345px] relative">
+      <div class="space-y-6 text-center text-white mx-auto max-w-[1345px] relative" data-cues="bounceInUp"
+        data-duration="700" data-delay="100">
         <!-- <button class="text-white overflow-hidden z-1 px-4 py-2.5 inline-flex playbtn items-center rounded-full bg-[#1c1f2b] text-sm font-medium capitalize backdrop-blur-xs gap-2 font-plus-jakarta-sans  relative">
                     <div class="relative inline-flex p-1 z-2">
                         <div class="inline-flex size-1.5 rounded-full bg-primary animate-pulse"></div>
@@ -136,6 +139,9 @@
         </ul>
       </div>
     </div>
+    <span class="absolute pointer-events-none bottom-0 left-0 right-0 h-85 
+         bg-[radial-gradient(50%_100%_at_50%_100%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]">
+    </span>
   </section>
 
   <section class="overflow-hidden bg-white rounded-t-4xl xl:py-25 lg:py-18 py-15" id="features">
@@ -155,11 +161,11 @@
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg"
-                      alt=""></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt=""
+                      lazy="loading"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg"
-                      alt=""></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt=""
+                      lazy="loading"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Suitable Product Finder</h3>
@@ -172,9 +178,11 @@
           </div>
           <div
             class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.jpg)] grid content-center bg-cover bg-center">
-            <figure class="overflow-hidden rounded-2xl"><img
-                class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner1.jpg"
-                alt=""></figure>
+            <picture class="overflow-hidden rounded-2xl">
+              <source type="image/webp" srcset="img/img-banner1.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner1.jpg"
+                alt="banner" lazy="loading">
+            </picture>
           </div>
         </div>
       </div>
@@ -185,11 +193,11 @@
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg"
-                      alt=""></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt="icon"
+                      loading="lazy"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg"
-                      alt=""></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt="icon"
+                      loading="lazy"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Recommend Collection</h3>
@@ -202,9 +210,11 @@
           </div>
           <div
             class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.jpg)] grid content-center bg-cover bg-center">
-            <figure class="overflow-hidden rounded-2xl"><img
-                class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner2.jpg"
-                alt=""></figure>
+            <picture class="overflow-hidden rounded-2xl">
+              <source type="image/webp" srcset="img/img-banner2.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner2.jpg"
+                alt="banner" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -215,11 +225,11 @@
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg"
-                      alt=""></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt="icon"
+                      loading="lazy"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg"
-                      alt=""></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt="icon"
+                      loading="lazy"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Product Bundle</h3>
@@ -231,9 +241,11 @@
           </div>
           <div
             class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.jpg)] grid content-center bg-cover bg-center">
-            <figure class="overflow-hidden rounded-2xl"><img
-                class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner3.jpg"
-                alt=""></figure>
+            <picture class="overflow-hidden rounded-2xl">
+              <source type="image/webp" srcset="img/img-banner3.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner3.jpg"
+                alt="banner" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -244,11 +256,11 @@
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg"
-                      alt=""></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt="icon"
+                      loading="lazy"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg"
-                      alt=""></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt="icon"
+                      loading="lazy"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Featured Product Banner</h3>
@@ -261,9 +273,11 @@
           </div>
           <div
             class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.jpg)] grid content-center bg-cover bg-center">
-            <figure class="overflow-hidden rounded-2xl"><img
-                class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner4.jpg"
-                alt=""></figure>
+            <picture class="overflow-hidden rounded-2xl">
+              <source type="image/webp" srcset="img/img-banner4.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner4.jpg"
+                alt="banner" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>
@@ -272,8 +286,11 @@
         <div class="grid gap-6 md:text-center gap-x-4 lg:gap-x-6 md:grid-cols-3" data-cues="slideInUp"
           data-duration="500" data-group="section-box">
           <div class="bg-[#ECE7DA] rounded-[20px] group overflow-hidden">
-            <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-shop.jpg"
-                alt=""></figure>
+            <picture>
+              <source type="image/webp" srcset="img/img-shop.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-shop.jpg"
+                alt="shop image" loading="lazy">
+            </picture>
             <div class="p-6 xl:p-8">
               <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl  lg:mb-3 mb-2">Sticky
                 Video
@@ -283,8 +300,11 @@
             </div>
           </div>
           <div class="bg-[#DAE2EC] rounded-[20px] group overflow-hidden">
-            <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-testi.jpg"
-                alt=""></figure>
+            <picture>
+              <source type="image/webp" srcset="img/img-testi.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-testi.jpg"
+                alt="testimonial image" loading="lazy">
+            </picture>
             <div class="p-6 xl:p-8">
               <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl lg:mb-3 mb-2">Dynamic
                 Testimonial</h3>
@@ -293,8 +313,11 @@
             </div>
           </div>
           <div class="bg-[#ECE7DA] rounded-[20px] group overflow-hidden">
-            <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-page.jpg"
-                alt=""></figure>
+            <picture>
+              <source type="image/webp" srcset="img/img-page.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-page.jpg"
+                alt="page image" loading="lazy">
+            </picture>
             <div class="p-6 xl:p-8">
               <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl  lg:mb-3 mb-2">Action
                 Video
@@ -310,8 +333,11 @@
         <div class="grid gap-6 gap-x-4 lg:gap-x-6 md:grid-cols-2" data-cues="slideInUp" data-duration="500"
           data-group="section-box">
           <div class="bg-[#DAE2EC] rounded-[20px] group overflow-hidden">
-            <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101"
-                src="img/img-compare.jpg" alt=""></figure>
+            <picture>
+              <source type="image/webp" srcset="img/img-compare.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-compare.jpg"
+                alt="image compare" loading="lazy">
+            </picture>
             <div class="p-6 xl:p-8">
               <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl lg:mb-3 mb-2">Compare
                 Related Product</h3>
@@ -320,8 +346,11 @@
             </div>
           </div>
           <div class="bg-[#DAE2EC] rounded-[20px] group overflow-hidden">
-            <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-off.jpg"
-                alt=""></figure>
+            <picture>
+              <source type="image/webp" srcset="img/img-off.webp">
+              <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-off.jpg"
+                alt="image off" loading="lazy">
+            </picture>
             <div class="p-6 xl:p-8">
               <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl  lg:mb-3 mb-2">Product
                 Offer
@@ -338,6 +367,7 @@
     </div>
   </section>
   <section class="bg-[#13111C] relative xl:pt-25 xl:pb-20 lg:py-18 py-15 rounded-t-4xl">
+    <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
     <span
       class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
     <div class="px-4 mx-auto lg:container">
@@ -354,25 +384,40 @@
         class="grid md:grid-cols-[5fr_5fr_6fr_5fr_5fr] grid-cols-[4fr_6fr_4fr] xl:gap-6 lg:gap-4 gap-3 w-full max-w-[1345px] mx-auto mb-12.5">
         <div
           class="hidden mt-10 transition-transform ease-in-out lg:mt-20 duration-900 will-change-transform box md:block target">
-          <figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1"
-              src="img/img-iphone1.png" alt=""></figure>
+          <picture>
+            <source type="image/webp" srcset="img/img-iphone1.webp">
+            <img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone1.png"
+              alt="image iphone 1" loading="lazy">
+          </picture>
         </div>
         <div class="mt-5 transition-transform duration-700 ease-in-out lg:mt-10 will-change-transform box target">
-          <figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1"
-              src="img/img-iphone2.png" alt=""></figure>
+          <picture>
+            <source type="image/webp" srcset="img/img-iphone2.webp">
+            <img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone2.png"
+              alt="image iphone" loading="lazy">
+          </picture>
         </div>
         <div class="transition-transform duration-700 ease-in-out will-change-transform box">
-          <figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1"
-              src="img/img-iphone-3.png" alt=""></figure>
+          <picture>
+            <source type="image/webp" srcset="img/img-iphone-3.webp">
+            <img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone-3.png"
+              alt="image iphone" loading="lazy">
+          </picture>
         </div>
         <div class="mt-5 transition-transform duration-700 ease-in-out lg:mt-10 will-change-transform box target">
-          <figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1"
-              src="img/img-iphone4.png" alt=""></figure>
+          <picture>
+            <source type="image/webp" srcset="img/img-iphone4.webp">
+            <img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone4.png"
+              alt="image iphone" loading="lazy">
+          </picture>
         </div>
         <div
           class="hidden mt-10 transition-transform ease-in-out lg:mt-20 duration-900 will-change-transform box md:block target">
-          <figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1"
-              src="img/img-iphone5.png" alt=""></figure>
+          <picture>
+            <source type="image/webp" srcset="img/img-iphone5.webp">
+            <img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1" src="img/img-iphone5.png"
+              alt="image iphone" loading="lazy">
+          </picture>
         </div>
       </div>
 
@@ -399,54 +444,54 @@
     <div class="flex items-center mb-10 overflow-hidden scrolling xl:mb-25 lg:mb-20 md:mb-15">
       <div class="flex items-center overflow-hidden shrink-0 animate-scrolling">
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Core Power</h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Total Flexibility</h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Effortless Use </h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
       </div>
       <div class="flex items-center overflow-hidden shrink-0 animate-scrolling">
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Core Power</h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Total Flexibility</h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Effortless Use </h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
       </div>
       <div class="flex items-center overflow-hidden shrink-0 animate-scrolling">
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Core Power</h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Total Flexibility</h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
         <h2
-          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
+          class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block font-normal">
           Effortless Use </h2>
         <span class="inline-block mx-5 md:mx-10 2xl:mx-25 xl:mx-20 lg:mx-15"><img src="img/icon-scroll-text.svg"
-            alt=""></span>
+            alt="icon" loading="lazy"></span>
       </div>
     </div>
     <div class="px-4 mx-auto lg:container">
@@ -464,40 +509,40 @@
         data-cues="slideInUp" data-duration="500" data-group="section-box-1">
         <div
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5 hover:bg-white/8 transition-all duration-300 xl:py-8  p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
-          <figure
+          <picture
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-ux.svg" alt="">
-          </figure>
+            <img src="img/icon-ux.svg" alt="icon" loading="lazy">
+          </picture>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Seamless—Modern UX</h3>
           <p class="text-sm text-white/70 lg:text-base">Deliver a smooth, thumb-friendly experience with pixel-perfect
             layouts and elegant design that looks great on all devices.</p>
         </div>
         <div
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
-          <figure
+          <picture
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-fea.svg" alt="">
-          </figure>
+            <img src="img/icon-fea.svg" alt="icon" loading="lazy">
+          </picture>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Built-In Advanced Features</h3>
           <p class="text-sm text-white/70 lg:text-base">Unlock next-level selling power with conversion-focused features
             - fully integrated with no extra apps required.</p>
         </div>
         <div
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
-          <figure
+          <picture
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-per.svg" alt="">
-          </figure>
+            <img src="img/icon-per.svg" alt="icon" loading="lazy">
+          </picture>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">High Mobile Performance</h3>
           <p class="text-sm text-white/70 lg:text-base">Purity meets and exceeds Shopify's mobile performance standards,
             delivering a fast, smooth shopping experience on any device.</p>
         </div>
         <div
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
-          <figure
+          <picture
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-sup.svg" alt="">
-          </figure>
+            <img src="img/icon-sup.svg" alt="icon" loading="lazy">
+          </picture>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Fast & Reliable Support</h3>
           <p class="text-sm text-white/70 lg:text-base">Get expert help when you need it - from setup assistance to
             migration support, all backed by our fast-response team. </p>
@@ -510,7 +555,7 @@
           class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
           <span class="z-2 -tracking-[0.01em]">Try Purity Theme</span> <span
             class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-              src="img/icon-arrow.svg" alt=""></span>
+              src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
           <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
         </a>
       </div>
@@ -532,11 +577,11 @@
       </div>
     </div>
     <!-- scrolling-left -->
-    <div class="flex items-center mb-6 overflow-hidden scrolling">
+    <div class="flex items-center mb-4 lg:mb-6 overflow-hidden scrolling">
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-left">
         <div
           class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1">
-          <figure class="inline-block shrink-0"><img src="img/icon-search.svg" alt=""></figure>
+          <picture class="inline-block shrink-0"><img src="img/icon-search.svg" alt="icon" loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Predictive
               Search</h3>
@@ -545,8 +590,8 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt="icon" loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Free Shipping
               Reminder</h3>
@@ -555,8 +600,8 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-stock.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-stock.svg" alt="icon" loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Stock Counter
             </h3>
@@ -565,8 +610,8 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt="icon" loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Quick View
             </h3>
@@ -575,8 +620,8 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-filter.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-filter.svg " alt="icon" loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Advanced
               Filters</h3>
@@ -585,8 +630,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-gall.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-gall.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image
               Galleries</h3>
@@ -595,8 +641,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-cart.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg " alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Estimated
               Shipping Rate</h3>
@@ -605,8 +652,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-cart.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Sticky Add To
               Cart</h3>
@@ -615,8 +663,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-zom.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-zom.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image Zoome
             </h3>
@@ -627,8 +676,9 @@
       </div>
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-left">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-search.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-search.svg" alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Predictive
               Search</h3>
@@ -637,8 +687,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Free Shipping
               Reminder</h3>
@@ -647,8 +698,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-stock.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-stock.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Stock Counter
             </h3>
@@ -657,8 +709,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Quick View
             </h3>
@@ -667,8 +720,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-filter.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-filter.svg " alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Advanced
               Filters</h3>
@@ -677,8 +731,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-gall.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-gall.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image
               Galleries</h3>
@@ -687,8 +742,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-cart.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg " alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Estimated
               Shipping Rate</h3>
@@ -697,8 +753,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-cart.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Sticky Add To
               Cart</h3>
@@ -707,8 +764,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-zom.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-zom.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image Zoome
             </h3>
@@ -722,8 +780,9 @@
     <div class="flex items-center mb-10 overflow-hidden scrolling">
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-right">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-swa.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-swa.svg " alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Color and Image Swatches</h3>
             <p class="text-white/70 text-base">Display color and image swatches for products on both the
@@ -731,8 +790,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Image Hotspot</h3>
             <p class="text-white/70 text-base">Add clickable hotspots on images to let customers explore and
@@ -740,8 +800,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-video.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-video.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Video With Text</h3>
             <p class="text-white/70 text-base">Showcase your message with eye-catching video backgrounds and
@@ -750,8 +811,9 @@
         </div>
 
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-time.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-time.svg " alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Countdown Timer</h3>
             <p class="text-white/70 text-base">Create urgency and excitement with limited-time deals,
@@ -759,8 +821,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-before.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-before.svg" alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Before and After</h3>
             <p class="text-white/70 text-base">Highlight product effectiveness with clear before-and-after
@@ -768,8 +831,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Cart Upsell</h3>
             <p class="text-white/70 text-base">Suggest complementary or related products directly in the
@@ -777,8 +841,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-mega.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-mega.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Mega Menu</h3>
             <p class="text-white/70 text-base">An organized, comprehensive navigation helps customers easily
@@ -786,8 +851,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-rich.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-rich.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Rich Product Media </h3>
             <p class="text-white/70 text-base">Showcase products with 3D models and embedded Vimeo or YouTube
@@ -795,8 +861,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-buy.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-buy.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Quick Buy</h3>
             <p class="text-white/70 text-base">Faster checkouts by simplifying purchases process and reducing
@@ -806,8 +873,9 @@
       </div>
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-right">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-swa.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-swa.svg " alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Color and Image Swatches</h3>
             <p class="text-white/70 text-base">Display color and image swatches for products on both the
@@ -815,8 +883,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Image Hotspot</h3>
             <p class="text-white/70 text-base">Add clickable hotspots on images to let customers explore and
@@ -824,8 +893,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-stock.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-stock.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Video With Text</h3>
             <p class="text-white/70 text-base">Showcase your message with eye-catching video backgrounds and
@@ -834,8 +904,9 @@
         </div>
 
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-time.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-time.svg " alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Countdown Timer</h3>
             <p class="text-white/70 text-base">Create urgency and excitement with limited-time deals,
@@ -843,8 +914,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-before.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-before.svg" alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Before and After</h3>
             <p class="text-white/70 text-base">Highlight product effectiveness with clear before-and-after
@@ -852,8 +924,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt="icon" loading="lazy"
+              loading="lazy"></picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Cart Upsell</h3>
             <p class="text-white/70 text-base">Suggest complementary or related products directly in the
@@ -861,8 +934,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-mega.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-mega.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Mega Menu</h3>
             <p class="text-white/70 text-base">An organized, comprehensive navigation helps customers easily
@@ -870,8 +944,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-rich.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-rich.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Rich Product Media </h3>
             <p class="text-white/70 text-base">Showcase products with 3D models and embedded Vimeo or YouTube
@@ -879,8 +954,9 @@
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <figure class="inline-block shrink-0"><img src="img/icon-buy.svg" alt=""></figure>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <picture class="inline-block shrink-0"><img src="img/icon-buy.svg" alt="icon" loading="lazy" loading="lazy">
+          </picture>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Quick Buy</h3>
             <p class="text-white/70 text-base">Faster checkouts by simplifying purchases process and reducing
@@ -912,7 +988,8 @@
                         d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
                         fill="#1D1D1F" />
                     </svg>
-                    <h5 class="text-lg font-semibold -tracking-[0.02em] text-heading">Developed by NextSky</h5>
+                    <h5 class="text-lg font-semibold -tracking-[0.02em] text-heading" role="heading" aria-level="2">
+                      Developed by NextSky</h5>
                   </div>
                   <p class="text-sm font-medium lg:text-base">One of the top Shopify Theme developers on
                     ThemeForest.</p>
@@ -924,7 +1001,8 @@
                         d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
                         fill="#1D1D1F" />
                     </svg>
-                    <h5 class="text-lg font-semibold -tracking-[0.02em] text-heading">Top 1 Shopify Theme for
+                    <h5 class="text-lg font-semibold -tracking-[0.02em] text-heading" role="heading" aria-level="2">Top
+                      1 Shopify Theme for
                       Performance</p>
                   </div>
                   <p class="text-sm font-medium lg:text-base">Fastest and Ultimate Shopify Themes for your
@@ -940,20 +1018,21 @@
                   <picture class="aspect-[778/480] object-cover">
                     <source type="image/webp" srcset="img/banner.webp">
                     <img class="object-cover object-center size-full" width="774" height="480" alt="Icon footer"
-                      src="img/banner.jpg">
+                      src="img/banner.jpg" loading="lazy">
                   </picture>
                 </div>
                 <div class="absolute bottom-0 left-0 flex flex-row gap-4 p-4 xl:p-8 lg:p-6">
                   <div
                     class="rounded-[15px] border border-white/60 bg-white/30 backdrop-blur-[15px] lg:px-6 lg:py-5.5 p-4 sm:min-w-3xs min-[576px]:min-w-50 max-w-37.5">
-                    <h4
+                    <h4 role="heading" aria-level="2"
                       class="xl:text-[50px] md:text-5xl text-3xl font-semibold text-white font-plus-jakarta-sans mb-2">
                       50k</h4>
                     <p class="text-sm text-white md:text-base">Satisfied Customers</p>
                   </div>
                   <div
                     class="rounded-[15px] border border-white/50 bg-white/30 backdrop-blur-[15px] lg:px-6 lg:py-5.5 p-4 sm:min-w-3xs min-[576px]:min-w-50 max-w-37.5">
-                    <h4 class="mb-2 text-4xl font-semibold text-white xl:text-50 md:text-5xl font-plus-jakarta-sans">
+                    <h4 class="mb-2 text-4xl font-semibold text-white xl:text-50 md:text-5xl font-plus-jakarta-sans"
+                      role="heading" aria-level="2">
                       17k</h4>
                     <p class="text-sm text-white md:text-base">5 Stars Reviews</p>
                   </div>
@@ -966,7 +1045,7 @@
     </div>
   </section>
 
-  <section class="w-full bg-[#F1F3F7] xl:pb-32 lg:pb-25 pb-20">
+  <section class="w-full bg-[#F1F3F7] xl:pb-32 lg:pb-25 pb-22.5">
     <div class="px-4 mx-auto lg:container">
       <div class="lg:max-w-[1345px] mx-auto" data-cues="slideInUp" data-duration="600">
         <div class="text-center mb-12.5">
@@ -998,7 +1077,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1009,7 +1088,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1020,7 +1099,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1031,7 +1110,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1042,7 +1121,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1051,7 +1130,7 @@
                     <td class="px-6 py-3">Product Bundle</td>
                     <td class="px-6 py-3 text-center">$100</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
-                      <img src="img/icon-table.svg" alt="">
+                      <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       Free
                     </td>
                   </tr>
@@ -1059,7 +1138,7 @@
                     <td class="px-6 py-3">Sticky Add to Cart</td>
                     <td class="px-6 py-3 text-center">$100</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
-                      <img src="img/icon-table.svg" alt="">
+                      <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       Free
                     </td>
                   </tr>
@@ -1067,7 +1146,7 @@
                     <td class="px-6 py-3">Product Options</td>
                     <td class="px-6 py-3 text-center">$190</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
-                      <img src="img/icon-table.svg" alt="">
+                      <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       Free
                     </td>
                   </tr>
@@ -1075,7 +1154,7 @@
                     <td class="px-6 py-3">Suitable Product Finder</td>
                     <td class="px-6 py-3 text-center">🔥 Built-in Exclusive</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
-                      <img src="img/icon-table.svg" alt="">
+                      <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       Free
                     </td>
                   </tr>
@@ -1085,7 +1164,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1096,7 +1175,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1107,7 +1186,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1118,7 +1197,7 @@
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
-                        <img src="img/icon-table.svg" alt="">
+                        <img src="img/icon-table.svg" alt="icon" loading="lazy">
                       </span>
                       Free
                     </td>
@@ -1162,7 +1241,8 @@
   </section>
 
   <section id="exclusive-offeres"
-    class="bg-[#13111C] rounded-t-4xl relative -mt-7 overflow-hidden xl:py-25 lg:py-18 py-15 pb-20">
+    class="bg-[#13111C] rounded-t-4xl relative z-auto -mt-7 overflow-hidden xl:py-25 lg:py-18 py-15">
+    <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
     <span
       class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
     <div class="px-4 mx-auto lg:container">
@@ -1186,7 +1266,8 @@
           <div
             class="rounded-[20px] shadow-sm lg:p-8 p-6 min-h-[220px] flex items-center justify-center border border-[#71619F40] flex-col bg-white/3 text-white hover:bg-white/8 transition-all duration-300 group">
             <img src="./img/icon-special.svg" alt="Partner Logo"
-              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300" />
+              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300"
+              width="130" height="30" lazy="loading" />
             <div class="pb-6 text-center">
               <h3 class="lg:text-xl text-base xl:text-[22px] font-semibold pb-4 font-plus-jakarta-sans">Color Swatch
                 King: Variants</h3>
@@ -1204,7 +1285,8 @@
           <div
             class="rounded-[20px] shadow-sm lg:p-8 p-6 min-h-[220px] flex items-center justify-center border border-[#71619F40] flex-col bg-white/3 text-white hover:bg-white/8 transition-all duration-300 group">
             <img src="./img/icon-special.svg" alt="Partner Logo"
-              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300" />
+              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300"
+              lazy="loading" />
             <div class="pb-6 text-center">
               <h3 class="lg:text-xl text-base xl:text-[22px] font-semibold pb-4 font-plus-jakarta-sans">SA Variants:
                 Combined
@@ -1225,7 +1307,8 @@
           <div
             class="rounded-[20px] shadow-sm lg:p-8 p-6 min-h-[220px] flex items-center justify-center border border-[#71619F40] flex-col bg-white/3 text-white hover:bg-white/8 transition-all duration-300 group">
             <img src="./img/icon-easy.svg" alt="Partner Logo"
-              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300" />
+              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300"
+              lazy="loading" />
             <div class="pb-6 text-center">
               <h3 class="lg:text-xl text-base xl:text-[22px] font-semibold pb-4 font-plus-jakarta-sans">Easy Display:
                 Product
@@ -1245,7 +1328,8 @@
           <div
             class="rounded-[20px] shadow-sm lg:p-8 p-6 min-h-[220px] flex items-center justify-center border border-[#71619F40] flex-col bg-white/3 text-white hover:bg-white/8 transition-all duration-300 group">
             <img src="./img/icon-special.svg" alt="Partner Logo"
-              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300" />
+              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300"
+              lazy="loading" />
             <div class="pb-6 text-center">
               <h3 class="lg:text-xl text-base xl:text-[22px] font-semibold pb-4 font-plus-jakarta-sans">SA Variant
                 Image Automator
@@ -1264,7 +1348,8 @@
           <div
             class="rounded-[20px] shadow-sm lg:p-8 p-6 min-h-[220px] flex items-center justify-center border border-[#71619F40] flex-col bg-white/3 text-white hover:bg-white/8 transition-all duration-300 group">
             <img src="./img/icon-promote.svg" alt="Partner Logo"
-              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300" />
+              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300"
+              lazy="loading" />
             <div class="pb-6 text-center">
               <h3 class="lg:text-xl text-base xl:text-[22px] font-semibold pb-4 font-plus-jakarta-sans">UpPromote
                 Affiliate
@@ -1284,7 +1369,8 @@
           <div
             class="rounded-[20px] shadow-sm lg:p-8 p-6 min-h-[220px] flex items-center justify-center border border-[#71619F40] flex-col bg-white/3 text-white hover:bg-white/8 transition-all duration-300 group">
             <img src="./img/icon-bon.svg" alt="Partner Logo"
-              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300" />
+              class="size-[90px] rounded-4xl mb-6 group-hover:scale-105 group-hover:-translate-y-1 transition-transform duration-300"
+              lazy="loading" />
             <div class="pb-6 text-center">
               <h3 class="lg:text-xl text-base xl:text-[22px] font-semibold pb-4 font-plus-jakarta-sans">BON Loyalty
                 Program &
@@ -1302,22 +1388,21 @@
           </div>
         </div>
 
-        <div class="mb-15 text-center xl:mb-25 lg:mb-20">
-          <a href="#contact-us"
+        <div class="mb-7.5 text-center xl:mb-25 lg:mb-20">
+          <a href="#contact-us" onclick="focusInput()"
             class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
             <span class="z-2 -tracking-[0.01em]">Get the Deals Now</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                src="img/icon-arrow.svg" alt=""></span>
+                src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
             <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
           </a>
         </div>
-        <div class="h-px bg-[linear-gradient(90deg,rgba(45,41,64,0)_0%,#2D2940_21%,rgba(45,41,64,0)_100%)]">
+        <div
+          class="h-px mb-7.5 lg:mb-25 bg-[linear-gradient(90deg,rgba(45,41,64,0)_0%,#2D2940_21%,rgba(45,41,64,0)_100%)]">
         </div>
       </div>
     </div>
-  </section>
 
-  <section id="free-setup" class="bg-[#13111C] rounded-t-[30px] -mt-[30px] pb-25 xl:pb-32 lg:pb-25">
     <div class="px-4 mx-auto lg:container">
       <div class="lg:max-w-[1345px] mx-auto ">
         <div class="text-center mx-auto mb-12.5" data-cues="slideInUp" data-duration="600">
@@ -1332,8 +1417,8 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2" data-cues="slideInUp" data-duration="500"
-          data-group="section-box-7">
+        <div id="free-setup" class="grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2" data-cues="slideInUp"
+          data-duration="500" data-group="section-box-7">
           <div
             class="flex flex-col items-center justify-center bg-white/3 border border-[#71619F40] rounded-[20px] group/img">
             <div class="w-full mx-auto text-center 2xl:p-12.5 xl:p-10 lg:p-8 p-6 rounded-2xl">
@@ -1366,11 +1451,12 @@
               </div>
 
               <div class="relative mx-auto mt-10 transition-all duration-300 md:mt-14">
-                <figure class="relative rounded-2xl overflow-hidden">
+                <picture class="relative rounded-2xl overflow-hidden">
+                  <source type="image/webp" srcset="img/buy-purity.webp">
                   <img
                     class="transition-all duration-300 rounded-xl group-hover/img:scale-102 ease-linear will-change-auto"
-                    src="./img/buy-purity.png" alt="buy purity" />
-                </figure>
+                    src="./img/buy-purity.png" alt="buy purity" loading="lazy" />
+                </picture>
               </div>
             </div>
           </div>
@@ -1408,10 +1494,11 @@
               </div>
 
               <div class="relative mx-auto mt-10 md:mt-14">
-                <figure class="relative rounded-2xl overflow-hidden">
+                <picture class="relative rounded-2xl overflow-hidden">
+                  <source type="image/webp" srcset="img/let-purity.webp">
                   <img class="transition-all duration-300 rounded-xl group-hover/img:scale-102"
-                    src="./img/let-purity.png" alt="get purity" />
-                </figure>
+                    src="./img/let-purity.png" alt="get purity" loading="lazy" />
+                </picture>
               </div>
             </div>
           </div>
@@ -1420,7 +1507,7 @@
     </div>
   </section>
 
-  <section class="bg-[#F1F3F7] rounded-t-[30px] -mt-[30px] py-6 md:py-25 overflow-hidden">
+  <section class="bg-[#F1F3F7] rounded-t-[30px] -mt-[30px] relative py-7.5 md:py-25 overflow-hidden">
     <div class="px-4 mx-auto lg:container">
       <div class="lg:max-w-[1345px] mx-auto px-5 md:px-1 ">
         <div class="max-w-3xl mx-auto text-center mb-12.5" data-cues="slideInUp" data-duration="600">
@@ -1447,7 +1534,7 @@
               <span
                 class="inline-flex items-center justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
                 <!-- Folder icon -->
-                <img src="./img/detail-docs.svg" alt="detail documents">
+                <img src="./img/detail-docs.svg" alt="detail documents" loading="lazy">
               </span>
               <div>
                 <h3 class="mb-4 text-base font-semibold text-heading md:text-lg">Detailed Documentation</h3>
@@ -1464,7 +1551,7 @@
               <span
                 class="inline-flex items-center justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
                 <!-- Folder icon -->
-                <img src="./img/detail-video.svg" alt="detail documents">
+                <img src="./img/detail-video.svg" alt="detail documents" loading="lazy">
               </span>
               <div>
                 <h3 class="mb-4 text-base font-semibold text-heading md:text-lg">Detailed Video Guides</h3>
@@ -1480,7 +1567,7 @@
               <span
                 class="inline-flex items-center justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
                 <!-- Folder icon -->
-                <img src="./img/icon-sp-channel.svg" alt="detail documents">
+                <img src="./img/icon-sp-channel.svg" alt="detail documents" loading="lazy">
               </span>
               <div>
                 <h3 class="mb-4 text-base font-semibold text-heading md:text-lg">Support Channels</h3>
@@ -1496,7 +1583,7 @@
               <span
                 class="inline-flex items-center justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
                 <!-- Folder icon -->
-                <img src="./img/icon-sp-startup.svg" alt="detail documents">
+                <img src="./img/icon-sp-startup.svg" alt="detail documents" loading="lazy">
               </span>
               <div>
                 <h3 class="mb-4 text-base font-semibold text-heading md:text-lg">Support Startup</h3>
@@ -1533,9 +1620,9 @@
     </div>
   </section>
 
-  <section class="w-full bg-[#F1F3F7]">
+  <section class="w-full bg-[#F1F3F7] pt-7.5">
     <div class="px-4 mx-auto lg:container">
-      <div class="lg:max-w-[1345px] mx-auto pb-15 md:pb-25">
+      <div class="lg:max-w-[1345px] mx-auto pb-7.5 md:pb-25">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 2xl:gap-25 xl:gap-15 lg:gap-10" data-cues="slideInUp"
           data-duration="500" data-group="section-box-9">
           <!-- Left content -->
@@ -1547,13 +1634,27 @@
                 features, customization options, and support.</p>
             </div>
             <div class="flex mb-4">
-              <img class="size-12.5 rounded-full overflow-hidden" src="./img/help-center-1.png" alt="help-center">
-              <img class="-ms-[6px] size-12.5 rounded-full overflow-hidden" src="./img/help-center-2.png"
-                alt="help-center">
-              <img class="-ms-[6px] size-12.5 rounded-full overflow-hidden" src="./img/help-center-3.png"
-                alt="help-center">
+              <picture>
+                <source type="image/webp" srcset="img/help-center-1.webp">
+                <img class="size-12.5 rounded-full overflow-hidden" src="./img/help-center-1.png" alt="help-center"
+                  width="50" height="50" loading="lazy">
+              </picture>
+              <picture>
+                <source type="image/webp" srcset="img/help-center-2.webp">
+                <img class="-ms-[6px] size-12.5 rounded-full overflow-hidden" src="./img/help-center-2.png"
+                  alt="help-center" width="50" height="50" loading="lazy">
+              </picture>
+              <picture>
+                <source type="image/webp" srcset="img/help-center-3.webp">
+                <img class="-ms-[6px] size-12.5 rounded-full overflow-hidden" src="./img/help-center-3.png"
+                  alt="help-center" width="50" height="50" loading="lazy">
+              </picture>
               <div class="-ms-[6px] relative">
-                <img class="size-12.5 rounded-full overflow-hidden" src="./img/help-center-4.png" alt="help-center">
+                <picture>
+                  <source type="image/webp" srcset="img/help-center-4.webp">
+                  <img class="size-12.5 rounded-full overflow-hidden" src="./img/help-center-4.png" alt="help-center"
+                    width="50" height="50" loading="lazy">
+                </picture>
                 <span
                   class="border-2 border-white absolute size-4 bg-[#22B76E] rounded-full top-0 -right-2 animate-pulse">
                   <span class="absolute inset-0 rounded-full animate-ping z-2 bg-[#20cf7a]"></span>
@@ -1568,7 +1669,7 @@
                 class="inline-flex font-plus-jakarta-sans relative group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10  font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
                 <span class="z-2 -tracking-[0.01em]">Contact Us</span> <span
                   class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                    src="img/icon-arrow.svg" alt=""></span>
+                    src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
               </a>
               <a href="https://nextsky.gitbook.io/purity-theme/frequently-asked-questions"
                 class="inline-flex font-plus-jakarta-sans relative group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10  font-semibold -tracking-[0.02em] text-primary border border-primary transition-all duration-300 rounded-full bg-white gap-x-2 hover:bg-primary/90 hover:text-white  focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
@@ -1579,7 +1680,6 @@
                       d="M0.923828 2.34766C0.666016 2.34766 0.44401 2.26172 0.257812 2.08984C0.0859375 1.90365 0 1.68164 0 1.42383C0 1.16602 0.0859375 0.951172 0.257812 0.779297C0.44401 0.593099 0.666016 0.5 0.923828 0.5H10.0762C10.1478 0.5 10.2122 0.507161 10.2695 0.521484C10.3268 0.535807 10.3841 0.557292 10.4414 0.585938C10.4987 0.60026 10.5488 0.628906 10.5918 0.671875C10.6491 0.700521 10.6921 0.736328 10.7207 0.779297C10.735 0.779297 10.7422 0.779297 10.7422 0.779297C10.7852 0.822266 10.821 0.872396 10.8496 0.929688C10.8783 0.972656 10.9069 1.02279 10.9355 1.08008C10.9499 1.12305 10.9642 1.18034 10.9785 1.25195C10.9928 1.30924 11 1.36654 11 1.42383V10.5977C11 10.8411 10.9069 11.056 10.7207 11.2422C10.5488 11.4141 10.334 11.5 10.0762 11.5C9.83268 11.5 9.61784 11.4141 9.43164 11.2422C9.25977 11.056 9.17383 10.8411 9.17383 10.5977V3.63672L1.56836 11.2422C1.38216 11.4141 1.16016 11.5 0.902344 11.5C0.658854 11.5 0.451172 11.4141 0.279297 11.2422C0.093099 11.056 0 10.8411 0 10.5977C0 10.3398 0.093099 10.125 0.279297 9.95312L7.86328 2.34766H0.923828Z"
                       fill="currentcolor " />
                   </svg>
-
               </a>
             </div>
           </div>
@@ -1589,13 +1689,13 @@
             <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <!-- FAQ Item 1 -->
               <div class="p-4 lg:p-6 card-item-btn">
-                <h5 class="xl:text-lg">
+                <h5 class="xl:text-lg" role="heading" aria-level="2">
                   What's included in Purity
                   theme?
                 </h5>
                 <div class="icons">
-                  <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="">
-                  <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="">
+                  <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="icon" loading="lazy">
+                  <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="icon" loading="lazy">
                 </div>
               </div>
               <div class="card-item-description">
@@ -1613,13 +1713,13 @@
             <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
-                  <h5 class="xl:text-lg">
+                  <h5 class="xl:text-lg" role="heading" aria-level="2">
                     Which stores suit the Purity
                     theme?
                   </h5>
                   <div class="icons">
-                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="">
-                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="">
+                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="icon" loading="lazy">
+                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="icon" loading="lazy">
                   </div>
                 </div>
                 <div class="card-item-description">
@@ -1640,13 +1740,13 @@
             <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
-                  <h5 class="lg:text-lg">
+                  <h5 class="lg:text-lg" role="heading" aria-level="2">
                     Can I customize Purity theme
                     without coding?
                   </h5>
                   <div class="icons">
-                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="">
-                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="">
+                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="icon" loading="lazy">
+                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="icon" loading="lazy">
                   </div>
                 </div>
                 <div class="card-item-description">
@@ -1668,13 +1768,13 @@
             <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
-                  <h5 class="xl:text-lg">
+                  <h5 class="xl:text-lg" role="heading" aria-level="2">
                     Any additional fees for Purity
                     theme?
                   </h5>
                   <div class="icons">
-                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="">
-                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="">
+                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="icon" loading="lazy">
+                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="icon" loading="lazy">
                   </div>
                 </div>
                 <div class="card-item-description">
@@ -1692,12 +1792,12 @@
             <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
-                  <h5 class="lg:tex-lg">
+                  <h5 class="lg:tex-lg" role="heading" aria-level="2">
                     Is after-sale support available for Purity theme?
                   </h5>
                   <div class="icons">
-                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="">
-                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="">
+                    <img class="plus-icon btn-icon" src="./img/icon-plus.svg" alt="icon" loading="lazy">
+                    <img class="minus-icon btn-icon" src="./img/icon-minus.svg" alt="icon" loading="lazy">
                   </div>
                 </div>
                 <div class="card-item-description">
@@ -1725,7 +1825,7 @@
     </div>
   </section>
 
-  <section id="contact-us" class="w-full bg-[#F1F3F7]" data-cues="slideInUp" data-duration="600">
+  <section id="contact-us" class="w-full bg-[#F1F3F7] pt-7.5" data-cues="slideInUp" data-duration="600">
     <div class="px-4 mx-auto lg:container">
       <div class="lg:max-w-[1345px] mx-auto pb-15 md:pb-25">
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -1763,7 +1863,7 @@
               </div>
 
               <div class="flex items-center gap-3 mb-6">
-                <input type="checkbox" id="agreement" name="agreement" id="agreement"
+                <input type="checkbox" id="agreement" name="agreement" id="agreement" aria-label="checkbox"
                   class="size-4 appearance-none checked checked:border-white text-primary bg-transparent border border-white rounded-sm focus:outline-white focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]
                   relative checked:after:content-['✓'] checked:after:absolute checked:after:w-full checked:after:h-full checked:after:flex checked:after:justify-center checked:after:items-center checked:after:text-white checked:after:text-sm"">
                 <label for=" agreement" class="text-sm text-white">
@@ -1774,61 +1874,58 @@
               <button type="submit"
                 class="w-full relative cursor-pointer inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-primary transition-all duration-300 rounded-full border gap-x-2 bg-white border-white disabled:opacity-50 disabled:pointer-events-none">
                 Submit <span class="inline-block transition-all duration-300 group-hover:rotate-45">
-                  <img src="./img/icon-arrow-purple.svg" alt="">
+                  <img src="./img/icon-arrow-purple.svg" alt="icon" loading="lazy">
                 </span>
               </button>
             </form>
           </div>
 
-          <div class="grid grid-cols-1 lg:grid-rows-2 gap-6">
+          <div class="grid grid-rows-1 lg:grid-rows-2 gap-6">
             <div
-              class="h-full w-full lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.png)] bg-cover bg-center">
-              <div class="relative w-full h-full">
-                <span
-                  class="absolute pointer-events-none inset-0
-                                bg-[radial-gradient(circle_at_0%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
-                <div class="absolute top-10 left-10">
-                  <a
-                    class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
-                    <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">Trusted
-                      App Partners</span>
-                  </a>
-                  <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
-                    Exclusive Deals<br>
-                    from Our Partners
-                  </h2>
-                  <a href="#exclusive-offeres"
-                    class="relative inline-flex items-center justify-center px-8 py-3 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                    <span class="z-2 -tracking-[0.01em]">See Details</span> <span
-                      class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                        src="img/icon-arrow.svg" alt=""></span>
-                  </a>
-                </div>
+              class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.png)] bg-cover bg-center h-full min-h-[320px] relative z-auto">
+              <div
+                class="absolute w-full h-full bg-[url(./img/noise-165.svg)] bg-repeat top-0 pointer-events-none z-auto">
+              </div>
+              <div class="absolute top-10 left-10">
+                <a
+                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
+                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">Trusted
+                    App Partners</span>
+                </a>
+                <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
+                  Exclusive Deals <br>
+                  from Our Partners
+                </h2>
+                <a href="#exclusive-offeres"
+                  class="relative inline-flex items-center justify-center px-8 py-3 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+                  <span class="z-2 -tracking-[0.01em]">See Details</span> <span
+                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
+                      src="img/icon-arrow.svg" alt=""></span>
+                </a>
               </div>
             </div>
 
-            <div class="g:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/free-setup.png)] bg-cover bg-center">
-              <div class="relative w-full h-full">
-                <span
-                  class="absolute pointer-events-none inset-0
-                                bg-[radial-gradient(circle_at_0%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
-                <div class="absolute top-10 left-10">
-                  <a
-                    class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
-                    <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">No
-                      Store Yet?</span>
-                  </a>
-                  <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
-                    Free Setup<br>
-                    and Design Support
-                  </h2>
-                  <a href="#free-setup"
-                    class="relative inline-flex items-center justify-center px-8 py-3 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                    <span class="z-2 -tracking-[0.01em]">See Details</span> <span
-                      class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                        src="img/icon-arrow.svg" alt=""></span>
-                  </a>
-                </div>
+            <div
+              class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/free-setup.png)] bg-cover bg-cente h-full min-h-[320px] relative z-auto">
+              <div
+                class="absolute w-full h-full bg-[url(./img/noise-165.svg)] bg-repeat top-0 pointer-events-none z-auto">
+              </div>
+              <div class="absolute top-10 left-10">
+                <a
+                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
+                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">No
+                    Store Yet?</span>
+                </a>
+                <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
+                  Free Setup<br>
+                  and Design Support
+                </h2>
+                <a href="#free-setup"
+                  class="relative inline-flex items-center justify-center px-8 py-3 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+                  <span class="z-2 -tracking-[0.01em]">See Details</span> <span
+                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
+                      src="img/icon-arrow.svg" alt=""></span>
+                </a>
               </div>
             </div>
           </div>
@@ -1837,14 +1934,15 @@
     </div>
   </section>
 
-  <footer class="bg-[#13111C] relative" id="footer">
+  <footer class="bg-[#13111C] relative z-auto" id="footer">
     <div class="bg-[url('img/bg_footer.png')] bg-center bg-cover rounded-t-4xl overflow-hidden">
+      <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
       <div class="px-4 mx-auto lg:container">
         <div class="footer-top xl:py-37.5 lg:py-25 py-20 text-center text-white lg:max-w-[1345px] mx-auto">
           <div class="mb-6">
             <picture class="relative inline-flex icon-footer aspect-square">
               <source type="image/webp" srcset="img/icon_footer.webp">
-              <img width="130" height="130" alt="Icon footer" src="img/icon_footer.svg">
+              <img width="130" height="130" alt="Icon footer" src="img/icon_footer.svg" loading="lazy">
             </picture>
           </div>
 
@@ -1861,13 +1959,13 @@
               class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               <span class="z-2">View Demo Store</span> <span
                 class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                  src="img/icon-arrow.svg" alt=""></span>
+                  src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
               <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
             </a>
             <a href="https://themes.shopify.com/themes/purity/presets/purity"
               class="inline-flex font-plus-jakarta-sans group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               Try Purity Theme <span class="inline-block transition-all duration-300 group-hover:rotate-45"><img
-                  src="img/icon-arrow.svg" alt=""></span>
+                  src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
             </a>
           </div>
         </div>
@@ -1947,7 +2045,7 @@
 
   <!-- backToTop -->
   <button id="backToTop" class="fixed z-10 transition duration-300 cursor-pointer back-top end-8 bottom-8"
-    onclick="scrollToTop()" data-cue="slideInUp">
+    aria-label="back-top" onclick="scrollToTop()" data-cue="slideInUp">
     <span
       class="inline-flex items-center justify-center text-lg text-white transition-all duration-300 rounded-full bg-gradient-to-l from-purple-500 to-primary hover:bg-gradient-to-r md:size-13 size-11">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -1966,7 +2064,13 @@
     scrollCue.init({
       duration: 300,
       interval: -200,
-      percentage: 0.8
+      percentage: 1.2
+    });
+
+    // Ensure elements already in view animate on first paint and after layout shifts
+    window.addEventListener('load', function () {
+      scrollCue.update();
+      setTimeout(function () { scrollCue.update(); }, 300);
     });
 
     window.addEventListener("scroll", function () {
@@ -2059,80 +2163,152 @@
     });
 
 
-    // Menu mobile add overflow-hidden body
-    const menuCheckbox = document.getElementById("menu-checkbox");
-    const htmlTag = document.documentElement;
-
-    menuCheckbox.addEventListener("change", function () {
-      if (this.checked) {
-        htmlTag.classList.add("menu-open");
-      } else {
-        htmlTag.classList.remove("menu-open");
+    // Mobile menu controller (class-based)
+    class MobileMenuController {
+      constructor(checkboxId, offcanvasSelector) {
+        this.menuCheckbox = document.getElementById(checkboxId);
+        this.htmlTag = document.documentElement;
+        this.offcanvasSelector = offcanvasSelector;
+        if (this.menuCheckbox) {
+          this.bindEvents();
+        }
       }
-    });
-    document.querySelectorAll('.offcanvas a').forEach(link => {
-      link.addEventListener("click", () => {
-        menuCheckbox.checked = false;
-        htmlTag.classList.remove("menu-open");
-      });
-    });
+
+      bindEvents() {
+        this.menuCheckbox.addEventListener("change", () => this.toggleOverflow());
+        document.querySelectorAll(this.offcanvasSelector + ' a').forEach(link => {
+          link.addEventListener("click", () => this.closeMenu());
+        });
+      }
+
+      toggleOverflow() {
+        if (this.menuCheckbox.checked) {
+          this.htmlTag.classList.add("menu-open");
+        } else {
+          this.htmlTag.classList.remove("menu-open");
+        }
+      }
+
+      closeMenu() {
+        this.menuCheckbox.checked = false;
+        this.htmlTag.classList.remove("menu-open");
+      }
+    }
+
+    // init immediately (elements already present at this point)
+    new MobileMenuController("menu-checkbox", ".offcanvas");
   </script>
 
   <script>
-    // Focus input when click link to redirect to form
-    function focusInput() {
-      setTimeout(() => {
-        const focusElement = document.querySelector('.focus-input');
-        if (focusElement) {
-          focusElement.focus();
-        }
-      }, 300);
+    // Focus input helper (preserve global API for existing HTML usage)
+    class FocusInputHelper {
+      static focus(selector = '.focus-input', delayMs = 300) {
+        setTimeout(() => {
+          const focusElement = document.querySelector(selector);
+          if (focusElement) {
+            focusElement.focus();
+          }
+        }, delayMs);
+      }
     }
+
+    // Preserve original global function name if used by inline handlers
+    window.focusInput = () => FocusInputHelper.focus();
 
     (function () {
 
-      // Contact form handling (guarded and resilient)
-      const form = document.querySelector("form[action$='assets/php/contact.php']") || document.querySelector('form');
-      const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
-      const msg = (function () {
-        const el = document.getElementById('msg');
-        if (el) return el;
-        if (!form) return null;
-        const d = document.createElement('div');
-        d.id = 'msg';
-        d.style.marginTop = '12px';
-        d.style.color = 'white';
-        form.appendChild(d);
-        return d;
-      })();
+      // Contact form handling (class-based)
+      class ContactFormHandler {
+        constructor(formSelector) {
+          this.form = document.querySelector(formSelector) || document.querySelector('form');
+          this.submitBtn = this.form ? this.form.querySelector('button[type="submit"]') : null;
+          this.submitOriginalHTML = this.submitBtn ? this.submitBtn.innerHTML : '';
+          this.msg = this.ensureMessageElement();
+          if (this.form) this.bindSubmit();
+        }
 
-      function setMsg(type, text) {
-        if (!msg) return;
-        msg.className = type === 'success' ? 'success' : type === 'loading' ? 'loading' : 'error';
-        msg.textContent = text || '';
-      }
+        ensureMessageElement() {
+          const existing = document.getElementById('msg');
+          if (existing) return existing;
+          if (!this.form) return null;
+          const messageDiv = document.createElement('div');
+          messageDiv.id = 'msg';
+          messageDiv.style.marginTop = '12px';
+          messageDiv.style.overflow = 'hidden';
+          messageDiv.style.maxHeight = '0px';
+          messageDiv.style.opacity = '0';
+          messageDiv.style.transition = 'max-height 250ms ease, opacity 250ms ease';
+          this.form.appendChild(messageDiv);
+          return messageDiv;
+        }
 
-      if (form) {
-        form.addEventListener('submit', async function (e) {
+        setMessage(type, text) {
+          if (!this.msg) return;
+          // Reset content/classes
+          this.msg.className = '';
+          this.msg.innerHTML = '';
+
+          if (type === 'success') {
+            this.msg.className = 'bg-[#e5fae0] text-[#1c8a1a] border border-white/80 rounded-2xl px-3 py-2 flex items-center gap-3';
+            this.msg.innerHTML = '<span class="inline-flex items-center justify-center size-6 rounded-full bg-[#EAF6E9] text-[#257942]">\n              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\n                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/>\n              </svg>\n            </span>\n            <span>Thanks for contacting us. We\'ll get back to you as soon as possible.</span>';
+          } else if (type === 'loading') {
+            this.msg.className = '';
+            this.msg.textContent = '';
+          } else {
+            this.msg.className = 'bg-[#FEF3F2] text-[#B42318] border border-[#FECACA] rounded-lg px-3 py-2';
+            this.msg.textContent = text || 'Something went wrong.';
+          }
+
+          // Slide down/up animation
+          const hasContent = this.msg.textContent !== '' || this.msg.innerHTML !== '';
+          if (hasContent) {
+            this.msg.style.display = 'block';
+            this.msg.style.maxHeight = '0px';
+            this.msg.style.opacity = '0';
+            requestAnimationFrame(() => {
+              const target = this.msg.scrollHeight + 'px';
+              this.msg.style.maxHeight = target;
+              this.msg.style.opacity = '1';
+            });
+          } else {
+            this.msg.style.maxHeight = '0px';
+            this.msg.style.opacity = '0';
+          }
+        }
+
+        toggleSubmitting(isSubmitting) {
+          if (!this.submitBtn) return;
+          this.submitBtn.disabled = isSubmitting;
+          this.submitBtn.classList.toggle('opacity-50', isSubmitting);
+          this.submitBtn.classList.toggle('pointer-events-none', isSubmitting);
+          if (isSubmitting) {
+            this.submitBtn.setAttribute('aria-busy', 'true');
+            this.submitBtn.innerHTML = '<span class="inline-flex items-center gap-2">\n              <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">\n                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-opacity="0.2" stroke-width="4"/>\n                <path d="M22 12a10 10 0 0 0-10-10" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>\n              </svg>\n              Sending...\n            </span>';
+          } else {
+            this.submitBtn.removeAttribute('aria-busy');
+            this.submitBtn.innerHTML = this.submitOriginalHTML;
+          }
+        }
+
+        bindSubmit() {
+          this.form.addEventListener('submit', (e) => this.onSubmit(e));
+        }
+
+        async onSubmit(e) {
           e.preventDefault();
-          // Require agreement checkbox to be checked before submit
-          const agree = form.querySelector('#agreement');
+          const agree = this.form.querySelector('#agreement');
           if (agree && !agree.checked) {
-            setMsg('error', 'Please check the agreement checkbox before submitting.');
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.classList.remove('opacity-50', 'pointer-events-none');
-            }
+            this.setMessage('error', 'Please check the agreement checkbox before submitting.');
+            this.toggleSubmitting(false);
             agree.focus();
             return;
           }
-          setMsg('loading', 'Sending...');
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.classList.add('opacity-50', 'pointer-events-none');
-          }
-          const action = form.getAttribute('action') || 'assets/php/contact.php';
-          const data = new FormData(form);
+
+          this.setMessage('loading', 'Sending...');
+          this.toggleSubmitting(true);
+
+          const action = this.form.getAttribute('action') || 'assets/contact.php';
+          const data = new FormData(this.form);
           try {
             const res = await fetch(action, {
               method: 'POST',
@@ -2143,39 +2319,51 @@
             const isJson = contentType.includes('application/json');
             if (!res.ok) {
               const err = isJson ? await res.json().catch(() => ({})) : {};
-              setMsg('error', err.message);
+              this.setMessage('error', err.message);
             } else {
               const json = isJson ? await res.json().catch(() => ({ ok: true })) : { ok: true };
               if (json.ok !== false) {
-                setMsg();
-                form.reset();
+                this.setMessage('success', '');
+                this.form.reset();
               } else {
-                setMsg('error', json.message || 'Something went wrong.');
+                this.setMessage('error', json.message || 'Something went wrong.');
               }
             }
           } catch {
-            setMsg('error', 'Network error. Please try again.');
+            this.setMessage('error', 'Network error. Please try again.');
           } finally {
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.classList.remove('opacity-50', 'pointer-events-none');
-            }
+            this.toggleSubmitting(false);
           }
-        });
+        }
       }
 
-      // Features table toggle (only if elements exist)
-      const table = document.getElementById('features-table');
-      const toggleBtn = document.getElementById('toggle-features');
-      if (table && toggleBtn) {
-        const label = toggleBtn.querySelector('.toggle-label');
-        const overlay = document.getElementById('features-overlay');
-        const extras = Array.from(table.querySelectorAll('tbody tr.feature-extra'));
+      // Features table toggle (class-based)
+      class FeaturesTableToggle {
+        constructor(tableId, toggleBtnId) {
+          this.table = document.getElementById(tableId);
+          this.toggleBtn = document.getElementById(toggleBtnId);
+          if (!this.table || !this.toggleBtn) return;
+          this.label = this.toggleBtn.querySelector('.toggle-label');
+          this.overlay = document.getElementById('features-overlay');
+          this.extras = Array.from(this.table.querySelectorAll('tbody tr.feature-extra'));
+          this.expanded = false;
+          this.prepareRows();
+          this.toggleBtn.addEventListener('click', () => this.setState(!this.expanded));
+        }
 
-        let expanded = false;
-        function setState(isOpen) {
-          expanded = isOpen;
-          extras.forEach(function (row) {
+        prepareRows() {
+          this.extras.forEach((row) => {
+            row.style.overflow = 'hidden';
+            row.style.maxHeight = '0px';
+            row.style.opacity = '0';
+            row.style.transition = 'max-height 200ms ease, opacity 200ms ease';
+            row.classList.add('hidden');
+          });
+        }
+
+        setState(isOpen) {
+          this.expanded = isOpen;
+          this.extras.forEach((row) => {
             if (isOpen) {
               row.classList.remove('hidden');
               row.style.maxHeight = row.scrollHeight + 'px';
@@ -2183,55 +2371,41 @@
             } else {
               row.style.maxHeight = '0px';
               row.style.opacity = '0';
-              setTimeout(function () { row.classList.add('hidden'); }, 200);
+              setTimeout(() => { row.classList.add('hidden'); }, 200);
             }
-            row.style.transition = 'max-height 200ms ease, opacity 200ms ease';
           });
-          if (label) label.textContent = isOpen ? 'Hide Features' : 'View all Features';
-          if (overlay) overlay.style.opacity = isOpen ? '0' : '1';
+          if (this.label) this.label.textContent = isOpen ? 'Hide Features' : 'View all Features';
+          if (this.overlay) this.overlay.style.opacity = isOpen ? '0' : '1';
         }
-
-        // Initialize collapsed styles for smoothness
-        extras.forEach(function (row) {
-          row.style.overflow = 'hidden';
-          row.style.maxHeight = '0px';
-          row.style.opacity = '0';
-          row.classList.add('hidden');
-        });
-
-        toggleBtn.addEventListener('click', function () {
-          setState(!expanded);
-        });
       }
 
-      // Sticky header scroll effect
-      function initStickyHeader() {
-        const header = document.getElementById('header');
-        const headerContainer = document.getElementById('header-container');
-
-        function handleScroll() {
-          const currentScrollY = window.scrollY;
-
-          if (currentScrollY > 100) {
-            // Thu nhỏ header khi scroll
-            headerContainer.classList.remove('lg:max-w-[1345px]');
-            headerContainer.classList.add('lg:max-w-[950px]');
-            header.classList.add('lg:pt-7.5');
-          } else {
-            // Trở về kích thước ban đầu
-            headerContainer.classList.remove('lg:max-w-[950px]');
-            headerContainer.classList.add('lg:max-w-[1345px]');
+      // Sticky header (class-based)
+      class StickyHeader {
+        constructor(headerId, containerId, threshold = 100) {
+          this.header = document.getElementById(headerId);
+          this.headerContainer = document.getElementById(containerId);
+          this.threshold = threshold;
+          if (this.header && this.headerContainer) {
+            this.bind();
           }
         }
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-      }
+        bind() {
+          window.addEventListener('scroll', () => this.onScroll(), { passive: true });
+          this.onScroll();
+        }
 
-      // Initialize sticky header when DOM is loaded
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initStickyHeader);
-      } else {
-        initStickyHeader();
+        onScroll() {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY > this.threshold) {
+            this.headerContainer.classList.remove('lg:max-w-[1345px]');
+            this.headerContainer.classList.add('lg:max-w-[950px]');
+            this.header.classList.add('lg:pt-7.5');
+          } else {
+            this.headerContainer.classList.remove('lg:max-w-[950px]');
+            this.headerContainer.classList.add('lg:max-w-[1345px]');
+          }
+        }
       }
 
       // FAQ accordion: slide down, first open by default, only one open
@@ -2291,9 +2465,23 @@
         }
       }
 
-      new AccordionFAQ(".card-item-btn");
+      // Initialize all modules
+      const init = () => {
+        new ContactFormHandler("form[action$='assets/contact.php']");
+        new FeaturesTableToggle('features-table', 'toggle-features');
+        new StickyHeader('header', 'header-container', 100);
+        new AccordionFAQ(".card-item-btn");
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
     })();
   </script>
 </body>
+
+</html>
 
 </html>
