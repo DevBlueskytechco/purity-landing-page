@@ -55,7 +55,8 @@
 .scrolling-left {
   animation-duration: 60s;
 }
-.menu-open{
+
+.menu-open {
   overflow: hidden !important;
 }
 
@@ -68,31 +69,36 @@
 .sweep-wrap .line {
   position: absolute;
   top: 50%;
-  height: 1px;
-  width: 150px !important;
+  height: 2px;
+  width: 0;
   pointer-events: none;
+  opacity: 1;
 }
 
 .sweep-wrap .line.left {
-  left: auto;
-  right: 100%;
-  background: linear-gradient(90deg, #5B7BFB, #5B7BFB00);
-  animation: sweepLeft 2.2s ease-out infinite;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  background: linear-gradient(90deg, #5B7BFB 0, #5B7BFB calc(100% - 12px), transparent 100%);
+  animation: sweepLeft 2.2s ease infinite;
 }
 
 .sweep-wrap .line.right {
-  right: auto;
-  left: 100%;
-  background: linear-gradient(270deg, #5B7BFB, #5B7BFB00);
+  right: 0;
+  top: 50%;
+  transform: translate(100%, -50%);
+  background: linear-gradient(90deg, #5B7BFB 0, #5B7BFB calc(100% - 12px), transparent 100%);
+
   animation: sweepRight 2.2s ease-out infinite;
 }
 
 .sweep-wrap .line.up {
   left: 50%;
-  top: auto;
-  bottom: 100%;
-  width: 1px !important;
-  background: linear-gradient(0deg, #5B7BFB00, #5B7BFB);
+  top: 0;
+  bottom: auto;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(180deg, #5B7BFB 0, transparent 100%);
   animation: sweepUp 2.2s ease-out infinite;
   transform: translate(-50%, 0);
 }
@@ -107,7 +113,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px;
   font-weight: 600;
   color: hsl(292, 42%, 14%);
   width: 100%;
@@ -116,8 +121,41 @@
   text-align: left;
 }
 
-.minus-icon {
-  display: none;
+.card-item-btn .icons {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.card-item-btn .icons::before,
+.card-item-btn .icons::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transform-origin: 50% 50%;
+  transition: transform 200ms ease, opacity 200ms ease;
+  translate: -50% -50%;
+}
+
+.card-item-btn .icons::before {
+  transform: rotate(0deg) scaleX(1);
+}
+
+.card-item-btn .icons::after {
+  transform: rotate(90deg);
+}
+
+.card-item-btn.active .icons::after {
+  transform: rotate(180deg);
+  opacity: 0;
 }
 
 .card-item-description {

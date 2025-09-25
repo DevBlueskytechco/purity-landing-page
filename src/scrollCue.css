@@ -424,52 +424,53 @@
   }
 }
 
-/* animation for landing page */
+/* animation sweep */
 @keyframes sweepLeft {
   0% {
-    transform: translate(0, -50%);
+    width: 0;
     opacity: .9;
   }
 
   70% {
-    opacity: .15;
+    opacity: .2;
   }
 
   100% {
-    transform: translate(-140px, -50%);
+    width: 150px;
     opacity: 0;
   }
 }
 
 @keyframes sweepRight {
   0% {
-    transform: translate(0, -50%);
+    width: 0;
     opacity: .9;
   }
 
   70% {
-    opacity: .15;
+    opacity: .2;
   }
 
   100% {
-    transform: translate(140px, -50%);
+    width: 150px;
     opacity: 0;
   }
 }
 
 @keyframes sweepUp {
   0% {
+    height: 0;
     transform: translate(-50%, 0);
     opacity: .9;
   }
 
   70% {
-    opacity: .15;
-    height: 150px;
+    opacity: .2;
   }
 
   100% {
-    transform: translate(-50%, -140px);
+    height: 150px;
+    transform: translate(-50%, -150px);
     opacity: 0;
   }
 }
