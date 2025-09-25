@@ -140,3 +140,8 @@ svg {
   z-index: 1;
   animation: circTxt-rotating 8s linear infinite;
 }
+
+/* scroll to target */
+:target {
+  scroll-margin-top: 80px !important;
+}
