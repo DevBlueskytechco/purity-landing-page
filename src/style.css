@@ -58,6 +58,7 @@
 .menu-open{
   overflow: hidden !important;
 }
+
 /* animation 3 border */
 .sweep-wrap {
   position: relative;
@@ -68,18 +69,20 @@
   position: absolute;
   top: 50%;
   height: 1px;
-  width: 150px;
+  width: 150px !important;
   pointer-events: none;
 }
 
 .sweep-wrap .line.left {
-  left: -50%;
+  left: auto;
+  right: 100%;
   background: linear-gradient(90deg, #5B7BFB, #5B7BFB00);
   animation: sweepLeft 2.2s ease-out infinite;
 }
 
 .sweep-wrap .line.right {
-  right: -50%;
+  right: auto;
+  left: 100%;
   background: linear-gradient(270deg, #5B7BFB, #5B7BFB00);
   animation: sweepRight 2.2s ease-out infinite;
 }
@@ -88,9 +91,8 @@
   left: 50%;
   top: auto;
   bottom: 100%;
-  width: 1px;
-  height: 150px;
-  background: linear-gradient(0deg, #5B7BFB, #5B7BFB00);
+  width: 1px !important;
+  background: linear-gradient(0deg, #5B7BFB00, #5B7BFB);
   animation: sweepUp 2.2s ease-out infinite;
   transform: translate(-50%, 0);
 }
@@ -100,11 +102,6 @@
 }
 
 /* FAQ details/summary styling */
-img,
-svg {
-  max-width: 100%;
-}
-
 .card-item-btn {
   display: flex;
   flex-direction: row;

@@ -24,20 +24,23 @@
   <meta property="og:image:secure_url" content="https://themes.nextsky.co/purity/social.jpg" />
   <meta property="og:image:width" content="590" />
   <meta property="og:image:height" content="300" />
-  <link rel="icon" href="img/Favicon.svg" sizes="32x32" />
+  <link rel="icon" href="./img/Favicon.svg" sizes="32x32" />
 
   <link rel="stylesheet" href="./scrollCue.css">
   <link rel="stylesheet" href="./style.css">
   <link href="./output.css" rel="stylesheet" />
+
 </head>
 
 <body class="min-h-screen overflow-x-hidden">
   <!-- Header -->
   <header
-    class="top-0 z-10 w-full  start-0 shadow  fixed  lg:not-[.show]:pt-7.5  will-change-auto bg-transparent  transition-all duration-300"
+    class="top-0 z-10 w-full start-0 shadow fixed lg:pt-7.5 will-change-auto bg-transparent transition-all duration-300"
     id="header">
-    <div class="px-4 py-2 mx-auto bg-white lg:p-0 lg:container lg:bg-transparent">
-      <div class="flex items-center gap-4 bg-white rounded-lg lg:justify-between lg:ps-5 lg:max-w-[1350px]">
+    <div
+      class="px-4 py-2 m-3 rounded-lg lg:mx-auto bg-white lg:p-0 lg:container lg:bg-transparent transition-all duration-500">
+      <div id="header-container"
+        class="flex items-center gap-4 bg-white rounded-lg lg:justify-between lg:ps-5 lg:max-w-[1345px] mx-auto transition-all duration-500 h-[60px] lg:h-auto">
         <div class="cursor-pointer lg:hidden">
           <label for="menu-checkbox" class="cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -59,7 +62,8 @@
               Offers</a>
           </li>
           <li>
-            <a class="block p-3 transition-all duration-300 hover:text-primary" href="#contact-us">Contact Us</a>
+            <a class="block p-3 transition-all duration-300 hover:text-primary" onclick="focusInput()"
+              href="#contact-us">Contact Us</a>
           </li>
           <li>
             <a href="https://nextsky.gitbook.io/purity-theme/"
@@ -68,7 +72,7 @@
         </ul>
         <div class="lg:m-0 ms-auto">
           <a href="https://themes.shopify.com/themes/purity/presets/purity"
-            class="inline-flex font-plus-jakarta-sans lg:rounded-r-lg lg:rounded-l-none rounded-lg relative  group justify-center items-center px-4 py-2 lg:py-4.5 lg:px-10 lg:text-base text-sm  font-semibold tracking-tighter text-white transition-all duration-300  bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
+            class="inline-flex font-plus-jakarta-sans lg:rounded-r-lg lg:rounded-l-none rounded-lg relative  group justify-center items-center px-4 py-2 lg:py-4.5 lg:px-10 lg:text-base text-sm  font-semibold -tracking-[0.02em] text-white transition-all duration-300  bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
             <span class="z-2">Try Theme</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                 src="img/icon-arrow.svg" alt=""></span>
@@ -79,9 +83,9 @@
   </header>
 
   <section
-    class="bg-[#13111C] bg-[url(img/bg-header.jpg)] pb-15 2xl:pt-50 lg:pt-40 pt-30 bg-cover bg-center bg-no-repeat 2xl:min-h-screen font-plus-jakarta-sans">
+    class="bg-[#13111C] bg-[url(img/bg-header.jpg)] pb-10 lg:pb-16 lg:pt-40 pt-25 bg-cover bg-center bg-no-repeat font-plus-jakarta-sans min-h-screen">
     <div class="px-4 mx-auto lg:container">
-      <div class="space-y-6 text-center text-white" data-cues="bounceInUp" data-duration="700" data-delay="100">
+      <div class="space-y-6 text-center text-white mx-auto max-w-[1345px] relative">
         <!-- <button class="text-white overflow-hidden z-1 px-4 py-2.5 inline-flex playbtn items-center rounded-full bg-[#1c1f2b] text-sm font-medium capitalize backdrop-blur-xs gap-2 font-plus-jakarta-sans  relative">
                     <div class="relative inline-flex p-1 z-2">
                         <div class="inline-flex size-1.5 rounded-full bg-primary animate-pulse"></div>
@@ -94,7 +98,7 @@
                 </button> -->
         <div class="m-0 text-center"><img class="inline-block" src="img/logo.svg" alt="" data-duration="600"></div>
         <h2
-          class="max-w-[700px] mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl sm:text-5xl text-4xl tracking-tighter font-semibold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent"
+          class="max-w-[700px] mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl sm:text-5xl text-4xl -tracking-[0.02em] font-semibold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent"
           data-duration="1000">
           The Perfect <span class="hidden lg:inline"><br /></span>
           Design Solution<span class="hidden lg:inline"><br /></span>
@@ -105,20 +109,21 @@
         </p>
         <div class="flex flex-col justify-center gap-4 sm:flex-row" data-duration="1300">
           <a href="https://themes.shopify.com/themes/purity/presets/purity"
-            class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-            <span class="z-2">Try Purity Theme</span> <span
+            class="inline-flex font-plus-jakarta-sans relative playbtn group h-[50px] lg:h-auto justify-center items-center px-8 py-3.5 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+            <span class="z-2 -tracking-[0.01em]">Try Purity Theme</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                 src="img/icon-arrow.svg" alt=""></span>
             <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
           </a>
           <a href="https://themes.shopify.com/themes/purity/presets/purity"
-            class="inline-flex font-plus-jakarta-sans group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-            View Demo <span class="inline-block transition-all duration-300 group-hover:rotate-45"><img
+            class="-tracking-[0.01em] inline-flex font-plus-jakarta-sans group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+            View Demo Store<span class="inline-block transition-all duration-300 group-hover:rotate-45"><img
                 src="img/icon-arrow.svg" alt=""></span>
           </a>
         </div>
 
-        <ul class="mt-10 space-x-5 space-y-1 text-sm xl:space-x-12 2xl:mt-37 xl:mt-30 lg:mt-25 md:text-base">
+        <ul
+          class="mt-10 space-x-5 space-y-1 text-sm xl:space-x-12 lg:mt-16 md:text-base flex flex-col gap-2.5 lg:flex-row lg:justify-center">
           <li class="inline-flex items-center gap-3"> <span
               class="inline-flex items-center justify-center text-white rounded-full shrink-0 size-5 bg-primary"><img
                 src="img/icon-list.svg" alt=""></span> Exclusive Built-in Features</li>
@@ -130,15 +135,15 @@
                 src="img/icon-list.svg" alt=""></span> Setup and Migration Help</li>
         </ul>
       </div>
-
     </div>
   </section>
 
-  <section class="overflow-hidden bg-white -mt-7 rounded-t-4xl xl:py-25 lg:py-18 py-15" id="features">
+  <section class="overflow-hidden bg-white rounded-t-4xl xl:py-25 lg:py-18 py-15" id="features">
     <div class="px-4 mx-auto lg:container">
-      <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
+      <div class="space-y-4 text-center lg:mb-12.5 mb-8 max-w-[1345px] mx-auto" data-cues="slideInUp"
+        data-duration="600">
         <h2
-          class="text-heading tracking-tighter font-plus-jakarta-sans leading-tight lg:text-[45px] text-3xl font-semibold">
+          class="text-heading -tracking-[0.02em] font-plus-jakarta-sans leading-tight lg:text-[45px] text-3xl font-semibold">
           Powerful Sections<span class="sm:inline hidden"><br /></span>
           to Increase Sales Conversion</h2>
         <p>A complete range of features designed for a smooth mobile shopping experience,<span
@@ -158,7 +163,7 @@
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Suitable Product Finder</h3>
-                <p class="text-sm leading-relaxed lg:text-base">Smart search helps you find the right products tailored
+                <p class="leading-relaxed">Smart search helps you find the right products tailored
                   to your lifestyle, habits, and goals, delivering instant recommendations so you can choose with
                   confidence.</p>
               </div>
@@ -188,7 +193,7 @@
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Recommend Collection</h3>
-                <p class="text-sm leading-relaxed lg:text-base">An A–Z skincare roadmap makes it simple to build a
+                <p class="leading-relaxed">An A–Z skincare roadmap makes it simple to build a
                   complete routine, guiding you step by step from basic care to advanced treatments with clarity and
                   ease.</p>
               </div>
@@ -218,7 +223,7 @@
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Product Bundle</h3>
-                <p class="text-sm leading-relaxed lg:text-base">Offering curated bundles of related products, carefully
+                <p class="leading-relaxed">Offering curated bundles of related products, carefully
                   combined to encourage more purchases while providing added savings and value for customers.</p>
               </div>
             </div>
@@ -247,7 +252,7 @@
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Featured Product Banner</h3>
-                <p class="text-sm leading-relaxed lg:text-base">Smart search helps you find the right products tailored
+                <p class="leading-relaxed">Smart search helps you find the right products tailored
                   to your lifestyle, habits, and goals, delivering instant recommendations so you can choose with
                   confidence.</p>
               </div>
@@ -270,9 +275,10 @@
             <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-shop.jpg"
                 alt=""></figure>
             <div class="p-6 xl:p-8">
-              <h3 class="font-semibold text-heading tracking-tighter xl:text-[22px] text-xl  lg:mb-3 mb-2">Sticky Video
+              <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl  lg:mb-3 mb-2">Sticky
+                Video
                 Shopable</h3>
-              <p class="text-sm leading-relaxed lg:text-base">Keeps a video visible while customers scroll, allowing
+              <p class="leading-relaxed">Keeps a video visible while customers scroll, allowing
                 them to view product demos or tutorials as they shop.</p>
             </div>
           </div>
@@ -280,9 +286,9 @@
             <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-testi.jpg"
                 alt=""></figure>
             <div class="p-6 xl:p-8">
-              <h3 class="font-semibold text-heading tracking-tighter xl:text-[22px] text-xl lg:mb-3 mb-2">Dynamic
+              <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl lg:mb-3 mb-2">Dynamic
                 Testimonial</h3>
-              <p class="text-sm leading-relaxed lg:text-base">Auto-play customer videos with before-and-after
+              <p class="leading-relaxed">Auto-play customer videos with before-and-after
                 comparisons to show real product results clearly and engagingly.</p>
             </div>
           </div>
@@ -290,9 +296,10 @@
             <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-page.jpg"
                 alt=""></figure>
             <div class="p-6 xl:p-8">
-              <h3 class="font-semibold text-heading tracking-tighter xl:text-[22px] text-xl  lg:mb-3 mb-2">Action Video
+              <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl  lg:mb-3 mb-2">Action
+                Video
                 on Product Page</h3>
-              <p class="text-sm leading-relaxed lg:text-base">Showcase products in action with a dynamic video gallery
+              <p class="leading-relaxed">Showcase products in action with a dynamic video gallery
                 for a fully interactive and engaging shopping experience.</p>
             </div>
           </div>
@@ -306,9 +313,9 @@
             <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101"
                 src="img/img-compare.jpg" alt=""></figure>
             <div class="p-6 xl:p-8">
-              <h3 class="font-semibold text-heading tracking-tighter xl:text-[22px] text-xl lg:mb-3 mb-2">Compare
+              <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl lg:mb-3 mb-2">Compare
                 Related Product</h3>
-              <p class="text-sm leading-relaxed lg:text-base">Easily compare similar products by price, ratings,
+              <p class="leading-relaxed">Easily compare similar products by price, ratings,
                 ingredients, and availability to find the best option for you.</p>
             </div>
           </div>
@@ -316,9 +323,10 @@
             <figure><img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-off.jpg"
                 alt=""></figure>
             <div class="p-6 xl:p-8">
-              <h3 class="font-semibold text-heading tracking-tighter xl:text-[22px] text-xl  lg:mb-3 mb-2">Product Offer
+              <h3 class="font-semibold text-heading -tracking-[0.02em] xl:text-[22px] text-xl  lg:mb-3 mb-2">Product
+                Offer
               </h3>
-              <p class="text-sm leading-relaxed lg:text-base">Displays limited-time sales, product bundles, and
+              <p class="leading-relaxed">Displays limited-time sales, product bundles, and
                 exclusive discounts, encouraging customers to make quick purchases.</p>
             </div>
           </div>
@@ -333,9 +341,10 @@
     <span
       class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
     <div class="px-4 mx-auto lg:container">
-      <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
+      <div class="space-y-4 text-center lg:mb-12.5 mb-8 max-w-[1345px] mx-auto" data-cues="slideInUp"
+        data-duration="600">
         <h2
-          class="inline-block tracking-tighter leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
+          class="inline-block -tracking-[0.02em] leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
           Optimized for Mobile-First</h2>
         <p class="text-white/70">Designed to help customers find, compare, and purchase products effortlessly while<span
             class="hidden md:inline"><br /></span> boosting your store’s conversion rates.</p>
@@ -354,7 +363,7 @@
         </div>
         <div class="transition-transform duration-700 ease-in-out will-change-transform box">
           <figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1"
-              src="img/img-iphone3.png" alt=""></figure>
+              src="img/img-iphone-3.png" alt=""></figure>
         </div>
         <div class="mt-5 transition-transform duration-700 ease-in-out lg:mt-10 will-change-transform box target">
           <figure><img class="transition-all duration-300 hover:scale-102 hover:-translate-y-1"
@@ -371,23 +380,23 @@
         data-cues="slideInUp" data-duration="400">
         <span
           class="inline-flex group justify-center items-center lg:text-base text-sm px-4 py-2 lg:py-4.5 lg:px-6 font-medium  bg-white/10 text-white transition-all duration-300 rounded-full border border-[#71619F33] gap-x-2 hover:-translate-y-1  hover:bg-white/8">
-          🥳 Always Free
+          🥳 <span class="me-px"></span>Always Free
         </span>
         <span
           class="inline-flex group justify-center items-center lg:text-base text-sm px-4 py-2 lg:py-4.5 lg:px-6 font-medium  bg-white/10 text-white transition-all duration-300 rounded-full border border-[#71619F33] gap-x-2 hover:-translate-y-1  hover:bg-white/8">
-          👍 One‑Click Launch
+          👍 <span class="me-px"></span>One‑Click Launch
         </span>
         <span
           class="inline-flex group justify-center items-center lg:text-base text-sm px-4 py-2 lg:py-4.5 lg:px-6 font-medium  bg-white/10 text-white transition-all duration-300 rounded-full border border-[#71619F33] gap-x-2 hover:-translate-y-1  hover:bg-white/8">
-          🔥 Start Selling Today
+          🔥 <span class="me-px"></span>Start Selling Today
         </span>
         <span
           class="inline-flex group justify-center items-center lg:text-base text-sm px-4 py-2 lg:py-4.5 lg:px-6 font-medium  bg-white/10 text-white transition-all duration-300 rounded-full border border-[#71619F33] gap-x-2 hover:-translate-y-1  hover:bg-white/8">
-          👋 Swipe‑Ready
+          👋 <span class="me-px"></span>Swipe‑Ready
         </span>
       </div>
     </div>
-    <div class="flex items-center mb-10 overflow-hidden scrolling xl:mb-27 lg:mb-20 md:mb-15">
+    <div class="flex items-center mb-10 overflow-hidden scrolling xl:mb-25 lg:mb-20 md:mb-15">
       <div class="flex items-center overflow-hidden shrink-0 animate-scrolling">
         <h2
           class="2xl:text-[70px] xl:text-6xl lg:text-5xl text-4xl bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent inline-block">
@@ -441,22 +450,24 @@
       </div>
     </div>
     <div class="px-4 mx-auto lg:container">
-      <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
+      <div class="space-y-4 text-center lg:mb-12.5 mb-8 max-w-[1345px] mx-auto" data-cues="slideInUp"
+        data-duration="600">
         <h2
-          class="inline-block tracking-tighter leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
+          class="inline-block -tracking-[0.02em] leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
           Why Merchants Love Purity</h2>
         <p class="text-white/70">Designed with flexibility, performance, and elegance in mind, Purity adapts seamlessly
           to your<span class="hidden md:inline"><br /></span> brand - whether you're starting out or expanding.</p>
       </div>
 
       <div
-        class="grid  max-w-[1345px] grid-cols-1 gap-6 text-center text-white lg:grid-cols-4 sm:grid-cols-2 gap-x-4 xl:gap-x-6 mb-12.5"
+        class="grid  max-w-[1345px] grid-cols-1 gap-6 text-center text-white lg:grid-cols-4 sm:grid-cols-2 gap-x-4 xl:gap-x-6 mb-8 lg:mb-12.5 mx-auto"
         data-cues="slideInUp" data-duration="500" data-group="section-box-1">
         <div
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5 hover:bg-white/8 transition-all duration-300 xl:py-8  p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
           <figure
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-ux.svg" alt=""></figure>
+            <img src="img/icon-ux.svg" alt="">
+          </figure>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Seamless—Modern UX</h3>
           <p class="text-sm text-white/70 lg:text-base">Deliver a smooth, thumb-friendly experience with pixel-perfect
             layouts and elegant design that looks great on all devices.</p>
@@ -465,7 +476,8 @@
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
           <figure
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-fea.svg" alt=""></figure>
+            <img src="img/icon-fea.svg" alt="">
+          </figure>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Built-In Advanced Features</h3>
           <p class="text-sm text-white/70 lg:text-base">Unlock next-level selling power with conversion-focused features
             - fully integrated with no extra apps required.</p>
@@ -474,7 +486,8 @@
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
           <figure
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-per.svg" alt=""></figure>
+            <img src="img/icon-per.svg" alt="">
+          </figure>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">High Mobile Performance</h3>
           <p class="text-sm text-white/70 lg:text-base">Purity meets and exceeds Shopify's mobile performance standards,
             delivering a fast, smooth shopping experience on any device.</p>
@@ -483,7 +496,8 @@
           class="rounded-[20px] shadow-sm hover:shadow-[#71619F33] border border-[#71619F33] bg-white/5  hover:bg-white/8 transition-all duration-300 xl:py-8 p-6 group lg:space-y-6 space-y-4 xl:min-h-76 grid  place-content-center place-items-center">
           <figure
             class="inline-flex items-center justify-center transition-transform duration-300 rounded-full size-15 bg-primary group-hover:scale-105 group-hover:-translate-y-1">
-            <img src="img/icon-sup.svg" alt=""></figure>
+            <img src="img/icon-sup.svg" alt="">
+          </figure>
           <h3 class="text-base font-semibold xl:leading-none lg:text-lg">Fast & Reliable Support</h3>
           <p class="text-sm text-white/70 lg:text-base">Get expert help when you need it - from setup assistance to
             migration support, all backed by our fast-response team. </p>
@@ -493,8 +507,8 @@
 
       <div class="flex flex-col justify-center gap-4 mb-10 sm:flex-row xl:mb-25 lg:mb-20 md:mb-15">
         <a href="https://themes.shopify.com/themes/purity/presets/purity"
-          class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-          <span class="z-2">Try Purity Theme</span> <span
+          class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
+          <span class="z-2 -tracking-[0.01em]">Try Purity Theme</span> <span
             class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
               src="img/icon-arrow.svg" alt=""></span>
           <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
@@ -507,9 +521,10 @@
     </div>
 
     <div class="px-4 mx-auto lg:container">
-      <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
+      <div class="space-y-4 text-center lg:mb-12.5 mb-8 max-w-[1345px] mx-auto" data-cues="slideInUp"
+        data-duration="600">
         <h2
-          class="inline-block tracking-tighter leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
+          class="inline-block -tracking-[0.02em] leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
           And 30+ Sections<span class="sm:inline hidden"><br></span>
           to Enhance Your Business</h2>
         <p class="text-white/70">Elevate your store with new features that turbo‑charge performance, conversions,
@@ -525,179 +540,179 @@
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Predictive
               Search</h3>
-            <p class="text-sm text-white/70 lg:text-base">Easily customize your store layout with flexible sections,
+            <p class="text-white/70 text-base">Easily customize your store layout with flexible sections,
               giving you full control over content placement.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Free Shipping
               Reminder</h3>
-            <p class="text-sm text-white/70 lg:text-base">Encourage customers to increase their cart value by showing
+            <p class="text-white/70 text-base">Encourage customers to increase their cart value by showing
               how close they are to free shipping.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-stock.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Stock Counter
             </h3>
-            <p class="text-sm text-white/70 lg:text-base">Inform shoppers of available quantities to create urgency and
+            <p class="text-white/70 text-base">Inform shoppers of available quantities to create urgency and
               encourage faster purchase decisions.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Quick View
             </h3>
-            <p class="text-sm text-white/70 lg:text-base">Allow customers to view product details without leaving the
+            <p class="text-white/70 text-base">Allow customers to view product details without leaving the
               page, simplifying shopping experience.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-filter.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Advanced
               Filters</h3>
-            <p class="text-sm text-white/70 lg:text-base">Filters with multiple options for categories, price range, and
+            <p class="text-white/70 text-base">Filters with multiple options for categories, price range, and
               more, helping customers refine searches.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-gall.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image
               Galleries</h3>
-            <p class="text-sm text-white/70 lg:text-base">Showcase a rich visual display, giving customers a
+            <p class="text-white/70 text-base">Showcase a rich visual display, giving customers a
               comprehensive view of each item.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-cart.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Estimated
               Shipping Rate</h3>
-            <p class="text-sm text-white/70 lg:text-base">Sticky add-to-cart button stays visible as customers scroll,
+            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
               enabling easy product adding anytime.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-cart.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Sticky Add To
               Cart</h3>
-            <p class="text-sm text-white/70 lg:text-base">Sticky add-to-cart button stays visible as customers scroll,
+            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
               enabling easy product adding anytime.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-zom.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image Zoome
             </h3>
-            <p class="text-sm text-white/70 lg:text-base">Allow customers to zoom in on product images for a closer look
+            <p class="text-white/70 text-base">Allow customers to zoom in on product images for a closer look
               at details and quality. </p>
           </div>
         </div>
       </div>
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-left">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-search.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Predictive
               Search</h3>
-            <p class="text-sm text-white/70 lg:text-base">Easily customize your store layout with flexible sections,
+            <p class="text-white/70 text-base">Easily customize your store layout with flexible sections,
               giving you full control over content placement.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Free Shipping
               Reminder</h3>
-            <p class="text-sm text-white/70 lg:text-base">Encourage customers to increase their cart value by showing
+            <p class="text-white/70 text-base">Encourage customers to increase their cart value by showing
               how close they are to free shipping.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-stock.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Stock Counter
             </h3>
-            <p class="text-sm text-white/70 lg:text-base">Inform shoppers of available quantities to create urgency and
+            <p class="text-white/70 text-base">Inform shoppers of available quantities to create urgency and
               encourage faster purchase decisions.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Quick View
             </h3>
-            <p class="text-sm text-white/70 lg:text-base">Allow customers to view product details without leaving the
+            <p class="text-white/70 text-base">Allow customers to view product details without leaving the
               page, simplifying shopping experience.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-filter.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Advanced
               Filters</h3>
-            <p class="text-sm text-white/70 lg:text-base">Filters with multiple options for categories, price range, and
+            <p class="text-white/70 text-base">Filters with multiple options for categories, price range, and
               more, helping customers refine searches.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-gall.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image
               Galleries</h3>
-            <p class="text-sm text-white/70 lg:text-base">Showcase a rich visual display, giving customers a
+            <p class="text-white/70 text-base">Showcase a rich visual display, giving customers a
               comprehensive view of each item.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-cart.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Estimated
               Shipping Rate</h3>
-            <p class="text-sm text-white/70 lg:text-base">Sticky add-to-cart button stays visible as customers scroll,
+            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
               enabling easy product adding anytime.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-cart.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Sticky Add To
               Cart</h3>
-            <p class="text-sm text-white/70 lg:text-base">Sticky add-to-cart button stays visible as customers scroll,
+            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
               enabling easy product adding anytime.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-zom.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image Zoome
             </h3>
-            <p class="text-sm text-white/70 lg:text-base">Allow customers to zoom in on product images for a closer look
+            <p class="text-white/70 text-base">Allow customers to zoom in on product images for a closer look
               at details and quality. </p>
           </div>
         </div>
@@ -707,168 +722,168 @@
     <div class="flex items-center mb-10 overflow-hidden scrolling">
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-right">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-swa.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Color and Image Swatches</h3>
-            <p class="text-sm text-white/70 lg:text-base">Display color and image swatches for products on both the
+            <p class="text-white/70 text-base">Display color and image swatches for products on both the
               product detail page and collection listing pages. </p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Image Hotspot</h3>
-            <p class="text-sm text-white/70 lg:text-base">Add clickable hotspots on images to let customers explore and
+            <p class="text-white/70 text-base">Add clickable hotspots on images to let customers explore and
               buy products directly.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-video.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Video With Text</h3>
-            <p class="text-sm text-white/70 lg:text-base">Showcase your message with eye-catching video backgrounds and
+            <p class="text-white/70 text-base">Showcase your message with eye-catching video backgrounds and
               clear text overlays.</p>
           </div>
         </div>
 
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-time.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Countdown Timer</h3>
-            <p class="text-sm text-white/70 lg:text-base">Create urgency and excitement with limited-time deals,
+            <p class="text-white/70 text-base">Create urgency and excitement with limited-time deals,
               motivating faster purchases.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-before.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Before and After</h3>
-            <p class="text-sm text-white/70 lg:text-base">Highlight product effectiveness with clear before-and-after
+            <p class="text-white/70 text-base">Highlight product effectiveness with clear before-and-after
               visuals to build customer trust .</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Cart Upsell</h3>
-            <p class="text-sm text-white/70 lg:text-base">Suggest complementary or related products directly in the
+            <p class="text-white/70 text-base">Suggest complementary or related products directly in the
               cart, encouraging more purchases.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-mega.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Mega Menu</h3>
-            <p class="text-sm text-white/70 lg:text-base">An organized, comprehensive navigation helps customers easily
+            <p class="text-white/70 text-base">An organized, comprehensive navigation helps customers easily
               explore all product categories. </p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-rich.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Rich Product Media </h3>
-            <p class="text-sm text-white/70 lg:text-base">Showcase products with 3D models and embedded Vimeo or YouTube
+            <p class="text-white/70 text-base">Showcase products with 3D models and embedded Vimeo or YouTube
               videos for an engaging experience.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-buy.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Quick Buy</h3>
-            <p class="text-sm text-white/70 lg:text-base">Faster checkouts by simplifying purchases process and reducing
+            <p class="text-white/70 text-base">Faster checkouts by simplifying purchases process and reducing
               cart abandonment.</p>
           </div>
         </div>
       </div>
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-right">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-swa.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Color and Image Swatches</h3>
-            <p class="text-sm text-white/70 lg:text-base">Display color and image swatches for products on both the
+            <p class="text-white/70 text-base">Display color and image swatches for products on both the
               product detail page and collection listing pages. </p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Image Hotspot</h3>
-            <p class="text-sm text-white/70 lg:text-base">Add clickable hotspots on images to let customers explore and
+            <p class="text-white/70 text-base">Add clickable hotspots on images to let customers explore and
               buy products directly.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-stock.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Video With Text</h3>
-            <p class="text-sm text-white/70 lg:text-base">Showcase your message with eye-catching video backgrounds and
+            <p class="text-white/70 text-base">Showcase your message with eye-catching video backgrounds and
               clear text overlays.</p>
           </div>
         </div>
 
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-time.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Countdown Timer</h3>
-            <p class="text-sm text-white/70 lg:text-base">Create urgency and excitement with limited-time deals,
+            <p class="text-white/70 text-base">Create urgency and excitement with limited-time deals,
               motivating faster purchases.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-before.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Before and After</h3>
-            <p class="text-sm text-white/70 lg:text-base">Highlight product effectiveness with clear before-and-after
+            <p class="text-white/70 text-base">Highlight product effectiveness with clear before-and-after
               visuals to build customer trust .</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Cart Upsell</h3>
-            <p class="text-sm text-white/70 lg:text-base">Suggest complementary or related products directly in the
+            <p class="text-white/70 text-base">Suggest complementary or related products directly in the
               cart, encouraging more purchases.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-mega.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Mega Menu</h3>
-            <p class="text-sm text-white/70 lg:text-base">An organized, comprehensive navigation helps customers easily
+            <p class="text-white/70 text-base">An organized, comprehensive navigation helps customers easily
               explore all product categories. </p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-rich.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Rich Product Media </h3>
-            <p class="text-sm text-white/70 lg:text-base">Showcase products with 3D models and embedded Vimeo or YouTube
+            <p class="text-white/70 text-base">Showcase products with 3D models and embedded Vimeo or YouTube
               videos for an engaging experience.</p>
           </div>
         </div>
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
           <figure class="inline-block shrink-0"><img src="img/icon-buy.svg" alt=""></figure>
           <div>
             <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Quick Buy</h3>
-            <p class="text-sm text-white/70 lg:text-base">Faster checkouts by simplifying purchases process and reducing
+            <p class="text-white/70 text-base">Faster checkouts by simplifying purchases process and reducing
               cart abandonment.</p>
           </div>
         </div>
@@ -879,13 +894,13 @@
 
   <section class="bg-[#F1F3F7] rounded-t-4xl overflow-hidden -mt-7 relative z-2 xl:py-25 lg:py-18 py-15">
     <div class="px-4 mx-auto lg:container">
-      <div class="max-w-[1350px] mx-auto">
+      <div class="max-w-[1345px] mx-auto">
         <div class="w-full mx-auto">
           <div class="flex flex-col gap-10 lg:flex-row xl:gap-20" data-group="section-box-4" data-cues="slideInUp"
             data-duration="500">
             <div class="flex justify-end flex-col lg:w-[37%] w-full">
               <h2
-                class="text-heading tracking-tighter leading-tight xl:text-[45px] text-3xl font-semibold font-plus-jakarta-sans mb-4">
+                class="text-heading -tracking-[0.02em] leading-tight xl:text-[45px] text-3xl font-semibold font-plus-jakarta-sans mb-4">
                 Our Growth <span class="hidden xl:inline"><br></span>and Achievements</h2>
               <p class="xl:mb-12.5 mb-6">We are committed to constantly improving and innovating to
                 enhance your experience.</p>
@@ -897,7 +912,7 @@
                         d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
                         fill="#1D1D1F" />
                     </svg>
-                    <h5 class="text-lg font-semibold tracking-tighter text-heading">Developed by NextSky</h5>
+                    <h5 class="text-lg font-semibold -tracking-[0.02em] text-heading">Developed by NextSky</h5>
                   </div>
                   <p class="text-sm font-medium lg:text-base">One of the top Shopify Theme developers on
                     ThemeForest.</p>
@@ -909,7 +924,7 @@
                         d="M16.2891 0.289062C16.4922 0.101562 16.7266 0.0078125 16.9922 0.0078125C17.2734 0.0078125 17.5078 0.101562 17.6953 0.289062C17.8984 0.492187 18 0.734375 18 1.01562C18 1.28125 17.8984 1.50781 17.6953 1.69531L6.70312 12.7109C6.51562 12.8984 6.28125 12.9922 6 12.9922C5.71875 12.9922 5.48438 12.8984 5.29688 12.7109L0.304688 7.69531C0.101562 7.50781 0 7.28125 0 7.01562C0 6.73438 0.101562 6.49219 0.304688 6.28906C0.492188 6.10156 0.71875 6.00781 0.984375 6.00781C1.26562 6.00781 1.50781 6.10156 1.71094 6.28906L6 10.5781L16.2891 0.289062Z"
                         fill="#1D1D1F" />
                     </svg>
-                    <h5 class="text-lg font-semibold tracking-tighter text-heading">Top 1 Shopify Theme for
+                    <h5 class="text-lg font-semibold -tracking-[0.02em] text-heading">Top 1 Shopify Theme for
                       Performance</p>
                   </div>
                   <p class="text-sm font-medium lg:text-base">Fastest and Ultimate Shopify Themes for your
@@ -930,7 +945,7 @@
                 </div>
                 <div class="absolute bottom-0 left-0 flex flex-row gap-4 p-4 xl:p-8 lg:p-6">
                   <div
-                    class="rounded-[15px] border border-white/50 bg-white/30 backdrop-blur-[15px] lg:px-6 lg:py-5.5 p-4 sm:min-w-3xs min-[576px]:min-w-50 max-w-37.5">
+                    class="rounded-[15px] border border-white/60 bg-white/30 backdrop-blur-[15px] lg:px-6 lg:py-5.5 p-4 sm:min-w-3xs min-[576px]:min-w-50 max-w-37.5">
                     <h4
                       class="xl:text-[50px] md:text-5xl text-3xl font-semibold text-white font-plus-jakarta-sans mb-2">
                       50k</h4>
@@ -953,9 +968,9 @@
 
   <section class="w-full bg-[#F1F3F7] xl:pb-32 lg:pb-25 pb-20">
     <div class="px-4 mx-auto lg:container">
-      <div class="lg:max-w-[1350px] mx-auto" data-cues="slideInUp" data-duration="600">
+      <div class="lg:max-w-[1345px] mx-auto" data-cues="slideInUp" data-duration="600">
         <div class="text-center mb-12.5">
-          <h3 class="text-heading tracking-tighter leading-tight lg:text-[40px] text-3xl font-semibold mb-4">
+          <h3 class="text-heading -tracking-[0.02em] leading-tight lg:text-[40px] text-3xl font-semibold mb-4">
             Pay Once—Unlock All</h3>
           <p class="">One—time charge no more year fee. Save $2.500+ per Year with our built—in
             theme
@@ -967,10 +982,10 @@
           <div class="relative rounded-[20px] shadow-sm xl:p-8 lg:p-6 p-4">
             <div class="w-full overflow-x-auto">
               <table id="features-table"
-                class="min-w-max md:w-full border-collapse [&>tbody>*:nth-child(odd)]:bg-[#DDE3EB] [&>tbody>*:nth-child(even)]:bg-white rounded-[20px] overflow-hidden">
+                class="min-w-max md:w-full border-collapse [&>tbody>*:nth-child(odd)]:bg-[#DDE3EB] [&>tbody>*:nth-child(even)]:bg-white rounded-[20px] overflow-hidden table-fixed w-full">
                 <thead class="font-medium text-heading">
                   <tr
-                    class="xl:text-lg text-base tracking-tighter text-center bg-white divide-x divide-[#F1F3F7] font-plus-jakarta-sans">
+                    class="xl:text-lg text-base -tracking-[0.02em] text-center bg-white divide-x divide-[#F1F3F7] font-plus-jakarta-sans">
                     <th class="p-3 lg:px-6 lg:py-4 border-e-1">Features</th>
                     <th class="p-3 lg:px-6 lg:py-4 ">Apps</th>
                     <th class="p-3 lg:px-6 lg:py-4 ">Purity Theme</th>
@@ -979,8 +994,8 @@
                 <tbody class="text-sm text-center lg:text-base">
                   <tr class="divide-x divide-[#F1F3F7]">
                     <td class="px-6 py-3">Countdown Timer</td>
-                    <td class="px-6 py-3 text-center text-slate-500">$85</td>
-                    <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-3">
+                    <td class="px-6 py-3 text-center">$85</td>
+                    <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
                         <img src="img/icon-table.svg" alt="">
@@ -1012,7 +1027,7 @@
                   </tr>
                   <tr class="divide-x divide-[#F1F3F7]">
                     <td class="px-6 py-3">Cart Upsell</td>
-                    <td class="px-6 py-3 text-center text-slate-500">$300</td>
+                    <td class="px-6 py-3 text-center">$300</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
@@ -1023,7 +1038,7 @@
                   </tr>
                   <tr class="divide-x divide-[#F1F3F7]">
                     <td class="px-6 py-3">Before/After Image</td>
-                    <td class="px-6 py-3 text-center text-slate-500">$80</td>
+                    <td class="px-6 py-3 text-center">$80</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
@@ -1034,7 +1049,7 @@
                   </tr>
                   <tr class="divide-x divide-[#F1F3F7]">
                     <td class="px-6 py-3">Product Bundle</td>
-                    <td class="px-6 py-3 text-center text-slate-500">$100</td>
+                    <td class="px-6 py-3 text-center">$100</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <img src="img/icon-table.svg" alt="">
                       Free
@@ -1042,7 +1057,7 @@
                   </tr>
                   <tr class="divide-x divide-[#F1F3F7]">
                     <td class="px-6 py-3">Sticky Add to Cart</td>
-                    <td class="px-6 py-3 text-center text-slate-500">$100</td>
+                    <td class="px-6 py-3 text-center">$100</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <img src="img/icon-table.svg" alt="">
                       Free
@@ -1050,7 +1065,7 @@
                   </tr>
                   <tr class="divide-x divide-[#F1F3F7]">
                     <td class="px-6 py-3">Product Options</td>
-                    <td class="px-6 py-3 text-center text-slate-500">$190</td>
+                    <td class="px-6 py-3 text-center">$190</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <img src="img/icon-table.svg" alt="">
                       Free
@@ -1088,7 +1103,7 @@
                   </tr>
                   <tr class="divide-x divide-[#F1F3F7] feature-extra hidden">
                     <td class="px-6 py-3">Countdown Timer</td>
-                    <td class="px-6 py-3 text-center text-slate-500">$85</td>
+                    <td class="px-6 py-3 text-center">$85</td>
                     <td class="px-6 py-3 text-center text-[#14854E] flex justify-center items-center gap-2">
                       <span
                         class="inline-flex items-center gap-2 justify-center w-[18px] h-[18px] rounded-full border-rounded bg-[#14854E]">
@@ -1115,7 +1130,7 @@
                         class="pointer-events-none absolute left-0 right-0 -top-[55px] h-14 bg-gradient-to-t from-white to-transparent opacity-100 transition-opacity duration-500 shadow-[0_0px_20px_rgba(255,255,255,0.95)]">
                       </div>
                       <button id="toggle-features" type="button"
-                        class="inline-flex items-center gap-1 text-lg font-semibold text-[var(--color-primary)] opacity-100 cursor-pointer focus:outline-none font-plus-jakarta-sans">
+                        class="inline-flex items-center gap-1 text-base lg:text-lg font-semibold text-[var(--color-primary)] opacity-100 cursor-pointer focus:outline-none font-plus-jakarta-sans">
                         <span class="toggle-label">View all Features</span>
                       </button>
                     </td>
@@ -1128,13 +1143,13 @@
                       Total</td>
                     <td
                       class="px-6 text-center align-middle font-semibold text-lg md:text-[22px] text-heading leading-tight">
-                      $2.500/year<br><span class="text-base font-medium text-body">(Standalone
+                      $2.500/year<span class="text-base font-medium text-body  block">(Standalone
                         Cost)</span>
                     </td>
                     <td class="px-6 text-center bg-[var(--color-primary)]">
                       <a href="#"
-                        class="inline-block px-6 py-3 text-center font-semibold text-white text-lg md:text-[22px]  hover:opacity-80 leading-tight">$350<br>
-                        <span class="text-base font-medium">(One Time Only)</span></a>
+                        class="inline-block px-6 py-3 text-center font-semibold text-white text-lg md:text-[22px]  hover:opacity-80 leading-tight">$350
+                        <span class="text-base font-medium block">(One Time Only)</span></a>
                     </td>
                   </tr>
                 </tfoot>
@@ -1151,11 +1166,12 @@
     <span
       class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
     <div class="px-4 mx-auto lg:container">
-      <div class="max-w-[1350px] mx-auto">
+      <div class="max-w-[1345px] mx-auto">
 
-        <div class="space-y-4 text-center lg:mb-12.5 mb-8" data-cues="slideInUp" data-duration="600">
+        <div class="space-y-4 text-center lg:mb-12.5 mb-8 max-w-[1345px] mx-auto" data-cues="slideInUp"
+          data-duration="600">
           <h2
-            class="inline-block tracking-tighter leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
+            class="inline-block -tracking-[0.02em] leading-tight lg:text-[45px] text-3xl font-semibold bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">
             Special Offers <br class="sm:inline hidden" />
             from Our Trusted App Partners</h2>
           <p class="text-sm lg:text-base text-white/70">Get more than just a theme - enjoy exclusive partner
@@ -1180,7 +1196,7 @@
                 variant selector for better usability.</p>
             </div>
             <div
-              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66] font-semibold bg-white/5 items-center gap-3 md:gap-4">
+              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66]/40 font-semibold bg-white/5 items-center gap-3 md:gap-4">
               20% Off All Plans for Purity Users
             </div>
           </div>
@@ -1201,7 +1217,7 @@
                 SEO, and comparison with images.</p>
             </div>
             <div
-              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66] font-semibold bg-white/5 items-center gap-3 md:gap-4">
+              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66]/40 font-semibold bg-white/5 items-center gap-3 md:gap-4">
               20% Off All Plans for Purity Users
             </div>
           </div>
@@ -1221,7 +1237,7 @@
                 hover, and grid tabs.</p>
             </div>
             <div
-              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66] font-semibold bg-white/5 items-center gap-3 md:gap-4">
+              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66]/40 font-semibold bg-white/5 items-center gap-3 md:gap-4">
               20% Off All Plans for Purity Users
             </div>
           </div>
@@ -1240,7 +1256,7 @@
                 variant options.</p>
             </div>
             <div
-              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66] font-semibold bg-white/5 items-center gap-3 md:gap-4">
+              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66]/40 font-semibold bg-white/5 items-center gap-3 md:gap-4">
               20% Off All Plans for Purity Users
             </div>
           </div>
@@ -1260,7 +1276,7 @@
                 links, and codes.</p>
             </div>
             <div
-              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66] font-semibold bg-white/5 items-center gap-3 md:gap-4">
+              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66]/40 font-semibold bg-white/5 items-center gap-3 md:gap-4">
               20% Off All Plans for Purity Users
             </div>
           </div>
@@ -1280,7 +1296,7 @@
                 special occasions.</p>
             </div>
             <div
-              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66] font-semibold bg-white/5 items-center gap-3 md:gap-4">
+              class="flex lg:py-4 p-3 text-sm lg:text-base tracking-tight w-full justify-center  rounded-full border-2 border-dashed   border-[#71619F66]/40 font-semibold bg-white/5 items-center gap-3 md:gap-4">
               20% Off All Plans for Purity Users
             </div>
           </div>
@@ -1288,14 +1304,14 @@
 
         <div class="mb-15 text-center xl:mb-25 lg:mb-20">
           <a href="#contact-us"
-            class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-            <span class="z-2">Get the Deals Now</span> <span
+            class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
+            <span class="z-2 -tracking-[0.01em]">Get the Deals Now</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                 src="img/icon-arrow.svg" alt=""></span>
             <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
           </a>
         </div>
-        <div class="h-px bg-[linear-gradient(90deg,rgba(45,41,64,0)_0%,#2D2940_50%,rgba(45,41,64,0)_100%)]">
+        <div class="h-px bg-[linear-gradient(90deg,rgba(45,41,64,0)_0%,#2D2940_21%,rgba(45,41,64,0)_100%)]">
         </div>
       </div>
     </div>
@@ -1303,7 +1319,7 @@
 
   <section id="free-setup" class="bg-[#13111C] rounded-t-[30px] -mt-[30px] pb-25 xl:pb-32 lg:pb-25">
     <div class="px-4 mx-auto lg:container">
-      <div class="lg:max-w-[1350px] mx-auto ">
+      <div class="lg:max-w-[1345px] mx-auto ">
         <div class="text-center mx-auto mb-12.5" data-cues="slideInUp" data-duration="600">
           <h2
             class="text-3xl md:text-4xl lg:text-[45px] inline-block  font-plus-jakarta-sans font-semibold leading-tight tracking-tight bg-gradient-to-r from-[#ffffff] via-[#ffffff] to-[#6E5BFB] bg-clip-text text-transparent">
@@ -1340,9 +1356,9 @@
                 Product pages with optimized sections.
               </p>
               <div class="mt-6 md:mt-10">
-                <a href="#contact-us"
-                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                  <span class="z-2">Contact Us</span> <span
+                <a href="#contact-us" onclick="focusInput()"
+                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
+                  <span class="z-2 -tracking-[0.01em]">Contact Us</span> <span
                     class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                       src="img/icon-arrow.svg" alt=""></span>
                   <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
@@ -1351,7 +1367,8 @@
 
               <div class="relative mx-auto mt-10 transition-all duration-300 md:mt-14">
                 <figure class="relative rounded-2xl overflow-hidden">
-                  <img class="transition-all duration-300 rounded-xl group-hover/img:scale-102"
+                  <img
+                    class="transition-all duration-300 rounded-xl group-hover/img:scale-102 ease-linear will-change-auto"
                     src="./img/buy-purity.png" alt="buy purity" />
                 </figure>
               </div>
@@ -1382,8 +1399,8 @@
               </p>
               <div class="mt-6 md:mt-10">
                 <a href="#contact-us"
-                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                  <span class="z-2">Explore Now</span> <span
+                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
+                  <span class="z-2 -tracking-[0.01em]">Explore Now</span> <span
                     class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                       src="img/icon-arrow.svg" alt=""></span>
                   <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
@@ -1393,7 +1410,7 @@
               <div class="relative mx-auto mt-10 md:mt-14">
                 <figure class="relative rounded-2xl overflow-hidden">
                   <img class="transition-all duration-300 rounded-xl group-hover/img:scale-102"
-                    src="./img/let-purrity.png" alt="get purity" />
+                    src="./img/let-purity.png" alt="get purity" />
                 </figure>
               </div>
             </div>
@@ -1403,25 +1420,25 @@
     </div>
   </section>
 
-  <section class="bg-[#F1F3F7] rounded-t-[30px] -mt-[30px] py-16 md:py-20 overflow-hidden">
+  <section class="bg-[#F1F3F7] rounded-t-[30px] -mt-[30px] py-6 md:py-25 overflow-hidden">
     <div class="px-4 mx-auto lg:container">
-      <div class="lg:max-w-[1350px] mx-auto px-5 md:px-1 ">
-        <div class="max-w-3xl mx-auto text-center" data-cues="slideInUp" data-duration="600">
+      <div class="lg:max-w-[1345px] mx-auto px-5 md:px-1 ">
+        <div class="max-w-3xl mx-auto text-center mb-12.5" data-cues="slideInUp" data-duration="600">
           <h2
-            class="text-3xl lg:text-4xl xl:text-[45px] text-heading font-plus-jakarta-sans font-semibold leading-tight tracking-tight">
+            class="text-3xl lg:text-4xl xl:text-[45px] text-heading font-plus-jakarta-sans font-semibold leading-tight tracking-tight mb-4">
             Helpful Support
             <br class="sm:block hidden" />
             Whenever You Need It
           </h2>
-          <p class="mt-4">
+          <p class="">
             More than 100k+ customers have trusted and used our products. Their customers appreciate
             the performance and user experience we are providing.
           </p>
         </div>
 
-        <div class="relative grid grid-cols-1 mt-10 md:mt-14 sm:grid-cols-2 lg:grid-cols-4" data-cues="slideInUp"
-          data-duration="500" data-group="section-box-8">
-          <span class="absolute top-0 flex items-center bottom-0 w-full lg:max-w-[1350px] h-[1px]
+        <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" data-cues="slideInUp" data-duration="500"
+          data-group="section-box-8">
+          <span class="absolute top-0 flex items-center bottom-0 w-full lg:max-w-[1345px] h-[1px]
                   bg-gradient-to-r from-transparent via-[#D1D6DD] to-transparent z-[1]">
           </span>
           <!-- Item 1 -->
@@ -1445,16 +1462,14 @@
           <div class="p-6 md:p-8 cursor-default lg:border-e border-[#D1D6DD]">
             <div class="flex flex-col items-start gap-3 md:gap-4 group">
               <span
-                class="inline-flex items-center justify-center transition-transform duration-300 size-10 group-hover:scale-105 group-hover:-translate-y-1">
-                <!-- Mouse icon -->
-                <img src="./img/detail-video.svg" alt="detail video">
+                class="inline-flex items-center justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
+                <!-- Folder icon -->
+                <img src="./img/detail-video.svg" alt="detail documents">
               </span>
               <div>
                 <h3 class="mb-4 text-base font-semibold text-heading md:text-lg">Detailed Video Guides</h3>
                 <p class="mb-6 text-sm lg:text-base">Step‑by‑step guides and tutorials to support you every step of the
-                  way,
-                  from
-                  initial setup to success.</p>
+                  way, from initial setup to success.</p>
                 <a href="#" class="inline-block font-semibold text-heading hover:text-primary">View Video Tutorials</a>
               </div>
             </div>
@@ -1463,39 +1478,38 @@
           <div class="p-6 md:p-8 cursor-default border-none md:border-e lg:border-none border-[#D1D6DD]">
             <div class="flex flex-col items-start gap-3 md:gap-4 group">
               <span
-                class="inline-flex items-center justify-center transition-transform duration-300 size-10 group-hover:scale-105 group-hover:-translate-y-1">
-                <img src="./img/support-channel.svg" alt="support channel">
+                class="inline-flex items-center justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
+                <!-- Folder icon -->
+                <img src="./img/icon-sp-channel.svg" alt="detail documents">
               </span>
               <div>
-                <h3 class="mb-4 text-base font-semibold md:text-lg text-heading">Support Channels</h3>
+                <h3 class="mb-4 text-base font-semibold text-heading md:text-lg">Support Channels</h3>
                 <p class="mb-6 text-sm lg:text-base">Fast, efficient assistance via Support Ticket System, Whatsapp and
-                  booking
-                  options.</p>
+                  booking options.</p>
                 <a href="#" class="inline-block font-semibold text-heading hover:text-primary">Get Support</a>
               </div>
             </div>
           </div>
           <!-- Item 4 -->
-          <div class="p-6 cursor-default md:p-8">
+          <div class="p-6 md:p-8 cursor-default">
             <div class="flex flex-col items-start gap-3 md:gap-4 group">
               <span
-                class="inline-flex items-center justify-center transition-transform duration-300 size-10 group-hover:scale-105 group-hover:-translate-y-1">
-                <img src="./img/support-startup.svg" alt="support startup">
+                class="inline-flex items-center justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
+                <!-- Folder icon -->
+                <img src="./img/icon-sp-startup.svg" alt="detail documents">
               </span>
               <div>
                 <h3 class="mb-4 text-base font-semibold text-heading md:text-lg">Support Startup</h3>
                 <p class="mb-6 text-sm lg:text-base">Open your store with Purity's special offer: 3-day free trial, then
-                  3
-                  months
-                  at $1/month on any plan.</p>
+                  3 months at $1/month on any plan.</p>
                 <a href="#" class="inline-block font-semibold text-heading hover:text-primary">Get Support</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex justify-center relative z-[2] mt-2">
-          <span class="absolute top-1/2 flex items-center bottom-0 w-full lg:max-w-[1350px] h-[1px]
+        <div class="flex justify-center relative z-[2]">
+          <span class="absolute top-1/2 flex items-center bottom-0 w-full lg:max-w-[1345px] h-[1px]
                   bg-gradient-to-r from-transparent via-[#D1D6DD] to-transparent z-[1] pointer-events-none">
           </span>
           <a href="#"
@@ -1506,7 +1520,7 @@
                           class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full w-full h-px bg-[#D1D6DD]"></span> -->
 
             <!-- Left sweeping lines -->
-            <span class="lg:min-w-[150px] w-full line left delay-1"></span>
+            <span class="w-full line left delay-1"></span>
             <!-- Right sweeping lines -->
             <span class="lg:min-w-[150px]  line right delay-1"></span>
             <!-- Upward sweeping line -->
@@ -1521,11 +1535,11 @@
 
   <section class="w-full bg-[#F1F3F7]">
     <div class="px-4 mx-auto lg:container">
-      <div class="lg:max-w-[1350px] mx-auto pb-15 md:pb-25">
+      <div class="lg:max-w-[1345px] mx-auto pb-15 md:pb-25">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 2xl:gap-25 xl:gap-15 lg:gap-10" data-cues="slideInUp"
           data-duration="500" data-group="section-box-9">
           <!-- Left content -->
-          <div class="order-last md:order-first">
+          <div class="">
             <div class="lg:mb-12.5 mb-8">
               <h2 class="font-semibold text-heading xl:text-[45px] lg:text-4xl text-3xl mb-4">Help Center</h2>
               <p>We answer frequently asked questions about Purity, helping customers easily understand
@@ -1550,15 +1564,15 @@
             <p class="mb-10">Customer support team from: 8am to 7:30pm daily.<br>Average answer time: 8
               hours.</p>
             <div class="flex flex-col w-full gap-4 sm:flex-row">
-              <a href="#contact-us"
-                class="inline-flex font-plus-jakarta-sans relative group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10  font-semibold tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                <span class="z-2">Contact Us</span> <span
+              <a href="#contact-us" onclick="focusInput()"
+                class="inline-flex font-plus-jakarta-sans relative group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10  font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+                <span class="z-2 -tracking-[0.01em]">Contact Us</span> <span
                   class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                     src="img/icon-arrow.svg" alt=""></span>
               </a>
               <a href="https://nextsky.gitbook.io/purity-theme/frequently-asked-questions"
-                class="inline-flex font-plus-jakarta-sans relative group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10  font-semibold tracking-tighter text-primary border border-primary transition-all duration-300 rounded-full bg-white gap-x-2 hover:bg-primary/90 hover:text-white  focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                <span class="z-2">More Faqs</span> <span
+                class="inline-flex font-plus-jakarta-sans relative group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10  font-semibold -tracking-[0.02em] text-primary border border-primary transition-all duration-300 rounded-full bg-white gap-x-2 hover:bg-primary/90 hover:text-white  focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+                <span class="z-2 -tracking-[0.01em]">More Faqs</span> <span
                   class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45">
                   <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -1572,7 +1586,7 @@
 
           <!-- Right content -->
           <div id="card-content">
-            <div class="bg-white cursor-pointer rounded-[20px] mb-4">
+            <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <!-- FAQ Item 1 -->
               <div class="p-4 lg:p-6 card-item-btn">
                 <h5 class="xl:text-lg">
@@ -1596,7 +1610,7 @@
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="bg-white cursor-pointer rounded-[20px] mb-4">
+            <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
                   <h5 class="xl:text-lg">
@@ -1623,7 +1637,7 @@
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="bg-white cursor-pointer rounded-[20px] mb-4">
+            <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
                   <h5 class="lg:text-lg">
@@ -1651,7 +1665,7 @@
             </div>
 
             <!-- FAQ Item 4 -->
-            <div class="bg-white cursor-pointer rounded-[20px] mb-4">
+            <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
                   <h5 class="xl:text-lg">
@@ -1675,7 +1689,7 @@
             </div>
 
             <!-- FAQ Item 5 -->
-            <div class="bg-white cursor-pointer rounded-[20px] mb-4">
+            <div class="bg-white cursor-pointer rounded-[20px] mb-4 border border-[#E5E8EC]">
               <div class="card-item">
                 <div class="p-4 lg:p-6 card-item-btn">
                   <h5 class="lg:tex-lg">
@@ -1714,8 +1728,8 @@
   <section id="contact-us" class="w-full bg-[#F1F3F7]" data-cues="slideInUp" data-duration="600">
     <div class="px-4 mx-auto lg:container">
       <div class="lg:max-w-[1345px] mx-auto pb-15 md:pb-25">
-        <div class="grid grid-cols-1 gap-6 lg:grid-flow-col lg:grid-rows-2 lg:grid-cols-2">
-          <div class="bg-primary rounded-[30px] lg:row-span-2 xl:p-12.5 lg:p-8 p-6">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="bg-primary rounded-[20px] xl:p-12.5 lg:p-8 p-6">
             <div class="text-center xl:mb-12.5 lg:mb-8 mb-6">
               <h2 class="text-white 2xl:text-[45px] lg:text-4xl text-3xl  font-semibold mb-3">Get in Touch</h2>
               <p class="px-2 text-white">Have questions or special requests? Submit the form for free
@@ -1727,37 +1741,38 @@
             <form action="./assets/contact.php" method="POST" class="mx-auto">
               <div class="flex flex-col items-center justify-center w-full gap-4 mb-4 lg:flex-row">
                 <input type="text" name="name" id="name"
-                  class="w-full text-white border border-[#E5E8EC] rounded-full transition-all duration-200 placeholder:text-white bg-primary p-4 focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  class="focus-input w-full text-white border border-white/40 rounded-[30px] transition-all duration-200 placeholder:text-white bg-primary p-4 focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
                   placeholder="Your name *">
                 <input type="email" name="email" id="email"
-                  class="w-full text-white border border-[#E5E8EC] rounded-full transition-all duration-200 placeholder:text-white bg-primary p-4 focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  class="w-full text-white border border-white/40 rounded-[30px] transition-all duration-200 placeholder:text-white bg-primary p-4 focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
                   placeholder="Your email *">
               </div>
 
               <div class="mb-4">
                 <label for="store_url" aria-label="store url"></label>
                 <input type="url" name="store_url" id="store_url"
-                  class="border text-white border-[#E5E8EC] rounded-full transition-all duration-200 p-4 w-full placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  class="border text-white border-white/40 rounded-[30px] transition-all duration-200 p-4 w-full placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
                   placeholder="Store url">
               </div>
 
               <div class="mb-4">
                 <label for="notes" aria-label="additional notes"></label>
                 <textarea name="notes" rows="4" id="notes"
-                  class="border text-white border-[#E5E8EC] rounded-[20px] transition-all duration-200 p-4 w-full resize-none placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  class="border text-white border-white/40 rounded-[30px] transition-all duration-200 p-4 w-full resize-none placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
                   placeholder="Additional notes or requests?"></textarea>
               </div>
 
               <div class="flex items-center gap-3 mb-6">
                 <input type="checkbox" id="agreement" name="agreement" id="agreement"
-                  class="size-4 text-primary bg-transparent border border-white rounded focus:outline-white focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]">
-                <label for="agreement" class="text-sm text-white">
-                  I agree that my submitted data is being collected and stored.
+                  class="size-4 appearance-none checked checked:border-white text-primary bg-transparent border border-white rounded-sm focus:outline-white focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]
+                  relative checked:after:content-['✓'] checked:after:absolute checked:after:w-full checked:after:h-full checked:after:flex checked:after:justify-center checked:after:items-center checked:after:text-white checked:after:text-sm"">
+                <label for=" agreement" class="text-sm text-white">
+                I agree that my submitted data is being collected and stored.
                 </label>
               </div>
 
               <button type="submit"
-                class="w-full relative cursor-pointer inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4 lg:min-w-[220px] font-semibold tracking-tighter text-primary transition-all duration-300 rounded-full border gap-x-2 bg-white border-white disabled:opacity-50 disabled:pointer-events-none">
+                class="w-full relative cursor-pointer inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-3 lg:py-4 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-primary transition-all duration-300 rounded-full border gap-x-2 bg-white border-white disabled:opacity-50 disabled:pointer-events-none">
                 Submit <span class="inline-block transition-all duration-300 group-hover:rotate-45">
                   <img src="./img/icon-arrow-purple.svg" alt="">
                 </span>
@@ -1765,57 +1780,55 @@
             </form>
           </div>
 
-          <div class="bg-black lg:col-span-2 rounded-[20px] overflow-hidden">
-            <div class="relative w-full aspect-[4/3] md:aspect-[16/7] h-full">
-              <a href="#special-offer">
-                <img src="./img/exclusive.png" alt="" class="absolute inset-0 object-cover object-center w-full h-full"
-                  width="700" height="320">
-              </a>
-              <span
-                class="absolute pointer-events-none inset-0
+          <div class="grid grid-cols-1 lg:grid-rows-2 gap-6">
+            <div
+              class="h-full w-full lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.png)] bg-cover bg-center">
+              <div class="relative w-full h-full">
+                <span
+                  class="absolute pointer-events-none inset-0
                                 bg-[radial-gradient(circle_at_0%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
-              <div class="absolute top-10 left-10">
-                <a
-                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
-                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">Trusted
-                    App Partners</span>
-                </a>
-                <h2 class="mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
-                  Exclusive Deals<br>
-                  from Our Partners
-                </h2>
-                <a href="#exclusive-offeres"
-                  class="relative inline-flex items-center justify-center px-8 py-3 font-semibold tracking-tighter text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                  <span class="z-2">See Details</span> <span
-                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" alt=""></span>
-                </a>
+                <div class="absolute top-10 left-10">
+                  <a
+                    class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
+                    <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">Trusted
+                      App Partners</span>
+                  </a>
+                  <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
+                    Exclusive Deals<br>
+                    from Our Partners
+                  </h2>
+                  <a href="#exclusive-offeres"
+                    class="relative inline-flex items-center justify-center px-8 py-3 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+                    <span class="z-2 -tracking-[0.01em]">See Details</span> <span
+                      class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
+                        src="img/icon-arrow.svg" alt=""></span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="bg-black lg:col-span-2 rounded-[20px] overflow-hidden">
-            <div class="relative w-full aspect-[4/3] md:aspect-[16/7] h-full">
-              <img src="./img/free-setup.png" alt="" class="absolute inset-0 object-cover object-center w-full h-full"
-                width="700" height="320">
-              <span
-                class="absolute pointer-events-none inset-0
+
+            <div class="g:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/free-setup.png)] bg-cover bg-center">
+              <div class="relative w-full h-full">
+                <span
+                  class="absolute pointer-events-none inset-0
                                 bg-[radial-gradient(circle_at_0%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
-              <div class="absolute top-10 left-10">
-                <a
-                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
-                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">No
-                    Store Yet?</span>
-                </a>
-                <h2 class="mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
-                  Free Setup<br>
-                  and Design Support
-                </h2>
-                <a href="#free-setup"
-                  class="relative inline-flex items-center justify-center px-8 py-3 font-semibold tracking-tighter text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-                  <span class="z-2">See Details</span> <span
-                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" alt=""></span>
-                </a>
+                <div class="absolute top-10 left-10">
+                  <a
+                    class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
+                    <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">No
+                      Store Yet?</span>
+                  </a>
+                  <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
+                    Free Setup<br>
+                    and Design Support
+                  </h2>
+                  <a href="#free-setup"
+                    class="relative inline-flex items-center justify-center px-8 py-3 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full font-plus-jakarta-sans group lg:py-4 lg:px-10 bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+                    <span class="z-2 -tracking-[0.01em]">See Details</span> <span
+                      class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
+                        src="img/icon-arrow.svg" alt=""></span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1827,41 +1840,40 @@
   <footer class="bg-[#13111C] relative" id="footer">
     <div class="bg-[url('img/bg_footer.png')] bg-center bg-cover rounded-t-4xl overflow-hidden">
       <div class="px-4 mx-auto lg:container">
-        <div class="footer-top xl:py-37.5 lg:py-25 py-20 text-center text-white">
+        <div class="footer-top xl:py-37.5 lg:py-25 py-20 text-center text-white lg:max-w-[1345px] mx-auto">
           <div class="mb-6">
             <picture class="relative inline-flex icon-footer aspect-square">
               <source type="image/webp" srcset="img/icon_footer.webp">
-              <img width="130" height="130" alt="Icon footer" src="img/icon_foote.png">
+              <img width="130" height="130" alt="Icon footer" src="img/icon_footer.svg">
             </picture>
           </div>
 
           <h2
-            class="mx-auto inline-block mb-6 xl:text-[60px] lg:text-5xl text-4xl tracking-tighter font-semibold leading-tight text-transparent bg-clip-text bg-[linear-gradient(92.35deg,#FFFFFF_0%,#FFFFFF_49.5%,#6E5BFB_100%)] font-plus-jakarta-sans ">
+            class="mx-auto inline-block mb-6 xl:text-[60px] lg:text-5xl text-4xl -tracking-[0.02em] font-semibold leading-tight text-transparent bg-clip-text bg-[linear-gradient(92.35deg,#FFFFFF_0%,#FFFFFF_49.5%,#6E5BFB_100%)] font-plus-jakarta-sans ">
             Transform Your Shopify Store <span class="sm:inline hidden"><br /></span>
             with Expert Solutions
           </h2>
           <p class="opacity-80">Purity Theme is a high-performance Shopify theme with dynamic features,
             seamless navigation, and a
             user-<span class="hidden lg:inline"><br /></span> friendly experience to boost conversions.</p>
-          <div class="flex flex-col justify-center gap-4 mt-12 sm:flex-row">
+          <div class="flex flex-col justify-center gap-4 mt-12.5 sm:flex-row">
             <a href="https://themes.shopify.com/themes/agile/presets/agile"
-              class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+              class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               <span class="z-2">View Demo Store</span> <span
                 class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                   src="img/icon-arrow.svg" alt=""></span>
               <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
             </a>
             <a href="https://themes.shopify.com/themes/purity/presets/purity"
-              class="inline-flex font-plus-jakarta-sans group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold tracking-tighter text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
+              class="inline-flex font-plus-jakarta-sans group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               Try Purity Theme <span class="inline-block transition-all duration-300 group-hover:rotate-45"><img
                   src="img/icon-arrow.svg" alt=""></span>
             </a>
           </div>
-
-
         </div>
+
         <div
-          class="footer-bottom border-t [border-image:linear-gradient(to_right,rgba(45,41,64,0),rgba(45,41,64,1),rgba(45,41,64,0))_1] text-white">
+          class="footer-bottom border-solid border-t [border-image:linear-gradient(to_right,rgba(45,41,64,0.3),rgba(45,41,64,1),rgba(45,41,64,0.3))_1] text-white">
           <div class="lg:py-12.5 py-6 gap-2 flex flex-col sm:flex-row sm:justify-between  justify-center items-center">
             <p class="coypright opacity-70">© 2025 Purity.nextsky.co</p>
             <ul class="inline-flex lg:gap-8 gap-4 flex-wrap">
@@ -1889,7 +1901,7 @@
     class="fixed inset-0 z-40 invisible transition-opacity duration-300 opacity-0 cursor-pointer bg-black/70 peer-checked:opacity-100 peer-checked:visible"></label>
   <!-- Offcanvas Menu -->
   <div
-    class="offcanvas fixed top-0 z-50 h-full max-w-full text-white transition-all duration-300 -translate-x-full shadow-lg bg-heading w-90 peer-checked:translate-0">
+    class="offcanvas fixed top-0 z-50 h-full max-w-full text-white transition-all duration-300 -translate-x-full shadow-lg bg-heading w-75 peer-checked:translate-0">
     <div class="flex items-center justify-between p-4 px-6 text-white uppercase bg-primary">
       <h3>Menu</h3>
       <label for="menu-checkbox"
@@ -1908,11 +1920,12 @@
 
       </li>
       <li>
-        <a class="block py-3 transition-all duration-300 hover:text-primary" href="#exclusive-offeres">Exclusive
-          Offers</a>
+        <a class="block py-3 transition-all normal-case md:capitalize duration-300 hover:text-primary"
+          href="#exclusive-offeres">Exclusive Offers</a>
       </li>
       <li>
-        <a class="block py-3 transition-all duration-300 hover:text-primary" href="#contact-us">Contact Us</a>
+        <a class="block py-3 transition-all duration-300 hover:text-primary" href="#contact-us"
+          onclick="focusInput()">Contact Us</a>
       </li>
       <li>
         <a class="block py-3 transition-all duration-300 hover:text-primary" href="#">Documents</a>
@@ -1925,8 +1938,8 @@
       class="pointer-events-auto sticky-box transition-all duration-300 opacity-100 not-[.show]:opacity-0 not-[.show]:translate-y-full">
       <a href="https://purity.nextsky.co/"
         class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white transition-all duration-300 rounded-full group lg:text-base lg:px-8 bg-primary/100 gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/95 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
-        <span class="z-2">💥 Built-in demos 💥 One—click to launch. Explore for Free</span> <span
-          class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
+        <span class="z-2">🤩 Watch your brand in action before you buy. 👍 Explore for Free</span>
+        <span class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
             src="img/icon-arrow.svg" alt=""></span>
       </a>
     </div>
@@ -2064,8 +2077,20 @@
       });
     });
   </script>
+
   <script>
+    // Focus input when click link to redirect to form
+    function focusInput() {
+      setTimeout(() => {
+        const focusElement = document.querySelector('.focus-input');
+        if (focusElement) {
+          focusElement.focus();
+        }
+      }, 300);
+    }
+
     (function () {
+
       // Contact form handling (guarded and resilient)
       const form = document.querySelector("form[action$='assets/php/contact.php']") || document.querySelector('form');
       const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
@@ -2177,6 +2202,36 @@
         toggleBtn.addEventListener('click', function () {
           setState(!expanded);
         });
+      }
+
+      // Sticky header scroll effect
+      function initStickyHeader() {
+        const header = document.getElementById('header');
+        const headerContainer = document.getElementById('header-container');
+
+        function handleScroll() {
+          const currentScrollY = window.scrollY;
+
+          if (currentScrollY > 100) {
+            // Thu nhỏ header khi scroll
+            headerContainer.classList.remove('lg:max-w-[1345px]');
+            headerContainer.classList.add('lg:max-w-[950px]');
+            header.classList.add('lg:pt-7.5');
+          } else {
+            // Trở về kích thước ban đầu
+            headerContainer.classList.remove('lg:max-w-[950px]');
+            headerContainer.classList.add('lg:max-w-[1345px]');
+          }
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+      }
+
+      // Initialize sticky header when DOM is loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initStickyHeader);
+      } else {
+        initStickyHeader();
       }
 
       // FAQ accordion: slide down, first open by default, only one open
