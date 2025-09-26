@@ -34,13 +34,12 @@
 
 <body class="min-h-screen overflow-x-hidden">
   <!-- Header -->
-  <header
-    class="top-0 z-10 w-full start-0 shadow fixed lg:pt-7.5 will-change-auto bg-transparent transition-all duration-300"
+  <header class="lg:px-4 lg:py-2 top-0 z-10 w-full start-0 fixed lg:pt-7.5 will-change-auto bg-transparent transition-all duration-300"
     id="header">
     <div
-      class="px-4 py-2 m-3 rounded-lg lg:mx-auto bg-white lg:p-0 lg:container lg:bg-transparent transition-all duration-500">
+      class="lg:m-3 mx-3 my-1 rounded-lg lg:mx-auto bg-white lg:p-0 lg:container lg:bg-transparent transition-all duration-500">
       <div id="header-container"
-        class="flex items-center gap-4 bg-white rounded-lg lg:justify-between lg:ps-5 lg:max-w-[1345px] mx-auto transition-all duration-500 h-[60px] lg:h-auto">
+        class="flex items-center gap-4 bg-white rounded-lg lg:justify-between lg:ps-5 lg:max-w-[1345px] mx-auto transition-all shadow-2xl duration-500 h-[60px] lg:h-auto px-4 lg:p-0 py-2">
         <div class="cursor-pointer lg:hidden">
           <label for="menu-checkbox" class="cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -50,29 +49,29 @@
           </label>
         </div>
         <h1>
-          <a href="#" aria-label="logo"> <img src="img/logo-sky.svg" alt="logo" fetchpriority="hight"></a>
+          <a href="#" aria-label="logo"> <img src="img/logo-sky.svg" alt="logo" fetchpriority="high"></a>
         </h1>
         <ul
           class="items-center justify-center hidden gap-5 font-semibold lg:inline-flex 2xl:gap-8 xl:gap-6 lg:gap-6 text-heading font-plus-jakarta-sans">
           <li>
-            <a class="block p-3 transition-all duration-300 hover:text-primary" href="#features">Features</a>
+            <a class="block p-4 transition-all duration-300 hover:text-primary" href="#features">Features</a>
           </li>
           <li>
-            <a class="block p-3 transition-all duration-300 hover:text-primary" href="#exclusive-offeres">Exclusive
+            <a class="block p-4 transition-all duration-300 hover:text-primary" href="#exclusive-offeres">Exclusive
               Offers</a>
           </li>
           <li>
-            <a class="block p-3 transition-all duration-300 hover:text-primary" onclick="focusInput()"
+            <a class="block p-4 transition-all duration-300 hover:text-primary" onclick="focusInput()"
               href="#contact-us">Contact Us</a>
           </li>
           <li>
             <a href="https://nextsky.gitbook.io/purity-theme/"
-              class="block p-3 transition-all duration-300 hover:text-primary" href="#">Documents</a>
+              class="block p-4 transition-all duration-300 hover:text-primary" href="#">Documents</a>
           </li>
         </ul>
         <div class="lg:m-0 ms-auto">
           <a href="https://themes.shopify.com/themes/purity/presets/purity"
-            class="inline-flex font-plus-jakarta-sans lg:rounded-r-lg lg:rounded-l-none rounded-lg relative  group justify-center items-center px-4 py-2 lg:py-4.5 lg:px-10 lg:text-base text-sm  font-semibold -tracking-[0.02em] text-white transition-all duration-300  bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
+            class="font-plus-jakarta-sans lg:rounded-r-lg lg:rounded-l-none rounded-lg relative  group justify-center items-center px-4 py-2 lg:py-4.5 lg:px-10 lg:text-base text-sm  font-semibold -tracking-[0.02em] text-white transition-all duration-300  bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
             <span class="z-2">Try Theme</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
                 src="img/icon-arrow.svg" alt=""></span>
@@ -365,10 +364,10 @@
 
     </div>
   </section>
-  <section class="bg-[#13111C] relative xl:pt-25 xl:pb-20 lg:py-18 py-15 rounded-t-4xl">
+  <section class="bg-[#13111C] relative xl:pt-25 xl:pb-20 lg:py-18 py-15 rounded-t-4xl overflow-hidden">
     <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
     <span
-      class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
+      class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)] transition-all duration-300 scroll-gradient"></span>
     <div class="px-4 mx-auto lg:container">
       <div class="space-y-4 text-center lg:mb-12.5 mb-8 max-w-[1345px] mx-auto" data-cues="slideInUp"
         data-duration="600">
@@ -579,198 +578,292 @@
     <div class="flex items-center mb-4 lg:mb-6 overflow-hidden scrolling">
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-left">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-105 w-full mx-3 transition-all duration-300 hover:-translate-y-1">
-          <picture class="inline-block shrink-0"><img src="img/icon-search.svg" alt="icon" loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Predictive
-              Search</h3>
-            <p class="text-white/70 text-base">Easily customize your store layout with flexible sections,
-              giving you full control over content placement.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt="icon" loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Free Shipping
-              Reminder</h3>
-            <p class="text-white/70 text-base">Encourage customers to increase their cart value by showing
-              how close they are to free shipping.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-stock.svg" alt="icon" loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Stock Counter
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-search.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Predictive Search
             </h3>
-            <p class="text-white/70 text-base">Inform shoppers of available quantities to create urgency and
-              encourage faster purchase decisions.</p>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Easily customize your store layout with flexible sections, giving you full control over content placement.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt="icon" loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Quick View
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-shipping.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Free Shipping Reminder
             </h3>
-            <p class="text-white/70 text-base">Allow customers to view product details without leaving the
-              page, simplifying shopping experience.</p>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Encourage customers to increase their cart value by showing how close they are to free shipping.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-filter.svg " alt="icon" loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Advanced
-              Filters</h3>
-            <p class="text-white/70 text-base">Filters with multiple options for categories, price range, and
-              more, helping customers refine searches.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-gall.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image
-              Galleries</h3>
-            <p class="text-white/70 text-base">Showcase a rich visual display, giving customers a
-              comprehensive view of each item.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg " alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Estimated
-              Shipping Rate</h3>
-            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
-              enabling easy product adding anytime.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Sticky Add To
-              Cart</h3>
-            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
-              enabling easy product adding anytime.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-zom.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image Zoome
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-stock.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Stock Counter
             </h3>
-            <p class="text-white/70 text-base">Allow customers to zoom in on product images for a closer look
-              at details and quality. </p>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Inform shoppers of available quantities to create urgency and encourage faster purchase decisions.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-quickview.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Quick View
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Allow customers to view product details without leaving the page, simplifying shopping experience.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-filter.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Advanced Filters
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Filters with multiple options for categories, price range, and more, helping customers refine searches.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-gall.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Image Galleries
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Showcase a rich visual display, giving customers a comprehensive view of each item.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-cart.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Estimated Shipping Rate
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Let customers estimate shipping fees in the cart by entering location details before checkout.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-cart.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Sticky Add To Cart
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Sticky add-to-cart button stays visible as customers scroll, enabling easy product adding anytime.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-zom.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Image Zoom
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Allow customers to zoom in on product images for a closer look at details and quality.
+            </p>
           </div>
         </div>
       </div>
+
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-left">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-search.svg" alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Predictive
-              Search</h3>
-            <p class="text-white/70 text-base">Easily customize your store layout with flexible sections,
-              giving you full control over content placement.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-shipping.svg" alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Free Shipping
-              Reminder</h3>
-            <p class="text-white/70 text-base">Encourage customers to increase their cart value by showing
-              how close they are to free shipping.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-stock.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Stock Counter
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-search.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Predictive Search
             </h3>
-            <p class="text-white/70 text-base">Inform shoppers of available quantities to create urgency and
-              encourage faster purchase decisions.</p>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Easily customize your store layout with flexible sections, giving you full control over content placement.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-quickview.svg" alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Quick View
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-shipping.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Free Shipping Reminder
             </h3>
-            <p class="text-white/70 text-base">Allow customers to view product details without leaving the
-              page, simplifying shopping experience.</p>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Encourage customers to increase their cart value by showing how close they are to free shipping.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-filter.svg " alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Advanced
-              Filters</h3>
-            <p class="text-white/70 text-base">Filters with multiple options for categories, price range, and
-              more, helping customers refine searches.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-gall.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image
-              Galleries</h3>
-            <p class="text-white/70 text-base">Showcase a rich visual display, giving customers a
-              comprehensive view of each item.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg " alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Estimated
-              Shipping Rate</h3>
-            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
-              enabling easy product adding anytime.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-cart.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Sticky Add To
-              Cart</h3>
-            <p class="text-white/70 text-base">Sticky add-to-cart button stays visible as customers scroll,
-              enabling easy product adding anytime.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-zom.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold font-plus-jakarta-sans xl:leading-none lg:text-[20px]">Image Zoome
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-stock.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Stock Counter
             </h3>
-            <p class="text-white/70 text-base">Allow customers to zoom in on product images for a closer look
-              at details and quality. </p>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Inform shoppers of available quantities to create urgency and encourage faster purchase decisions.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-quickview.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Quick View
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Allow customers to view product details without leaving the page, simplifying shopping experience.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-filter.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Advanced Filters
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Filters with multiple options for categories, price range, and more, helping customers refine searches.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-gall.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Image Galleries
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Showcase a rich visual display, giving customers a comprehensive view of each item.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-cart.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Estimated Shipping Rate
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Let customers estimate shipping fees in the cart by entering location details before checkout.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-cart.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Sticky Add To Cart
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Sticky add-to-cart button stays visible as customers scroll, enabling easy product adding anytime.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-zom.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Image Zoom
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Allow customers to zoom in on product images for a closer look at details and quality.
+            </p>
           </div>
         </div>
       </div>
@@ -779,191 +872,297 @@
     <div class="flex items-center mb-10 overflow-hidden scrolling">
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-right">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-swa.svg " alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Color and Image Swatches</h3>
-            <p class="text-white/70 text-base">Display color and image swatches for products on both the
-              product detail page and collection listing pages. </p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Image Hotspot</h3>
-            <p class="text-white/70 text-base">Add clickable hotspots on images to let customers explore and
-              buy products directly.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-video.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Video With Text</h3>
-            <p class="text-white/70 text-base">Showcase your message with eye-catching video backgrounds and
-              clear text overlays.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-swa.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Color and Image Swatches
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Display color and image swatches for products on both the product detail page and collection listing
+              pages.
+            </p>
           </div>
         </div>
 
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-time.svg " alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Countdown Timer</h3>
-            <p class="text-white/70 text-base">Create urgency and excitement with limited-time deals,
-              motivating faster purchases.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-hotspot.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Image Hotspot
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Add clickable hotspots on images to let customers explore and buy products directly.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-before.svg" alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Before and After</h3>
-            <p class="text-white/70 text-base">Highlight product effectiveness with clear before-and-after
-              visuals to build customer trust .</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-video.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Video With Text
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Showcase your message with eye-catching video backgrounds and clear text overlays.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Cart Upsell</h3>
-            <p class="text-white/70 text-base">Suggest complementary or related products directly in the
-              cart, encouraging more purchases.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-time.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Countdown Timer
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Create urgency and excitement with limited-time deals, motivating faster purchases.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-mega.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Mega Menu</h3>
-            <p class="text-white/70 text-base">An organized, comprehensive navigation helps customers easily
-              explore all product categories. </p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-before.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Before and After
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Highlight product effectiveness with clear before-and-after visuals to build customer trust .
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-rich.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Rich Product Media </h3>
-            <p class="text-white/70 text-base">Showcase products with 3D models and embedded Vimeo or YouTube
-              videos for an engaging experience.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-upsell.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Cart Upsell
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Suggest complementary or related products directly in the cart, encouraging more purchases.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-buy.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Quick Buy</h3>
-            <p class="text-white/70 text-base">Faster checkouts by simplifying purchases process and reducing
-              cart abandonment.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-mega.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Mega Menu
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              An organized, comprehensive navigation helps customers easily explore all product categories.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-rich.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Rich Product Media
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Showcase products with 3D models and embedded Vimeo or YouTube videos for an engaging experience.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-buy.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Quick Buy
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Faster checkouts by simplifying purchases process and reducing cart abandonment.
+            </p>
           </div>
         </div>
       </div>
+
       <div class="flex pt-1 overflow-hidden shrink-0 animate-scrolling scrolling-right">
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-swa.svg " alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Color and Image Swatches</h3>
-            <p class="text-white/70 text-base">Display color and image swatches for products on both the
-              product detail page and collection listing pages. </p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-hotspot.svg" alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Image Hotspot</h3>
-            <p class="text-white/70 text-base">Add clickable hotspots on images to let customers explore and
-              buy products directly.</p>
-          </div>
-        </div>
-        <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-stock.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Video With Text</h3>
-            <p class="text-white/70 text-base">Showcase your message with eye-catching video backgrounds and
-              clear text overlays.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-swa.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Color and Image Swatches
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Display color and image swatches for products on both the product detail page and collection listing
+              pages.
+            </p>
           </div>
         </div>
 
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-time.svg " alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Countdown Timer</h3>
-            <p class="text-white/70 text-base">Create urgency and excitement with limited-time deals,
-              motivating faster purchases.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-hotspot.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Image Hotspot
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Add clickable hotspots on images to let customers explore and buy products directly.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-before.svg" alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Before and After</h3>
-            <p class="text-white/70 text-base">Highlight product effectiveness with clear before-and-after
-              visuals to build customer trust .</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-video.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Video With Text
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Showcase your message with eye-catching video backgrounds and clear text overlays.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-upsell.svg " alt="icon" loading="lazy"
-              loading="lazy"></picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Cart Upsell</h3>
-            <p class="text-white/70 text-base">Suggest complementary or related products directly in the
-              cart, encouraging more purchases.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-time.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Countdown Timer
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Create urgency and excitement with limited-time deals, motivating faster purchases.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-mega.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Mega Menu</h3>
-            <p class="text-white/70 text-base">An organized, comprehensive navigation helps customers easily
-              explore all product categories. </p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-before.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Before and After
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Highlight product effectiveness with clear before-and-after visuals to build customer trust .
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-rich.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Rich Product Media </h3>
-            <p class="text-white/70 text-base">Showcase products with 3D models and embedded Vimeo or YouTube
-              videos for an engaging experience.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-upsell.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Cart Upsell
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Suggest complementary or related products directly in the cart, encouraging more purchases.
+            </p>
           </div>
         </div>
+
         <div
-          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 lg:space-y-6 inline-flex gap-4 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
-          <picture class="inline-block shrink-0"><img src="img/icon-buy.svg" alt="icon" loading="lazy" loading="lazy">
-          </picture>
-          <div>
-            <h3 class="mb-3 text-base font-semibold xl:leading-none lg:text-[20px]">Quick Buy</h3>
-            <p class="text-white/70 text-base">Faster checkouts by simplifying purchases process and reducing
-              cart abandonment.</p>
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-mega.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Mega Menu
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              An organized, comprehensive navigation helps customers easily explore all product categories.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-rich.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Rich Product Media
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Showcase products with 3D models and embedded Vimeo or YouTube videos for an engaging experience.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="rounded-[20px] border border-[#71619F33] bg-white/5 text-white xl:p-8 p-6 max-w-100 w-full mx-2 lg:mx-3 transition-all duration-300 hover:-translate-y-1 hover:bg-white/8">
+          <div class="grid grid-cols-[auto_1fr] gap-x-3 lg:gap-x-4 gap-y-2 lg:gap-y-3 items-center">
+            <picture class="flex items-center">
+              <img src="img/icon-buy.svg" alt="icon" loading="lazy" />
+            </picture>
+            <h3 class="text-base font-semibold font-plus-jakarta-sans lg:text-[20px]">
+              Quick Buy
+            </h3>
+            <div></div>
+            <p class="text-white/70 text-base">
+              Faster checkouts by simplifying purchases process and reducing cart abandonment.
+            </p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -1243,7 +1442,7 @@
     class="bg-[#13111C] rounded-t-4xl relative z-auto -mt-7 overflow-hidden xl:py-25 lg:py-18 py-15">
     <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
     <span
-      class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)]"></span>
+      class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)] scroll-gradient"></span>
     <div class="px-4 mx-auto lg:container">
       <div class="max-w-[1345px] mx-auto">
 
@@ -1508,7 +1707,7 @@
 
   <section class="bg-[#F1F3F7] rounded-t-[30px] -mt-[30px] relative py-7.5 md:py-25 overflow-hidden">
     <div class="px-4 mx-auto lg:container">
-      <div class="lg:max-w-[1345px] mx-auto px-5 md:px-1 ">
+      <div class="lg:max-w-[1345px] mx-auto">
         <div class="max-w-3xl mx-auto text-center mb-12.5" data-cues="slideInUp" data-duration="600">
           <h2
             class="text-3xl lg:text-4xl xl:text-[45px] text-heading font-plus-jakarta-sans font-semibold leading-tight tracking-tight mb-4">
@@ -1524,11 +1723,11 @@
 
         <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" data-cues="slideInUp" data-duration="500"
           data-group="section-box-8">
-          <span class="absolute top-0 flex items-center bottom-0 w-full lg:max-w-[1345px] h-[1px]
+          <span class="absolute top-0 flex items-center bottom-0 w-full hidden lg:block lg:max-w-[1345px] h-[1px]
                   bg-gradient-to-r from-transparent via-[#D1D6DD] to-transparent z-[1]">
           </span>
           <!-- Item 1 -->
-          <div class="p-6 md:p-8 cursor-default border-none md:border-e lg:border-none border-[#D1D6DD]">
+          <div class="pt-6 md:p-8 cursor-default border-none md:border-e lg:border-none border-[#D1D6DD]">
             <div class="flex flex-col items-center md:items-start gap-3 md:gap-4 group">
               <span
                 class="inline-flex items-center md:items-start transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
@@ -1545,7 +1744,7 @@
             </div>
           </div>
           <!-- Item 2 -->
-          <div class="p-6 md:p-8 cursor-default lg:border-e border-[#D1D6DD]">
+          <div class="pt-6 md:p-8 cursor-default lg:border-e border-[#D1D6DD]">
             <div class="flex flex-col items-center md:items-start gap-3 md:gap-4 group">
               <span
                 class="inline-flex items-center md:items-start justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
@@ -1561,7 +1760,7 @@
             </div>
           </div>
           <!-- Item 3 -->
-          <div class="p-6 md:p-8 cursor-default border-none md:border-e lg:border-none border-[#D1D6DD]">
+          <div class="pt-6 md:p-8 cursor-default border-none md:border-e lg:border-none border-[#D1D6DD]">
             <div class="flex flex-col items-center md:items-start gap-3 md:gap-4 group">
               <span
                 class="inline-flex items-center md:items-start justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
@@ -1577,7 +1776,7 @@
             </div>
           </div>
           <!-- Item 4 -->
-          <div class="p-6 md:p-8 cursor-default">
+          <div class="py-6 md:p-8 cursor-default">
             <div class="flex flex-col items-center md:items-start gap-3 md:gap-4 group">
               <span
                 class="inline-flex justify-center transition-transform duration-300 size-9 group-hover:scale-105 group-hover:-translate-y-1">
@@ -1862,9 +2061,6 @@
           <div class="grid grid-rows-1 lg:grid-rows-2 gap-6">
             <div
               class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.png)] bg-cover bg-center h-full min-h-[320px] relative z-auto">
-              <div
-                class="absolute w-full h-full bg-[url(./img/noise-165.svg)] bg-repeat top-0 pointer-events-none z-auto">
-              </div>
               <div class="absolute top-10 left-10">
                 <a
                   class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
@@ -1886,9 +2082,7 @@
 
             <div
               class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/free-setup.png)] bg-cover bg-cente h-full min-h-[320px] relative z-auto">
-              <div
-                class="absolute w-full h-full bg-[url(./img/noise-165.svg)] bg-repeat top-0 pointer-events-none z-auto">
-              </div>
+
               <div class="absolute top-10 left-10">
                 <a
                   class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
@@ -1913,9 +2107,11 @@
     </div>
   </section>
 
-  <footer class="bg-[#13111C] relative z-auto" id="footer">
+  <footer class="bg-[#13111C] relative z-auto rounded-4xl overflow-hidden" id="footer">
     <div class="bg-[url('img/bg_footer.png')] bg-center bg-cover rounded-t-4xl overflow-hidden">
       <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
+      <span
+        class="absolute pointer-events-none inset-0 h-85 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)] scroll-gradient"></span>
       <div class="px-4 mx-auto lg:container">
         <div class="footer-top xl:py-37.5 lg:py-25 py-20 text-center text-white lg:max-w-[1345px] mx-auto">
           <div class="mb-6">
@@ -1934,7 +2130,7 @@
             seamless navigation, and a
             user-<span class="hidden lg:inline"><br /></span> friendly experience to boost conversions.</p>
           <div class="flex flex-col justify-center gap-4 mt-12.5 sm:flex-row">
-            <a href="https://themes.shopify.com/themes/agile/presets/agile"
+            <a href="https://themes.shopify.com/themes/purity/presets/purity"
               class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               <span class="z-2">View Demo Store</span> <span
                 class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
@@ -2005,7 +2201,8 @@
           onclick="focusInput()">Contact Us</a>
       </li>
       <li>
-        <a class="block py-3 transition-all duration-300 hover:text-primary" href="#">Documents</a>
+        <a class="block py-3 transition-all duration-300 hover:text-primary"
+          href="https://nextsky.gitbook.io/purity-theme/">Documents</a>
       </li>
     </ul>
   </div>
@@ -2013,7 +2210,7 @@
   <div class="fixed left-0 right-0 hidden mx-auto pointer-events-none content bottom-6 w-fit z-111 sm:block">
     <div id="myBox"
       class="pointer-events-auto sticky-box transition-all duration-300 opacity-100 not-[.show]:opacity-0 not-[.show]:translate-y-full">
-      <a href="https://purity.nextsky.co/"
+      <a href="https://themes.shopify.com/themes/purity/presets/purity"
         class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white transition-all duration-300 rounded-full group lg:text-base lg:px-8 bg-primary/100 gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/95 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
         <span class="z-2">🤩 Watch your brand in action before you buy. 👍 Explore for Free</span>
         <span class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
@@ -2056,12 +2253,38 @@
       var header = document.querySelector("header");
       header.classList.toggle("show", window.scrollY > 0);
     })
+
     function scrollToTop() {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     }
+
+    // effect scroll gradient bg
+    const gradientEffect = document.querySelectorAll('.scroll-gradient')
+
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    window.addEventListener("scroll", function () {
+      gradientEffect.forEach(el => {
+        if (isElementInViewport(el) && window.scrollY > 50) {
+          el.classList.remove("h-85");
+          el.classList.add("h-125");
+        } else {
+          el.classList.remove("h-125");
+          el.classList.add("h-85");
+        }
+      });
+    })
 
     // Hiển thị/ẩn nút khi cuộn trang
     window.onscroll = function () {
