@@ -21,8 +21,12 @@
 }
 
 .playbtn::before {
-  filter: blur(1.5rem);
+  filter: blur(0rem);
   opacity: 0.5;
+}
+
+.playbtn:hover::before {
+filter: blur(1.5rem);
 }
 
 @keyframes spin-1 {
@@ -69,7 +73,7 @@
 .sweep-wrap .line {
   position: absolute;
   top: 50%;
-  height: 2px;
+  height: 1px;
   width: 0;
   pointer-events: none;
   opacity: 1;
@@ -96,7 +100,7 @@
   left: 50%;
   top: 0;
   bottom: auto;
-  width: 2px;
+  width: 1px;
   height: 0;
   background: linear-gradient(180deg, #5B7BFB 0, transparent 100%);
   animation: sweepUp 2.2s ease-out infinite;
@@ -104,7 +108,7 @@
 }
 
 .sweep-wrap .line.delay-1 {
-  animation-delay: 0s;
+  animation-delay: 2s;
 }
 
 /* FAQ details/summary styling */
