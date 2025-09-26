@@ -34,7 +34,7 @@
 
 <body class="min-h-screen overflow-x-hidden">
   <!-- Header -->
-  <header class="lg:px-4 lg:py-2 top-0 z-10 w-full start-0 fixed lg:pt-7.5 will-change-auto bg-transparent transition-all duration-300"
+  <header class="lg:px-4 lg:py-2 top-0 z-10 w-full start-0 fixed lg:pt-4.5 will-change-auto bg-transparent transition-all duration-300"
     id="header">
     <div
       class="lg:m-3 mx-3 my-1 rounded-lg lg:mx-auto bg-white lg:p-0 lg:container lg:bg-transparent transition-all duration-500">
@@ -2602,7 +2602,6 @@
           if (currentScrollY > this.threshold) {
             this.headerContainer.classList.remove('lg:max-w-[1345px]');
             this.headerContainer.classList.add('lg:max-w-[950px]');
-            this.header.classList.add('lg:pt-7.5');
           } else {
             this.headerContainer.classList.remove('lg:max-w-[950px]');
             this.headerContainer.classList.add('lg:max-w-[1345px]');
