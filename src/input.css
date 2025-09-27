@@ -25,7 +25,7 @@
 }
 @layer base {
   body {
-    @apply text-base font-medium text-body  font-instrument_sans;
+    @apply text-base font-normal text-body  font-instrument_sans;
   }
   .container {
     @apply pe-4 ps-4 mx-auto;
