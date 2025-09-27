@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        .outer {
+            background: url("https://picsum.photos/1000/600") center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            position: relative;
+        }
+
+        .box::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 15px;
+            padding: 2px;
+            background: linear-gradient(to right, transparent, transparent, #FFFFFF99);
+            mask:
+                linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+            mask-composite: exclude;
+        }
+
+        /* Nền blur bên trong */
+        .blur-box {
+            padding: 30px 50px;
+            text-align: center;
+            color: white;
+            z-index: 1;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.6);
+            width: 256px;
+        }
+
+        .number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .label {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box">
+            <div class="blur-box">
+                <p class="number">50k</p>
+                <p class="label">Satisfied Customers</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="blur-box">
+                <h4 class="number mb-2 text-4xl font-semibold text-white xl:text-50 md:text-5xl font-plus-jakarta-sans "
+                    role="heading" aria-level="2">
+                    17k</h4>
+                <p class="label text-sm text-white md:text-base">5 Stars Reviews</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
