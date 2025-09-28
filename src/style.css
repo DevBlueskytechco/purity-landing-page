@@ -184,3 +184,34 @@
 :target {
   scroll-margin-top: 80px !important;
 }
+
+.btn-demo::before, .btn-demo::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background: linear-gradient(45deg, #6E5BFB,  oklch(62.7% 0.265 303.9), oklch(66.7% 0.295 322.15), #6E5BFB);
+  
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  border-radius: calc(infinity * 1px);
+}
+.btn-demo::after {
+  filter: blur(20px);
+  opacity: 0.6;
+}
+@keyframes animate {
+    0% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 400% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}
