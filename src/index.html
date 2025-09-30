@@ -26,25 +26,39 @@
   <meta property="og:image:height" content="300" />
   <link rel="icon" href="./img/Favicon.svg" sizes="32x32" />
 
+<<<<<<< HEAD
   <link rel="stylesheet" href="./scrollCue.css?v=88">
   <link rel="stylesheet" href="./style.css?v=88">
   <link href="./output.css?v=88" rel="stylesheet" />
+=======
+  <link rel="preload" href="img/logo-sky.svg" as="image" />
+  <link rel="preload" href="img/logo.svg" as="image" fetchpriority="high" />
+  <link rel="preload" href="img/bg-header.webp" as="image">
+  <link rel="preconnect" href="https://www.facebook.com" crossorigin>
+  <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+
+  <link rel="stylesheet" href="./scrollCue.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href="./output.css" rel="stylesheet" />
+>>>>>>> 87d5e45d58a2ad35d2fd1befc3a634a1593c5f73
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2678445395674347');
-  fbq('track', 'PageView');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2678445395674347');
+    fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2678445395674347&ev=PageView&noscript=1"
-  /></noscript>
+      src="https://www.facebook.com/tr?id=2678445395674347&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6NY452RN2"></script>
@@ -90,7 +104,8 @@
           </label>
         </div>
         <h1>
-          <a href="#" aria-label="logo"> <img src="img/logo-sky.svg" alt="logo" fetchpriority="high"></a>
+          <a href="#" aria-label="logo"> <img src="img/logo-sky.svg" alt="logo" width="130" height="30"
+              fetchpriority="high" loading="eager" decoding="async"></a>
         </h1>
         <ul
           class="items-center justify-center hidden gap-5 font-semibold lg:inline-flex 2xl:gap-8 xl:gap-6 lg:gap-6 text-heading font-plus-jakarta-sans">
@@ -116,7 +131,7 @@
             class="font-plus-jakarta-sans lg:rounded-r-lg lg:rounded-l-none rounded-lg block relative h-full group justify-center items-center px-4 py-2 lg:py-4.5 lg:px-10 lg:text-base text-sm  font-semibold -tracking-[0.02em] text-white transition-all duration-300  bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none">
             <span class="z-2 me-1.5">Try Theme</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                src="img/icon-arrow.svg" alt=""></span>
+                src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
           </a>
         </div>
       </div>
@@ -139,7 +154,8 @@
                    
                    <span class="absolute  bg-[#1c1f2b] inset-[1.5px] rounded-full"></span>
                 </button> -->
-        <div class="m-0 text-center"><img class="inline-block" src="img/logo.svg" alt="" data-duration="600"></div>
+        <div class="m-0 text-center"><img class="inline-block will-change-[filter,transform]" src="img/logo.svg" alt="" width="141" height="140"
+            fetchpriority="high" decoding="async" loading="eager" data-duration="0" data-delay="0"></div>
         <h2
           class="inline-block mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl sm:text-5xl text-4xl -tracking-[0.02em] font-semibold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent"
           data-duration="1000">
@@ -155,13 +171,13 @@
             class="inline-flex font-plus-jakarta-sans relative playbtn group h-[50px] lg:h-auto justify-center items-center px-8 py-3.5 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
             <span class="z-2 -tracking-[0.01em]">Try Purity Theme</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                src="img/icon-arrow.svg" alt=""></span>
+                src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
             <span class="absolute  bg-primary inset-0.5 rounded-full btn-demo"></span>
           </a>
           <a href="https://themes.shopify.com/themes/purity/presets/purity"
             class="-tracking-[0.01em] inline-flex font-plus-jakarta-sans group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
             View Demo Store<span class="inline-block transition-all duration-300 group-hover:rotate-45"><img
-                src="img/icon-arrow.svg" alt=""></span>
+                src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
           </a>
         </div>
 
@@ -201,11 +217,11 @@
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt=""
-                      loading="lazy"></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" width="24"
+                      height="24" alt="" loading="lazy"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt=""
-                      loading="lazy"></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" width="24"
+                      height="24" alt="" loading="lazy"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Suitable Product Finder</h3>
@@ -214,10 +230,9 @@
                   confidence.</p>
               </div>
             </div>
-
           </div>
           <div
-            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.jpg)] grid content-center bg-cover bg-center">
+            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.webp)] grid content-center bg-cover bg-center">
             <picture class="overflow-hidden rounded-2xl">
               <source type="image/webp" srcset="img/img-banner1.webp">
               <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner1.jpg"
@@ -233,11 +248,11 @@
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt="icon"
-                      loading="lazy"></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" width="24"
+                      height="24" alt="icon" loading="lazy"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt="icon"
-                      loading="lazy"></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" width="24"
+                      height="24" alt="icon" loading="lazy"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Recommend Collection</h3>
@@ -249,27 +264,27 @@
 
           </div>
           <div
-            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.jpg)] grid content-center bg-cover bg-center">
+            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.webp)] grid content-center bg-cover bg-center">
             <picture class="overflow-hidden rounded-2xl">
               <source type="image/webp" srcset="img/img-banner2.webp">
               <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner2.jpg"
-                width="698" height="370" alt="banner" loading="lazy">
+                width="698" height="370" alt="banner" loading="lazy" decoding="async">
             </picture>
           </div>
         </div>
       </div>
 
-      <div class="max-w-[1345px] mx-auto mb-4 md:mb-6 group" data-cues="slideInUp" data-duration="600">
+      <div class="max-w-[1345px] mx-auto mb-4 md:mb-6 group" data-cues="slideInUp" data-duration="600"> 
         <div class="bg-[#ECE7DA] rounded-[20px] grid md:grid-cols-12 overflow-hidden">
           <div class="lg:col-span-5 md:col-span-6 xl:p-12.5 lg:p-8 p-6 order-last md:order-first">
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt="icon"
-                      loading="lazy"></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" width="24"
+                      height="24" alt="icon" loading="lazy"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt="icon"
-                      loading="lazy"></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" width="24"
+                      height="24" alt="icon" loading="lazy"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Product Bundle</h3>
@@ -280,7 +295,7 @@
 
           </div>
           <div
-            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.jpg)] grid content-center bg-cover bg-center">
+            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section1.webp)] grid content-center bg-cover bg-center">
             <picture class="overflow-hidden rounded-2xl">
               <source type="image/webp" srcset="img/img-banner3.webp">
               <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner3.jpg"
@@ -296,11 +311,11 @@
             <div class="flex flex-col justify-between h-full gap-5">
               <ul class="lg:space-x-5 space-x-3 space-y-1 xl:space-x-7.5">
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" alt="icon"
-                      loading="lazy"></span>Purity Exclusive</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-1.svg" width="24"
+                      height="24" alt="icon" loading="lazy"></span>Purity Exclusive</li>
                 <li class="inline-flex items-center lg:gap-3 gap-1.5"> <span
-                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" alt="icon"
-                      loading="lazy"></span>Personalized</li>
+                    class="inline-flex items-center justify-center shrink-0"><img src="img/icon-2.svg" width="24"
+                      height="24" alt="icon" loading="lazy"></span>Personalized</li>
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Featured Product Banner</h3>
@@ -312,7 +327,7 @@
 
           </div>
           <div
-            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.jpg)] grid content-center bg-cover bg-center">
+            class="lg:col-span-7 md:col-span-6 xl:p-12.5 lg:p-8 p-6 bg-[url(img/bg-section2.webp)] grid content-center bg-cover bg-center">
             <picture class="overflow-hidden rounded-2xl">
               <source type="image/webp" srcset="img/img-banner4.webp">
               <img class="transition-all duration-300 origin-bottom group-hover:scale-101" src="img/img-banner4.jpg"
@@ -593,7 +608,7 @@
           class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
           <span class="z-2 -tracking-[0.01em]">Try Purity Theme</span> <span
             class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-              src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
+              src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
           <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
         </a>
       </div>
@@ -1808,7 +1823,7 @@
             class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
             <span class="z-2 -tracking-[0.01em]">Get the Deals Now</span> <span
               class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
+                src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
             <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
           </a>
         </div>
@@ -1861,7 +1876,7 @@
                   class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
                   <span class="z-2 -tracking-[0.01em]">Contact Us</span> <span
                     class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
+                      src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
                   <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
                 </a>
               </div>
@@ -1904,7 +1919,7 @@
                   class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[250px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
                   <span class="z-2 -tracking-[0.01em]">Explore Now</span> <span
                     class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" alt=""></span>
+                      src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
                   <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
                 </a>
               </div>
@@ -2088,7 +2103,7 @@
                 class="inline-flex font-plus-jakarta-sans relative group justify-center items-center h-[50px] lg:h-auto px-8 py-3 lg:py-4.5 lg:px-10  font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
                 <span class="z-2 -tracking-[0.01em]">Contact Us</span> <span
                   class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                    src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
+                    src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
               </a>
               <a href="https://nextsky.gitbook.io/purity-theme/frequently-asked-questions"
                 class="inline-flex font-plus-jakarta-sans lg:h-[60px] h- relative group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10  font-semibold -tracking-[0.02em] text-primary border border-primary transition-all duration-300 rounded-full bg-white gap-x-2 hover:bg-primary/90 hover:text-white  focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
@@ -2286,7 +2301,7 @@
 
           <div class="grid grid-rows-1 lg:grid-rows-2 gap-4 lg:gap-6">
             <div
-              class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.png)] bg-cover bg-center h-full min-h-[320px] relative z-auto">
+              class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.webp)] bg-cover bg-center h-full min-h-[320px] relative z-auto">
               <div class="absolute top-10 left-10">
                 <a
                   class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
@@ -2303,14 +2318,14 @@
                   class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
                   <span class="z-2 -tracking-[0.01em]">See Details</span> <span
                     class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" alt=""></span>
+                      src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
                   <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
                 </a>
               </div>
             </div>
 
             <div
-              class="lg:col-span-2 rounded-[20px] [background-position:50%_100%] lg:[background-position:0%_0%] overflow-hidden bg-[url(./img/free-setup.png)] bg-cover bg-cente h-full min-h-[320px] relative z-auto">
+              class="lg:col-span-2 rounded-[20px] [background-position:50%_100%] lg:[background-position:0%_0%] overflow-hidden bg-[url(./img/free-setup.webp)] bg-cover bg-cente h-full min-h-[320px] relative z-auto">
 
               <div class="absolute top-10 left-10">
                 <a
@@ -2329,7 +2344,7 @@
                   class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
                   <span class="z-2 -tracking-[0.01em]">See Details</span> <span
                     class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
+                      src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
                   <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
                 </a>
               </div>
@@ -2341,7 +2356,7 @@
   </section>
 
   <footer class="bg-[#13111C] relative z-auto overflow-hidden" id="footer">
-    <div class="bg-[url('img/bg_footer.png')] bg-center bg-cover overflow-hidden">
+    <div class="bg-[url('img/bg_footer.webp')] bg-center bg-cover overflow-hidden">
       <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
       <span
         class="absolute pointer-events-none inset-0 h-85 opacity-50 bg-[radial-gradient(50%_100%_at_50%_0%,rgba(115,99,248,0.3)_0%,rgba(115,99,248,0)_100%)] scroll-gradient"></span>
@@ -2366,13 +2381,13 @@
               class="inline-flex font-plus-jakarta-sans relative playbtn group h-[50px] lg:h-[60px] justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               <span class="z-2">View Demo Store</span> <span
                 class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                  src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
+                  src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
               <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
             </a>
             <a href="https://themes.shopify.com/themes/purity/presets/purity"
               class="inline-flex font-plus-jakarta-sans group justify-center items-center px-8 py-3 lg:py-2 lg:px-10 lg:min-w-[220px] font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full border border-white gap-x-2 hover:bg-primary/90 hover:border-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
               Try Purity Theme <span class="inline-block transition-all duration-300 group-hover:rotate-45"><img
-                  src="img/icon-arrow.svg" alt="icon" loading="lazy"></span>
+                  src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
             </a>
           </div>
         </div>
@@ -2451,7 +2466,7 @@
         class="inline-flex items-center justify-center px-6 py-3 text-sm font-normal text-white transition-all duration-300 rounded-full group lg:text-base lg:px-8 bg-primary/100 gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/95 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1">
         <span class="z-2">🤩 Watch your brand in action before you buy. 👍 Explore for Free</span>
         <span class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-            src="img/icon-arrow.svg" alt=""></span>
+            src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
       </a>
     </div>
   </div>
@@ -2473,7 +2488,7 @@
     <script src="js/theme.js"></script> -->
   <script src="js/scrollCue.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script> -->
-  <script type="text/javascript">
+  <script defer type="text/javascript">
     scrollCue.init({
       duration: 300,
       interval: -200,
@@ -2642,7 +2657,7 @@
     new MobileMenuController("menu-checkbox", ".offcanvas");
   </script>
 
-  <script>
+  <script defer>
     // Focus input helper (preserve global API for existing HTML usage)
     class FocusInputHelper {
       static focus(selector = '.focus-input', delayMs = 300) {
@@ -2862,11 +2877,7 @@
             if (button !== current) {
               button.classList.remove("active");
               const desc = button.nextElementSibling;
-              const plus = button.querySelector(".plus-icon");
-              const minus = button.querySelector(".minus-icon");
               if (desc) desc.style.maxHeight = null;
-              if (plus) plus.style.display = "block";
-              if (minus) minus.style.display = "none";
             }
           });
         }
@@ -2875,22 +2886,27 @@
           this.closeAllExcept(button);
 
           const descriptions = button.nextElementSibling;
-          const plusIcons = button.querySelector(".plus-icon");
-          const minusIcons = button.querySelector(".minus-icon");
 
           if (button.classList.contains("active")) {
             button.classList.remove("active");
             if (descriptions) descriptions.style.maxHeight = null;
-            if (plusIcons) plusIcons.style.display = "block";
-            if (minusIcons) minusIcons.style.display = "none";
           } else {
             button.classList.add("active");
             if (descriptions) {
               descriptions.style.maxHeight = descriptions.scrollHeight + 'px';
             }
-            if (plusIcons) plusIcons.style.display = "none";
-            if (minusIcons) minusIcons.style.display = "block";
           }
+        }
+
+        updateActiveHeights() {
+          this.buttons.forEach(button => {
+            if (button.classList.contains("active")) {
+              const descriptions = button.nextElementSibling;
+              if (descriptions) {
+                descriptions.style.maxHeight = descriptions.scrollHeight + 'px';
+              }
+            }
+          });
         }
 
         init() {
@@ -2903,6 +2919,11 @@
             if (this.buttons.length > 0) {
               this.handleClick(this.buttons[0]);
             }
+          });
+
+          // Update heights on window resize
+          window.addEventListener('resize', () => {
+            this.updateActiveHeights();
           });
         }
       }
