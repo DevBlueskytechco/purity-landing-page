@@ -46,6 +46,13 @@ try {
     respond_json(false, 'Database error');
 }
 
+try {
+    saveToGoogleSheets($name, $email, $storeUrl, $notes);
+} catch (Throwable $e) {
+    // Log error but don't fail the whole process
+    error_log('Google Sheets save failed: ' . $e->getMessage());
+}
+
 // Send email
 $subject = 'New Contact Submission';
 $message = "You have a new submission:\n\n" .
@@ -203,4 +210,31 @@ function respond_json(bool $ok, string $message='') : void {
     http_response_code($ok ? 200 : 400);
     echo json_encode(['ok'=>$ok, 'message'=>$message]);
     exit;
+}
+
+function saveToGoogleSheets(string $name, string $email, string $storeUrl, string $notes): bool {
+    // Replace with your Google Apps Script Web App URL
+    $webAppUrl = 'https://script.google.com/macros/s/AKfycbzlrWrhCfGAX5J4cIIE808VQFCeacYmrvUQeWQaeOaNY-vVAT8PyDaBu9xK4j_QjE2H7A/exec';
+    
+    $postData = [
+        'name' => $name,
+        'email' => $email,
+        'store_url' => $storeUrl,
+        'notes' => $notes,
+        'timestamp' => date('Y-m-d H:i:s')
+    ];
+    
+    $options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($postData),
+            'timeout' => 10
+        ]
+    ];
+    
+    $context = stream_context_create($options);
+    $result = @file_get_contents($webAppUrl, false, $context);
+    
+    return $result !== false;
 }
