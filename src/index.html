@@ -27,7 +27,7 @@
   <link rel="icon" href="./img/Favicon.svg" sizes="32x32" />
 
   <link rel="preload" href="img/logo-sky.svg" as="image" />
-  <link rel="preload" href="img/logo.svg" as="image" fetchpriority="high" />
+  <link rel="preload" href="img/logo.svg" as="image" fetchpriority="low" />
   <link rel="preload" href="img/bg-header.webp" as="image">
   <link rel="preconnect" href="https://www.facebook.com" crossorigin>
   <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
@@ -58,26 +58,28 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6NY452RN2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-K6NY452RN2');
   </script>
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1357452342563970');
-  fbq('track', 'PageView');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1357452342563970');
+    fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1357452342563970&ev=PageView&noscript=1"
-  /></noscript>
+      src="https://www.facebook.com/tr?id=1357452342563970&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 </head>
 
@@ -88,7 +90,7 @@
     id="header">
     <div class="m-3 rounded-lg lg:mx-auto bg-white lg:p-0 lg:container lg:bg-transparent transition-all duration-500">
       <div id="header-container"
-        class="flex items-center gap-4 bg-white rounded-lg lg:justify-between lg:ps-5 overflow-hidden lg:max-w-[1345px] mx-auto transition-all shadow-[0_0_20px_0_rgba(19,17,28,0.05)] duration-500 h-[60px] lg:h-auto px-2 lg:p-0 py-3">
+        class="flex items-center gap-4 bg-white rounded-lg lg:justify-between lg:ps-5 overflow-hidden max-w-full lg:max-w-[1345px] mx-auto transition-all shadow-[0_0_20px_0_rgba(19,17,28,0.05)] duration-500 h-[60px] lg:h-auto px-2 lg:p-0 py-3">
         <div class="cursor-pointer lg:hidden">
           <label for="menu-checkbox" class="cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -99,7 +101,7 @@
         </div>
         <h1>
           <a href="#" aria-label="logo"> <img src="img/logo-sky.svg" alt="logo" width="130" height="30"
-              fetchpriority="high" loading="eager" decoding="async"></a>
+              fetchpriority="low" loading="eager" decoding="async"></a>
         </h1>
         <ul
           class="items-center justify-center hidden gap-5 font-semibold lg:inline-flex 2xl:gap-8 xl:gap-6 lg:gap-6 text-heading font-plus-jakarta-sans">
@@ -133,7 +135,10 @@
   </header>
 
   <section
-    class="bg-[#13111C] bg-[url(img/bg-header.webp)] pb-10 lg:pb-16 lg:pt-40 pt-25 bg-cover bg-center bg-no-repeat font-plus-jakarta-sans min-h-screen relative">
+    class="bg-[#13111C] pb-10 lg:pb-16 lg:pt-40 pt-25 bg-cover bg-center bg-no-repeat font-plus-jakarta-sans min-h-screen relative">
+    <img src="img/bg-header.webp" alt="bg-header" class="absolute top-0 left-0 w-full h-full object-cover"
+      data-image-src="img/bg-header.webp" width="412" height="824" fetchpriority="high" decoding="async"
+      loading="eager">
     <div class="absolute w-full h-full bg-[url(./img/noise.svg)] bg-repeat top-0 pointer-events-none z-auto"></div>
     <div class="px-4 mx-auto lg:container">
       <div class="space-y-6 text-center text-white mx-auto max-w-[1345px] relative" data-cues="bounceInUp"
@@ -148,8 +153,9 @@
                    
                    <span class="absolute  bg-[#1c1f2b] inset-[1.5px] rounded-full"></span>
                 </button> -->
-        <div class="m-0 text-center"><img class="inline-block will-change-[filter,transform]" src="img/logo.svg" alt="" width="141" height="140"
-            fetchpriority="high" decoding="async" loading="eager" data-duration="0" data-delay="0"></div>
+        <div class="m-0 text-center"><img class="inline-block will-change-[filter,transform]" src="img/logo.svg" alt=""
+            width="141" height="140" fetchpriority="high" decoding="async" loading="eager" data-duration="0"
+            data-delay="0"></div>
         <h2
           class="inline-block mx-auto 2xl:text-[80px] xl:text-7xl lg:text-6xl sm:text-5xl text-4xl -tracking-[0.02em] font-semibold leading-tight bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent"
           data-duration="1000">
@@ -268,7 +274,7 @@
         </div>
       </div>
 
-      <div class="max-w-[1345px] mx-auto mb-4 md:mb-6 group" data-cues="slideInUp" data-duration="600"> 
+      <div class="max-w-[1345px] mx-auto mb-4 md:mb-6 group" data-cues="slideInUp" data-duration="600">
         <div class="bg-[#ECE7DA] rounded-[20px] grid md:grid-cols-12 overflow-hidden">
           <div class="lg:col-span-5 md:col-span-6 xl:p-12.5 lg:p-8 p-6 order-last md:order-first">
             <div class="flex flex-col justify-between h-full gap-5">
