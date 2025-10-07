@@ -1006,9 +1006,6 @@
   .bg-\[url\(\.\/img\/noise\.svg\)\] {
     background-image: url(./img/noise.svg);
   }
-  .bg-\[url\(img\/bg-header\.webp\)\] {
-    background-image: url(img/bg-header.webp);
-  }
   .bg-\[url\(img\/bg-section1\.webp\)\] {
     background-image: url(img/bg-section1.webp);
   }
