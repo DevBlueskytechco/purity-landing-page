@@ -200,6 +200,114 @@
     </span>
   </section>
 
+  <section id="contact-us" class="w-full bg-[#F1F3F7] pt-10 md:pt-16" data-cues="slideInUp" data-duration="600">
+    <div class="px-4 mx-auto lg:container">
+      <div class="lg:max-w-[1345px] mx-auto pb-15 md:pb-25">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <div class="bg-[#6A57F5] rounded-[20px] xl:p-12.5 lg:p-8 p-6">
+            <div class="text-center xl:mb-12.5 lg:mb-8 mb-6">
+              <h2 class="text-white 2xl:text-[45px] lg:text-4xl text-3xl  font-semibold mb-3">Lock in Your Benefits Now</h2>
+              <p class="px-2 text-white">Submit information for free setup, partner discounts , expert help <br class="hidden md:block" /> from us, or anything you need.</p>
+            </div>
+
+            <form action="./assets/contact.php" method="POST" class="mx-auto">
+              <div class="flex flex-col items-center justify-center w-full gap-4 mb-4 lg:flex-row">
+                <input type="text" name="name" id="name"
+                  class="focus-input w-full text-white border border-white/40 rounded-[30px] transition-all duration-200 placeholder:text-white bg-primary p-4 md:ps-6 md:py-[15px] focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  placeholder="Your name *">
+                <input type="email" name="email" id="email"
+                  class="w-full text-white border border-white/40 rounded-[30px] transition-all duration-200 placeholder:text-white bg-primary p-4 md:ps-6 md:py-4 focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  placeholder="Your email *">
+              </div>
+
+              <div class="mb-4">
+                <label for="store_url" aria-label="store url"></label>
+                <input type="url" name="store_url" id="store_url"
+                  class="border text-white border-white/40 rounded-[30px] transition-all duration-200 p-4 md:py-4 md:ps-6 w-full placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  placeholder="Store url">
+              </div>
+
+              <div class="mb-4">
+                <label for="notes" aria-label="additional notes"></label>
+                <textarea name="notes" rows="4" id="notes"
+                  class="border text-white border-white/40 rounded-[20px] transition-all duration-200 p-4 md:ps-6 md:py-4 w-full resize-none placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
+                  placeholder="Additional notes or requests?"></textarea>
+              </div>
+
+              <div class="flex items-center gap-2 md:gap-3 mb-8 lg:mb-12.5">
+                <input type="checkbox" id="agreement" name="agreement" id="agreement" aria-label="checkbox"
+                  class="size-4 appearance-none checked checked:border-white text-primary bg-transparent border border-white rounded-sm focus:outline-white focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]
+                  relative checked:after:content-['✓'] checked:after:absolute checked:after:w-full checked:after:h-full checked:after:flex checked:after:justify-center checked:after:items-center checked:after:text-white checked:after:text-sm"">
+                <label for=" agreement" class="text-sm text-white">
+                I agree that my submitted data is being collected and stored.
+                </label>
+              </div>
+
+              <button type="submit"
+                class="w-full relative cursor-pointer inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-4 lg:py-4.5 h-[50px] lg:h-[60px] overflow-hidden lg:min-w-[220px] font-semibold -tracking-[0.02em] text-primary transition-all duration-300 rounded-full border gap-x-2 bg-white border-white disabled:opacity-50 disabled:pointer-events-none">
+                Submit <span class="inline-block transition-all duration-300 group-hover:rotate-45">
+                  <img src="./img/icon-arrow-purple.svg" alt="icon" loading="lazy">
+                </span>
+              </button>
+            </form>
+          </div>
+
+          <div class="grid grid-rows-1 lg:grid-rows-2 gap-4 lg:gap-6">
+            <div
+              class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.webp)] bg-cover bg-center h-full min-h-[320px] relative z-auto">
+              <div class="absolute top-10 left-10">
+                <a
+                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
+                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">Trusted
+                    App Partners</span>
+                </a>
+                <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
+                  Exclusive Deals <br>
+                  from Our Partners
+                </h2>
+              </div>
+              <div class="absolute bottom-10 left-10">
+                <a href="#exclusive-offeres"
+                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
+                  <span class="z-2 -tracking-[0.01em]">See Details</span> <span
+                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
+                      src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
+                  <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="lg:col-span-2 rounded-[20px] [background-position:50%_100%] lg:[background-position:0%_0%] overflow-hidden bg-[url(./img/free-setup.webp)] bg-cover bg-cente h-full min-h-[320px] relative z-auto">
+
+              <div class="absolute top-10 left-10">
+                <a
+                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
+                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">No
+                    Store Yet?</span>
+                </a>
+                <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
+                  Free Setup<br>
+                  and Design Support
+                </h2>
+
+              </div>
+              <div class="absolute bottom-10 left-10">
+                <a href="#free-setup"
+                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
+                  <span class="z-2 -tracking-[0.01em]">See Details</span> <span
+                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
+                      src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
+                  <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="overflow-hidden bg-white rounded-t-4xl xl:py-25 lg:py-18 py-15" id="features">
     <div class="px-4 mx-auto lg:container">
       <div class="space-y-4 text-center lg:mb-12.5 mb-8 max-w-[1345px] mx-auto" data-cues="slideInUp"
@@ -319,7 +427,8 @@
               </ul>
               <div class="space-y-3 lg:space-y-5">
                 <h3 class="font-semibold text-heading xl:text-[30px] text-2xl">Featured Product Banner</h3>
-                <p class="leading-relaxed">Effectively showcase product’s key features with engaging photos and icons to attract customers.</p>
+                <p class="leading-relaxed">Effectively showcase product’s key features with engaging photos and icons to
+                  attract customers.</p>
               </div>
             </div>
 
@@ -2234,117 +2343,6 @@
                   </p>
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact-us" class="w-full bg-[#F1F3F7]" data-cues="slideInUp" data-duration="600">
-    <div class="px-4 mx-auto lg:container">
-      <div class="lg:max-w-[1345px] mx-auto pb-15 md:pb-25">
-        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <div class="bg-[#6A57F5] rounded-[20px] xl:p-12.5 lg:p-8 p-6">
-            <div class="text-center xl:mb-12.5 lg:mb-8 mb-6">
-              <h2 class="text-white 2xl:text-[45px] lg:text-4xl text-3xl  font-semibold mb-3">Get in Touch</h2>
-              <p class="px-2 text-white">Have questions or special requests? Submit the form for free
-                setup,
-                partner discounts and
-                expert help.</p>
-            </div>
-
-            <form action="./assets/contact.php" method="POST" class="mx-auto">
-              <div class="flex flex-col items-center justify-center w-full gap-4 mb-4 lg:flex-row">
-                <input type="text" name="name" id="name"
-                  class="focus-input w-full text-white border border-white/40 rounded-[30px] transition-all duration-200 placeholder:text-white bg-primary p-4 md:ps-6 md:py-[15px] focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
-                  placeholder="Your name *">
-                <input type="email" name="email" id="email"
-                  class="w-full text-white border border-white/40 rounded-[30px] transition-all duration-200 placeholder:text-white bg-primary p-4 md:ps-6 md:py-4 focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
-                  placeholder="Your email *">
-              </div>
-
-              <div class="mb-4">
-                <label for="store_url" aria-label="store url"></label>
-                <input type="url" name="store_url" id="store_url"
-                  class="border text-white border-white/40 rounded-[30px] transition-all duration-200 p-4 md:py-4 md:ps-6 w-full placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
-                  placeholder="Store url">
-              </div>
-
-              <div class="mb-4">
-                <label for="notes" aria-label="additional notes"></label>
-                <textarea name="notes" rows="4" id="notes"
-                  class="border text-white border-white/40 rounded-[20px] transition-all duration-200 p-4 md:ps-6 md:py-4 w-full resize-none placeholder:text-white bg-primary focus:outline-none focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]"
-                  placeholder="Additional notes or requests?"></textarea>
-              </div>
-
-              <div class="flex items-center gap-2 md:gap-3 mb-8 lg:mb-12.5">
-                <input type="checkbox" id="agreement" name="agreement" id="agreement" aria-label="checkbox"
-                  class="size-4 appearance-none checked checked:border-white text-primary bg-transparent border border-white rounded-sm focus:outline-white focus:shadow-[0_0px_15px_rgba(255,255,255,0.25)]
-                  relative checked:after:content-['✓'] checked:after:absolute checked:after:w-full checked:after:h-full checked:after:flex checked:after:justify-center checked:after:items-center checked:after:text-white checked:after:text-sm"">
-                <label for=" agreement" class="text-sm text-white">
-                I agree that my submitted data is being collected and stored.
-                </label>
-              </div>
-
-              <button type="submit"
-                class="w-full relative cursor-pointer inline-flex group justify-center font-plus-jakarta-sans items-center px-8 py-4 lg:py-4.5 h-[50px] lg:h-[60px] overflow-hidden lg:min-w-[220px] font-semibold -tracking-[0.02em] text-primary transition-all duration-300 rounded-full border gap-x-2 bg-white border-white disabled:opacity-50 disabled:pointer-events-none">
-                Submit <span class="inline-block transition-all duration-300 group-hover:rotate-45">
-                  <img src="./img/icon-arrow-purple.svg" alt="icon" loading="lazy">
-                </span>
-              </button>
-            </form>
-          </div>
-
-          <div class="grid grid-rows-1 lg:grid-rows-2 gap-4 lg:gap-6">
-            <div
-              class="lg:col-span-2 rounded-[20px] overflow-hidden bg-[url(./img/exclusive.webp)] bg-cover bg-center h-full min-h-[320px] relative z-auto">
-              <div class="absolute top-10 left-10">
-                <a
-                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
-                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">Trusted
-                    App Partners</span>
-                </a>
-                <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
-                  Exclusive Deals <br>
-                  from Our Partners
-                </h2>
-              </div>
-              <div class="absolute bottom-10 left-10">
-                <a href="#exclusive-offeres"
-                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
-                  <span class="z-2 -tracking-[0.01em]">See Details</span> <span
-                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" width="12" height="12" alt=""></span>
-                  <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
-                </a>
-              </div>
-            </div>
-
-            <div
-              class="lg:col-span-2 rounded-[20px] [background-position:50%_100%] lg:[background-position:0%_0%] overflow-hidden bg-[url(./img/free-setup.webp)] bg-cover bg-cente h-full min-h-[320px] relative z-auto">
-
-              <div class="absolute top-10 left-10">
-                <a
-                  class="inline-flex border border-white rounded-full items-center px-4 py-1.5 text-sm font-semibold text-transparent bg-clip-text mb-4">
-                  <span class="text-transparent bg-gradient-to-r from-white via-white to-primary bg-clip-text">No
-                    Store Yet?</span>
-                </a>
-                <h2 class="mb-4 md:mb-8 text-2xl font-semibold text-white lg:text-3xl lg:mb-16">
-                  Free Setup<br>
-                  and Design Support
-                </h2>
-
-              </div>
-              <div class="absolute bottom-10 left-10">
-                <a href="#free-setup"
-                  class="inline-flex font-plus-jakarta-sans relative playbtn group justify-center items-center px-8 py-3 lg:py-4.5 lg:px-10 font-semibold -tracking-[0.02em] text-white transition-all duration-300 rounded-full bg-primary gap-x-2 hover:bg-primary/90 focus:outline-hidden focus:bg-primary/80 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-1 h-[50px] lg:h-auto">
-                  <span class="z-2 -tracking-[0.01em]">See Details</span> <span
-                    class="relative inline-block transition-all duration-300 z-2 group-hover:rotate-45"><img
-                      src="img/icon-arrow.svg" width="12" height="12" alt="icon" loading="lazy"></span>
-                  <span class="absolute  bg-primary inset-0.5 rounded-full"></span>
-                </a>
               </div>
             </div>
           </div>
